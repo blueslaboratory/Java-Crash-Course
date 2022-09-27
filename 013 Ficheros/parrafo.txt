@@ -1,0 +1,12 @@
+Update BufferedWriter: 2021-04-14
+Este fichero guarda logs
+stop
+Ayer estaba realmente contento despues de hacer TP en eth y link
+stop
+Update BufferedWriter: 2021-04-14
+creo que por fin respeta la modificacion del fichero
+stop
+Update BufferedWriter: 2021-04-14
+no hace falta poner stop, pero me hacia gracia el morse
+Update BufferedWriter: 2022-03-29
+hi

@@ -1,0 +1,12 @@
+package ejemplos012_matrices;
+
+public class Arrays {
+
+	public static void main(String[] args) {
+		//Declaracion
+		int [] ventas;
+		//Instanciar
+		ventas = new int[5]; 
+	}
+
+}

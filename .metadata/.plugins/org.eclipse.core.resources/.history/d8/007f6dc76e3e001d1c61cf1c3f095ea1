@@ -1,0 +1,10 @@
+package procesos2_lectura;
+
+public class PintarNombre {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

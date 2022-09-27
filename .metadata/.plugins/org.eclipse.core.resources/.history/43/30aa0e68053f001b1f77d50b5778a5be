@@ -1,0 +1,35 @@
+package ejemplos012_matrices;
+
+public class Arrays2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int [] array = {9,4};
+		//
+		modificarA1(array);
+		System.out.println("Valor de array tras modificarA1 " +array);
+		
+		for (int i = 0; i < array.length; i++) {
+			System.out.println(array[i]);
+		}
+		
+		escribirArray(array);
+		
+	}
+	
+	public static void modificarA1(int [] v) {
+		System.out.println("Valor de v dentro del metodo antes " +v);
+		for (int i = 0; i < v.length; i++) 
+			v[i] += 100; 
+		//no cambias v; cambias el contenido de la memoria, PERO NO V
+		
+		System.out.println("Valor de v dentro del metodo antes " +v);
+	}
+
+	public static void escribirArray(int [] a) {
+		for (int i = 0; i < a.length; i++) 
+			System.out.println(a[i] +" "); 
+		//no cambias v; cambias el contenido de la memoria, PERO NO V
+	}
+}

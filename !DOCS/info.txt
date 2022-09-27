@@ -1,0 +1,12 @@
+Eclipse IDE:
+https://www.eclipse.org/downloads/
+
+Instalar el OpenJDK 11 para garantizar compatibilidad.
+(creo que este es el enlace)
+https://jdk.java.net/java-se-ri/11
+
+Java Doc 11:
+https://docs.oracle.com/en/java/javase/11/docs/api/index.html
+
+XAMPP (para la parte de BBDD):
+https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/1.8.3/xampp-win32-1.8.3-5-VC11-installer.exe/download

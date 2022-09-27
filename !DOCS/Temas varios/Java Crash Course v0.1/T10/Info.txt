@@ -1,0 +1,22 @@
+21/4/2021
+
+Antes hay que iniciar el XAMPP
+http://localhost/phpmyadmin/
+
+
+Añadir la variable de entorno:
+Panel de control\Todos los elementos de Panel de control\Sistema\
+Configuracion avanzada del sistema\Variables de entorno\Path
+
+Editar Path
+
+Añades la ruta del mySQL.exe (hasta el bin)
+
+
+WINDOWS+R: cmd.exe
+> mysql -u root
+> show databases;
+> create database prueba;
+> drop database prueba;
+> use prueba;
+> create table datos(descripcion varchar(100), primary key(descripcion));

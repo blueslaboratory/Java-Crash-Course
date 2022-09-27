@@ -1,0 +1,20 @@
+/* 
+ * Estamos viendo como pasarle parametros al main en el array args
+ * Le damos a run y despues en la barra de herramientas:
+ * Project -> Properties -> Run/Debug settings -> Suma -> edit -> arguments -> 12 23
+ * 
+ */
+
+package arraylist2;
+
+public class Ej001Prueba {
+	public static void main(String args[]) {
+		if (args.length != 2) {
+			System.out.println("El numero de parametros debe ser 2");		
+		}
+		else {
+			Ej003Punto p = new Ej003Punto(Double.parseDouble(args[0]), Double.parseDouble(args[1]) );
+			System.out.println(p);		
+		}
+	}
+}

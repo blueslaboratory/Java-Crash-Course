@@ -1,0 +1,41 @@
+//3.- Escribe el código en Java de los siguientes ejercicios:
+//a) El método public int cuentaCeros ( int arr[ ] ) que 
+//recibe un array de enteros y devuelve el número de ceros 
+//que se encuentran dentro del array. 
+//b) El método public int sumaPares ( int arr[ ] ) que recibe 
+//un array de enteros y devuelve el resultado de sumar sólo los 
+//números pares que hay dentro del array. 
+//c) El método public int cuentaRepeticiones ( int arr[ ], int x ) 
+//que recibe un array de enteros y un valor entero x. El método 
+//devuelve el número de veces que se repite el valor de x en el array. 
+//d) El método public void sustituye (int arr[ ], int viejo, int nuevo) 
+//que recibe un array de enteros y dos valores enteros viejo y nuevo. 
+//El método debe reemplazar todos los valores viejo del array por el 
+//valor de nuevo.
+//e) El método public void intercambia (int arr[ ], int x, int y), 
+//que recibe un array de enteros y dos valores enteros que corresponden 
+//a dos componentes del array e intercambie los valores de las componentes 
+//del array. El ejercicio se hará teniendo en cuenta que x e y son el 
+//contenido de dos posiciones del array y después se hará teniendo en 
+//cuenta que x e y son las posiciones del array. 
+//f) El método public void invierte (int arr[ ]), que recibe un array 
+//de enteros e invierte la secuencia de valores del array.
+//g) El procedimiento public void rotaDerecha (int arr[ ]), que recibe 
+//un array de enteros y mueve a cada elemento una posición adelante, 
+//colocando el último valor del array en la primera componente del array 
+//resultante.
+//h) El método public boolean iguales (int a1[ ], int a2[ ]), que recibe 
+//dos arrays de enteros y devuelve true si los dos arrays contienen la 
+//misma secuencia de valores y false de otra manera. 
+
+
+package ejercicios;
+
+public class Ej003 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

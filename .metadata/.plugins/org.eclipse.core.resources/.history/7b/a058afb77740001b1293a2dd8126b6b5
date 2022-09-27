@@ -1,0 +1,17 @@
+//3. Haz un programa que cree un array cuyo tamaño se pedirá por 
+//teclado y cuyo contenido serán números  aleatorios entre 1 y 300. 
+//Posteriormente se creará otro array que guardará aquellos números 
+//del primer array que acaben en un dígito que se indicará por 
+//teclado (se debe controlar que se introduce un numero correcto). 
+//Finalmente, mostrar por pantalla los dos arrays.
+
+package ejercicios2;
+
+public class Ej003 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

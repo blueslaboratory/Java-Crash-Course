@@ -1,0 +1,33 @@
+package clases1;
+
+public class Circulo {
+	double x,y,r;
+	
+	
+	//SET IT
+	public void setX(double x) {
+		this.x = x;
+	}
+	
+	public void setY(double y) {
+		this.y = y;
+	}
+	
+	public void setR(double r) {
+		this.r = r;
+	}
+	
+	
+	//GET IT
+	public double getX() {
+		return x;
+	}
+	
+	public double getY() {
+		return y;
+	}
+	
+	public double getR() {
+		return r;
+	}
+}

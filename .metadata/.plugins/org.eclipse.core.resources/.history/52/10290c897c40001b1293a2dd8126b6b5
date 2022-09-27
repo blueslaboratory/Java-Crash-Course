@@ -1,0 +1,27 @@
+//4. Haz un programa que calcule la letra de un DNI. 
+//Se pedirá el DNI por teclado y devolverá la letra correspondiente 
+//al DNI. Para buscar la letra, se calcula el resto de dividir el 
+//número de dni entre 23, y con el resultado que estará entre 0 y 22, 
+//se busca en el array de caracteres la letra correspondiente en esa 
+//posición.
+//El orden de los caracteres es: T, R, W, A, G, M, Y, F, P, D, X, B, 
+//N, J, Z, S, Q, V, H, L, C, K, E
+
+
+package ejercicios2;
+
+import java.util.Scanner;
+
+public class Ej004 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		char [] letras = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 
+						  'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 
+						  'H', 'L', 'C', 'K', 'E'};
+		
+		System.out.println("Dime");
+	}
+
+}

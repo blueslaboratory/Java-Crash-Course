@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;008 Arrays&apos; to &apos;008 Matrices&apos;&#x0A;- Original element: &apos;008 Arrays&apos;&#x0A;- Renamed element: &apos;008 Arrays&apos;&#x0A;- Update references to refactored element" description="Rename Java project &apos;008 Arrays&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=008 Arrays" name="008 Matrices" references="true" stamp="1607970257079" version="1.0"/>
+</session>

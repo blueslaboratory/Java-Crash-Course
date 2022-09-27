@@ -1,0 +1,19 @@
+package ejemplos012_matrices;
+
+public class Arrays {
+
+	public static void main(String[] args) {
+		//Declaracion
+		int [] ventas;
+		
+		//Instanciar (se guarda en RAM)
+		ventas = new int[5]; 
+		
+		//De una vez
+		int [] ventas2 = new int[5]; 
+		double [] notas = {6.7, 7.5, 5.3, 8.75, 3.6, 6.5}; 
+		
+		System.out.println("Elementos en ventas: " +ventas.length);
+	}
+
+}

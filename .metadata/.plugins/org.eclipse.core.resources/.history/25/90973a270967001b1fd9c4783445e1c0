@@ -1,0 +1,15 @@
+package arraylistpaqTriangulo;
+import arraylistpaqPunto.*;
+import java.util.*;
+
+public class TrianguloMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<Ej003Triangulo> triangulos = new ArrayList<Ej003Triangulo>();
+		Ej003Punto p1 = new Ej003Punto(1,1);
+		triangulos.add(new new Ej003Punto(2,5),new Ej003Punto(2,5),new Ej003Punto(2,5));
+		
+	}
+
+}

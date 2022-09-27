@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;ejemplos029_ficheros3_leerUnaLineaEntrEstandar&apos; to &apos;ejemplos029_ficheros3_leeLineaEntradaEstandar&apos;&#x0D;&#x0A;- Original project: &apos;Ejemplos&apos;&#x0D;&#x0A;- Original element: &apos;Ejemplos/src/ejemplos029_ficheros3_leerUnaLineaEntrEstandar&apos;&#x0D;&#x0A;- Renamed element: &apos;Ejemplos/src/ejemplos029_ficheros3_leeLineaEntradaEstandar&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;ejemplos029_ficheros3_leerUnaLineaEntrEstandar&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;ejemplos029_ficheros3_leerUnaLineaEntrEstandar" name="ejemplos029_ficheros3_leeLineaEntradaEstandar" qualified="false" references="true" stamp="1617449749355" textual="false" version="1.0"/>
+</session>

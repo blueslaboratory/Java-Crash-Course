@@ -1,0 +1,40 @@
+/* 
+ * Como pasarle parametros al main en el array args
+ * Le damos a run y despues en la barra de herramientas:
+ * Project -> Properties -> Run/Debug settings -> Ej001Prueba -> edit -> arguments -> 1 5
+ * 
+ */
+
+package arraylistpaqPunto;
+
+public class Ej003Prueba {
+	public static void main(String args[]) {
+		if (args.length != 2) {
+			System.out.println("El numero de parametros debe ser 2");		
+		}
+		else {
+			Punto p0 = new Punto(Double.parseDouble(args[0]), Double.parseDouble(args[1]) );
+			Punto p1 = new Punto(3, 15);
+			Punto pArray[] = {new Punto(1, 7),
+								   new Punto(15, 15),
+								   new Punto(30, 40),
+								   new Punto(1, 6)};
+			
+			
+			System.out.println(p0);
+			System.out.println(p1);
+			System.out.println();
+			
+			System.out.println("Distancia al origen: " +p0.distanciaAlOrigen());
+			System.out.println("Distancia entre p0 y p1: " +p0.calcularDistancia(p1));
+			System.out.println();
+			
+			System.out.println("Cuadrante p0: " +p0.calcularCuadrante());
+			System.out.println("Cuadrante p1: " +p1.calcularCuadrante());
+			System.out.println();
+			
+			System.out.println("Punto mas cercano a p0: " +p0.calcularMasCercano(pArray));
+			System.out.println();
+		}
+	}
+}

@@ -1,0 +1,21 @@
+package calculadora;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+class TablaEnterosTestAct3 {
+	private static TablaEnteros tabla;
+	
+	@BeforeAll
+	public static void creaTablaEnteros() {
+		
+	}
+	
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

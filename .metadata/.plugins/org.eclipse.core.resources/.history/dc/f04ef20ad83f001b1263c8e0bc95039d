@@ -1,0 +1,29 @@
+//7.- Haz un programa que cree un array de números 
+//y otro de String de un número de  elementos que 
+//pondrás en una constante, que contendrán:
+//
+//El primero, notas entre 0 y 10 (debemos controlar 
+//que inserte una nota válida), pudiendo tener decimales.
+//
+//En el segundo, se insertarán los nombres de alumnos.
+//
+//Después, se creará un tercer array de Strings, donde 
+//se insertará la nota en forma de cadena, de la siguiente 
+//forma:
+//
+//Si la nota está entre 0 y 4,99 , será un suspenso 
+//Si está entre 5 y 6,99 , será un bien. 
+//Si está entre 7 y 8,99 será un notable. 
+//Si está entre 9 y 10 será un sobresaliente. 
+//
+//Finalmente, mostrar por pantalla el nombre de cada alumno, 
+//su nota numérica y su nota alfabética usando los tres arrays.
+
+
+package ejercicios;
+
+public class Ej007 {
+	public static void main(String[] args) {
+		
+	}
+}

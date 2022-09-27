@@ -1,0 +1,47 @@
+package calculadora;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+class TablaEnterosTestAct3 {
+	
+	private static TablaEnteros tabla;
+	
+	@BeforeAll
+	public static void creaTablaEnteros() {
+		Integer[] enteros = {1,2,3,4,5,6,7,8,9};
+		tabla = new TablaEnteros(enteros);
+	}
+	
+	
+	@Test
+	void testSumaTabla() {
+		double valorEsperado = 45;
+		double resultado = tabla.sumaTabla();
+		assertEquals(valorEsperado, resultado, 0);
+	}
+	@Test
+	void testMayorTabla() {
+		double valorEsperado = 9;
+		double resultado = tabla.mayorTabla();
+		assertEquals(valorEsperado, resultado, 0);
+	}
+	@Test
+	void testposicionTabla() {
+		int valorEsperado = 8;
+		int resultado = tabla.posicionTabla(9);
+		assertEquals(valorEsperado, resultado, 0);
+	}
+	@Test
+	public void testTablaEnteros() {
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			new TablaEnteros(null);
+		});
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			new TablaEnteros({0});
+		});
+	}
+}

@@ -1,0 +1,19 @@
+//2.- Escribe el codigo en Java de los siguientes procedimientos:
+//a) Un procedimiento que recibe un array de enteros y le asigna a cada 
+//componente los valores 0,3,6,..,3*(n-1) donde n es la longitud del array.
+//b) Un procedimiento que recibe un array de enteros y le asigna a cada 
+//componente los valores n-1, n-2, ...,2,1,0 donde n es la longitud del array.
+//c) Un procedimiento que recibe un array de valores booleanos y le 
+//asigna de manera intercalada los valores true y false.
+
+
+package ejercicios;
+
+public class Ej002 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,126 @@
+1614101472944	Copy package
+1614101481256	Delete elements
+1614101618306	Copy package
+1614101627894	Delete elements
+1614101705672	Copy package
+1614101714186	Delete elements
+1614101731344	Copy package
+1614101735339	Delete element
+1614101742397	Rename package 'ejemplos034_interface3.copy'
+1614101829443	Copy package
+1614101840260	Delete elements
+1614101860926	Copy package
+1614101864222	Delete element
+1614101869787	Rename package 'ejemplos034_interface4.copy'
+1614102643955	Copy package
+1614102650459	Delete elements
+1614102665578	Copy package
+1614102673715	Delete elements
+1614102693414	Copy package
+1614102698645	Delete element
+1614102791204	Copy package
+1614102798757	Delete element
+1614103151277	Copy package
+1614103157746	Delete elements
+1614103162848	Rename package 'ejemplos035_comparator1'
+1614103193888	Copy package
+1614103197304	Delete element
+1614103528498	Copy package
+1614103531546	Delete element
+1614103585262	Rename package 'ejemplos036_ordenar'
+1614103607266	Rename package 'ejemplos035_comparator1'
+1614103620448	Rename package 'ejemplos035_comparator1_J'
+1614103627855	Rename type 'Comparacion'
+1614103791170	Delete elements
+1614103819934	Rename type 'Comparacion_J'
+1614103849832	Copy package
+1614103869343	Delete elements
+1614103875833	Move compilation units
+1614103882296	Delete elements
+1614103911437	Copy package
+1614103915126	Delete element
+1614103932684	Rename package 'ejemplos035_comparator'
+1614103965154	Rename type 'OrdenArrayListPersonas'
+1614103986127	Rename type 'OrdenArrayListPersonas'
+1614104110307	Rename type 'PersonasOrdenArrayList'
+1614104118265	Rename type 'PersonasOrdenArrayList'
+1614104391990	Rename type 'Orden2Personas'
+1614104796806	Rename package 'ejemplos037_ordenarArrayList.copy'
+1614104815193	Copy package
+1614104820359	Delete elements
+1614104829038	Rename package 'ejemplos038_'
+1614104890208	Copy package
+1614104976496	Delete elements
+1614105874894	Rename package 'ejemplos040_'
+1614105998719	Copy package
+1614106005305	Delete elements
+1614106030277	Copy package
+1614106050046	Delete element
+1614106062042	Delete element
+1614106071381	Rename package 'ejemplos041_ordenArrayList.copy'
+1614106102844	Copy package
+1614106164293	Copy package
+1614106198734	Copy package
+1614106202974	Delete element
+1614106241552	Rename package 'ejemplos043_ordenArrayList'
+1614106249037	Rename package 'ejemplos042_ordenArrayList'
+1614106255780	Rename package 'ejemplos041_ordenArrayList'
+1614106264042	Rename package 'ejemplos040_ordenArrayList'
+1614108229322	Copy compilation units
+1614109192872	Copy package
+1614109223459	Delete element
+1614109229300	Delete elements
+1614111180364	Rename package 'ejemplos021_arraylist2'
+1614111202382	Rename package 'ejemplos022_sobrecarga'
+1614111209336	Rename package 'ejemplos023_herencia'
+1614111222947	Rename package 'ejemplos024_herencia2_poli'
+1614111228919	Rename package 'ejemplos025_herencia3_poli2'
+1614111237572	Rename package 'ejemplos026_herencia4_milpies'
+1614111243083	Rename package 'ejemplos027_herencia5_musica'
+1614111249458	Rename package 'ejemplos028_herencia6_empleado'
+1614111256485	Rename package 'ejemplos029_herencia7_empleado2'
+1614111264171	Rename package 'ejemplos030_abstractas'
+1614111272491	Rename package 'ejemplos031_abstractas2_hombre'
+1614111280781	Rename package 'ejemplos032_abstractas3_musica'
+1614111287721	Rename package 'ejemplos033_abstractas4_poli'
+1614111295520	Rename package 'ejemplos034_interface1'
+1614111305068	Rename package 'ejemplos034_interface1_1'
+1614111324722	Rename package 'ejemplos034_interface2'
+1614111334732	Rename package 'ejemplos034_interface3'
+1614111348454	Rename package 'ejemplos034_interface4'
+1614111356633	Rename package 'ejemplos034_interface5'
+1614111362687	Rename package 'ejemplos034_interface6'
+1614111418783	Rename package 'ejemplos035_comparator1'
+1614111426659	Rename package 'ejemplos036_ordenarArrayList'
+1614111434076	Rename package 'ejemplos037_ordenarArrayList'
+1614111481920	Rename package 'ejemplos026_ordenarArrayList'
+1614111499275	Rename package 'ejemplos025_ordenarArrayList'
+1614111509395	Rename package 'ejemplos027_ordenarArrayList'
+1614111519210	Rename package 'ejemplos038_ordenArrayList'
+1614111543335	Rename package 'ejemplos025_ordenarArrayList1'
+1614111553114	Rename package 'ejemplos025_ordenarArrayList2'
+1614111566937	Rename package 'ejemplos039_ordenArrayList'
+1614111577749	Rename package 'ejemplos040_ordenArrayListJug1'
+1614111586720	Rename package 'ejemplos041_ordenArrayListJug2'
+1614111593347	Rename package 'ejemplos0251_ordenArrayListJug2'
+1614111600254	Rename package 'ejemplos042_ordenArrayListJug3'
+1614111608614	Rename package 'ejemplos043_ordenArrayListJug4'
+1614111618586	Rename package 'ejemplos044_ordenArrayListCoches'
+1614164003726	Rename package 'ejemplos024_interface1'
+1614164007590	Rename package 'ejemplos024_interface1_1'
+1614164672995	Rename package 'ejemplos023_abstractas2_hombre'
+1614164677723	Rename package 'ejemplos023_abstractas3_musica'
+1614164681620	Rename package 'ejemplos023_abstractas4_poli'
+1614164692619	Rename package 'ejemplos022_herencia7_empleado2'
+1614164702576	Rename package 'ejemplos022_herencia2_poli'
+1614164706380	Rename package 'ejemplos022_herencia3_poli2'
+1614164711712	Rename package 'ejemplos022_herencia4_milpies'
+1614164717139	Rename package 'ejemplos022_herencia5_musica'
+1614164722606	Rename package 'ejemplos022_herencia6_empleado'
+1614164733629	Rename package 'ejemplos020_arraylist2'
+1614164737599	Rename package 'ejemplos017_compobj2'
+1614164742341	Rename package 'ejemplos011_static2'
+1614164754896	Rename package 'ejemplos025_comparator1'
+1614183356649	Rename type 'OrdenarCoches'
+1614183570114	Rename type 'OrdenarColor'
+1614338047905	Rename type 'ArrayListIterator'

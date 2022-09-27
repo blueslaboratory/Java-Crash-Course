@@ -1,0 +1,44 @@
+package fecha;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
+
+
+class FechaTestAct6 {
+	private Fecha fecha;
+	private SimpleDateFormat formato;
+	private Date hoy = new Date();
+	
+	private String cadEsperado = "";
+	private String cadResultado = "";
+	
+	
+	@BeforeAll
+	public static void creaFecha() {
+		fecha = new Fecha();
+	}
+	
+	@ParameterizedTest
+	@CsvSource({"5", "0", "-9"})
+	public void testFechaDefault(int a) {
+		cadEsperado = "ERROR";
+		cadResultado = fecha.DevuelveFecha(a);
+		assertEquals(cadEsperado, cadResultado, "Test Fail");
+	}
+	
+	@Test
+	void testFechaCase1() {
+		formato = new SimpleDateFormat("yyyy/MM");
+		cadEsperado = formato.format(hoy);
+		cadResultado = fecha.DevuelveFecha(1);
+		assertEquals(cadEsperado, cadResultado, "Test Fail");
+	}
+}

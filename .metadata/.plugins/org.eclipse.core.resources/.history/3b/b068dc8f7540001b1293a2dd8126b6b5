@@ -1,0 +1,15 @@
+//1. Haz un programa que rellene un array con los 100 
+//primeros números enteros y los muestre en pantalla en 
+//orden inverso al orden en que se han introducido 
+//(orden inverso).
+
+package ejercicios2;
+
+public class Ej001 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int array [] = new int[100];
+	}
+
+}

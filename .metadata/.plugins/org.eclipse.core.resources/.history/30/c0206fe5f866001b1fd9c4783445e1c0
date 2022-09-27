@@ -1,0 +1,46 @@
+package arraylist;
+
+public class Ej003Punto {
+	private double x;
+    private double y;
+    private int nPunto;
+    private static int contPunto = 0;
+    
+    //ALT+SHIFT+S
+    //CONSTRUCTORES
+    public Ej003Punto() {
+    	nPunto = contPunto;
+    	contPunto++;
+    }
+    public Ej003Punto(double x, double y) {
+    	nPunto = contPunto;
+    	contPunto++;
+    	this.x = x;
+    	this.y = y;
+    }
+	
+    
+    //GETTERS
+    public double getX() {
+		return x;
+	}
+	public double getY() {
+		return y;
+	}
+	
+    
+    //SETTERS
+	public void setX(double x) {
+		this.x = x;
+	}
+	public void setY(double y) {
+		this.y = y;
+	}
+	
+    
+    //TOSTRING
+	@Override
+	public String toString() {
+		return "Punto [x=" + x + ", y=" + y + "]";
+	}
+}

@@ -1,0 +1,91 @@
+//2.- Escribe el codigo en Java de los siguientes procedimientos:
+//a) Un procedimiento que recibe un array de enteros y le asigna a cada 
+//componente los valores 0,3,6,..,3*(n-1) donde n es el indice del array.
+//b) Un procedimiento que recibe un array de enteros y le asigna a cada 
+//componente los valores n-1, n-2, ...,2,1,0 donde n es la longitud del array.
+//c) Un procedimiento que recibe un array de valores booleanos y le 
+//asigna de manera intercalada los valores true y false.
+
+
+package m1_unidimensionales;
+
+import java.util.Scanner;
+
+public class Ej002 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		int size;
+		
+		System.out.print("Dime el size para los arrays: ");
+		size = Integer.parseInt(sc.nextLine());
+		
+		// a)
+		int [] a = new int[size];
+		a = apartadoA(a);
+		escribirArray(a);
+		
+		// b)
+		int [] b = new int[size];
+		b = apartadoB(b);
+		escribirArray(b);
+		
+		// c)
+		boolean [] c = new boolean[size];
+		c = apartadoC(c);
+		escribirArray2(c);
+		sc.close();
+	}
+	
+	
+	public static int[] apartadoA(int [] v) {
+		int[] a = new int[v.length];
+		
+		System.out.println("Valor de v dentro del metodo " +v);
+		for (int i = 0; i < v.length; i++) {
+			a[i] = i*3;
+		}
+		System.out.println("Valor de a " +a);
+		
+		return a;
+	}
+	
+	public static int[] apartadoB(int [] v) {
+		int[] b = new int[v.length];
+		
+		System.out.println("Valor de v dentro del metodo " +v);
+		for (int i = 0; i < v.length; i++) {
+			b[i] = v.length -(i+1);
+		}
+		System.out.println("Valor de b " +b);
+		
+		return b;
+	}
+	
+	public static boolean[] apartadoC(boolean [] v) {
+		boolean[] c = new boolean[v.length];
+		
+		System.out.println("Valor de v dentro del metodo " +v);
+		for (int i = 0; i < v.length; i++) {
+			if(i%2 == 0) 
+				c[i] = true;
+			else
+				c[i] = false;
+		}
+		System.out.println("Valor de b " +c);
+		
+		return c;
+	}
+	
+	public static void escribirArray(int [] a) {
+		for (int i = 0; i < a.length; i++) 
+			System.out.println(a[i] +" "); 
+	}
+	
+	public static void escribirArray2(boolean [] a) {
+		for (int i = 0; i < a.length; i++) 
+			System.out.println(a[i] +" "); 
+	}
+}

@@ -1,0 +1,9 @@
+package arraylistpaqTriangulo;
+import arraylistpaqPunto.*;
+
+public class Ej003Triangulo {
+	private Ej003Punto p1, p2, p3;
+	
+	public Ej003Triangulo() {}
+	
+}

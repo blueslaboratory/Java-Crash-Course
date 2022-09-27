@@ -1,0 +1,78 @@
+package clases1;
+
+public class Circulo {
+	double x,y,r;
+	
+	
+	public Circulo() {}
+	
+	
+	//AREA
+	public double area(double r) {
+		double PI = 3.14;
+		double area = 2*PI*Math.pow(r, 2);
+		
+		return area;
+	}
+	
+	
+	//LONGITUD
+	public double longitud(double r) {
+		double PI = 3.14;
+		double longitud = 2*PI*r;
+		
+		return longitud;
+	}
+	
+	
+	//CONSTRUCTOR 1
+	public void Circulo1() {
+		this.x = 0;
+		this.y = 0;
+		this.r = 1;
+	}
+	
+	//CONSTRUCTOR 2
+	public void Circulo2(double r) {
+		this.x = 0;
+		this.y = 0;
+		this.r = r;
+	}
+	
+	//CONSTRUCTOR 3
+	public void Circulo3(double x, double y, double r) {
+		this.x = x;
+		this.y = y;
+		this.r = r;
+	}
+	
+	
+	
+	//SET IT
+	public void setX(double x) {
+		this.x = x;
+	}
+	
+	public void setY(double y) {
+		this.y = y;
+	}
+	
+	public void setR(double r) {
+		this.r = r;
+	}
+	
+	
+	
+	//GET IT
+	public double getX() {
+		return x;
+	}
+	
+	public double getY() {
+		return y;
+	}
+	
+	public double getR() {
+		return r;
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 17 resources" deleteContents="false" description="Delete 17 resources" element1="/001 Secuenciales" element10="/010 Interfaces" element11="/011 Excepciones" element12="/012 Colecciones" element13="/013 Ficheros" element14="/Ejemplos" element15="/HelloWorld" element16="/Refactor" element17="/Test" element2="/002 Condicionales" element3="/003 Repetitivas" element4="/004 Basicos" element5="/005 Metodos" element6="/006 Objetos" element7="/007 Cadenas" element8="/008 Matrices" element9="/009 Herencia" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="17" stamp="1619543552582"/>
+</session>

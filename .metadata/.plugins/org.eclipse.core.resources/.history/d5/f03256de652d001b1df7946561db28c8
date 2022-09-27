@@ -1,0 +1,16 @@
+package clases1;
+
+
+public class CirculoMain {
+	public static void main(String[] args) {
+		Circulo c1 = new Circulo();
+		c1.Circulo1();
+		c1.escribir(1);
+		
+		c1.Circulo2(3);
+		c1.escribir(3);
+		
+		c1.Circulo3(3, 3, 8);
+		c1.escribir(8);
+	}
+}

@@ -1,0 +1,10 @@
+A gd's prc lstcty f dmnd s  msr f hw snstv th 
+qntty dmndd f t s t ts prc. Whn th prc rss, 
+qntty dmndd flls fr lmst ny gd, bt t flls mr fr sm 
+thn fr thrs. Th prc lstcty gvs th prcntg chng n 
+qntty dmndd whn thr s  n prcnt ncrs n prc, 
+hldng vrythng ls cnstnt. If th lstcty s -2, tht 
+mns  n prcnt prc rs lds t  tw prcnt dcln n 
+qntty dmndd. Othr lstcts msr hw th qntty dmndd 
+chngs wth thr vrbls (.g. th ncm lstcty f dmnd fr 
+cnsmr ncm chngs).

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Ej001Punto.java&apos; to &apos;010 Interfaces/src/relacionable&apos;&#x0D;&#x0A;- Original project: &apos;006 Objetos&apos;&#x0D;&#x0A;- Destination element: &apos;010 Interfaces/src/relacionable&apos;&#x0D;&#x0A;- Original element: &apos;composicion1.Ej001Punto.java&apos;" description="Copy compilation unit" destination="=010 Interfaces/src&lt;relacionable" element1="/src&lt;composicion1{Ej001Punto.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1615919764174" units="1" version="1.0"/>
+</session>

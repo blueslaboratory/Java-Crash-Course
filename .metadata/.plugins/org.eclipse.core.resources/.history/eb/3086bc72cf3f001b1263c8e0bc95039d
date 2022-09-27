@@ -1,0 +1,30 @@
+//6.- Haz un programa en Java para leer la altura de N 
+//personas y calcular la altura media. Calcular cuántas 
+//personas tienen una altura superior a la media y 
+//cuántas tienen una altura inferior a la media. El valor 
+//de N se pide por teclado y debe ser entero positivo. 
+
+
+package ejercicios;
+
+import java.util.Scanner;
+
+public class Ej006 {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int size;
+		
+		System.out.println("Introduce el numero de personas: ");
+		size = Integer.parseInt(sc.nextLine());
+		
+		double [] alturas = new double[size];
+		
+		for(int i=0; i<alturas.length; i++) {
+			System.out.println("Dime la altura " +i +" : ");
+			alturas[i] = Double.parseDouble(sc.nextLine());
+			
+		}
+		
+	}
+}

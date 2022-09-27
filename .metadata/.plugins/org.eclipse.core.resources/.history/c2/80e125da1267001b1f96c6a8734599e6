@@ -1,0 +1,41 @@
+package arraylistpaqTriangulo;
+import arraylistpaqPunto.*;
+import java.util.*;
+
+public class TrianguloMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<Ej003Triangulo> triangulos = new ArrayList<Ej003Triangulo>();
+		ArrayList<Ej003Punto> puntos = new ArrayList<Ej003Punto>();
+		Scanner sc = new Scanner(System.in);
+		double px, py;
+		final int SIZE; 
+		
+		System.out.print("Cuantos triangulos quieres introducir: ");
+		SIZE = Integer.parseInt(sc.nextLine());
+		
+		for(int j=0; j<SIZE; j++) {
+			for(int i=0; i<3; i++) {
+				System.out.print("Dime px" +i +":");
+				px = Double.parseDouble(sc.nextLine());
+				System.out.print("Dime py" +i +":");
+				py = Double.parseDouble(sc.nextLine());
+				puntos.add(new Ej003Punto(px,py));
+			}
+			triangulos.add(new Ej003Triangulo(puntos.get(0),puntos.get(1),puntos.get(2)));
+			puntos.clear();
+		}
+		
+		
+		
+		
+		Ej003Punto p1 = new Ej003Punto(1,1);
+		Ej003Punto p2 = new Ej003Punto(2,5);
+		Ej003Punto p3 = new Ej003Punto(6,7);
+		
+		triangulos.add(new Ej003Triangulo(p1,p2,p3));
+		triangulos.add(new Ej003Triangulo(p1,p2,p3));
+	}
+
+}

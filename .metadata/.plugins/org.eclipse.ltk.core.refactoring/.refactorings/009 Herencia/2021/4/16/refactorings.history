@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;herencia3_Ej005Academia.Asignatura&apos; to &apos;Ej001Asignatura&apos;&#x0D;&#x0A;- Original project: &apos;009 Herencia&apos;&#x0D;&#x0A;- Original element: &apos;herencia3_Ej005Academia.Asignatura&apos;&#x0D;&#x0A;- Renamed element: &apos;herencia3_Ej005Academia.Ej001Asignatura&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Asignatura&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;herencia3_Ej005Academia{Asignatura.java[Asignatura" matchStrategy="1" name="Ej001Asignatura" qualified="false" references="true" similarDeclarations="false" stamp="1619001924113" textual="false" version="1.0"/>
+</session>

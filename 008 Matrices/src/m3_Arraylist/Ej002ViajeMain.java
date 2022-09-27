@@ -1,0 +1,137 @@
+/*
+2.- Dada la clase Viaje siguiente, escribir un metodo denominado uneViaje 
+que reciba como parametros dos tipos Viaje y devuelva un nuevo objeto de esa 
+misma clase con: 
+el origen del primero, el destino del segundo y como distancia la suma de 
+las distancias de los dos viajes originales, si el destino del primero 
+coincide con el origen del segundo, sino se cumple dicha condicion se 
+asignara -1 a la distancia. 
+
+class Viaje { 
+private String origen; 
+private String destino; 
+private double distancia; 
+} 
+
+Nota: La funcion para comparar cadenas es: cadena1.compareTo(cadena2) 
+devuelve 0 si las dos cadenas son iguales, <0 si la cadena1 < cadena2 
+y >0 si cadena1>cadena2. 
+
+Crea una clase Principal, en la que se defina un array/ArrayList de 10 
+objetos Viaje e imprima por pantalla el resultado de usar el metodo 
+uneViaje, con una componente y la siguiente (0 y 1, 1 y 2, 2 y 3, ... ,9 y 10). 
+*/
+
+/*
+Quiero que cambieis el ejercicio de forma que se haga la suma de todas 
+las parejas para que nos devuelva los km recorridos en total. 
+Para ello, los origenes y destinos deben ser correctos, coincidir los nombres. 
+Si no lo hacen, teneis que decir que no forman un recorrido correcto.
+El metodo uneViajes lo cambiais para que solo reciba un viaje, el 
+otro es el que invoca el metodo.
+Y poneis el ArrayList en una clase aparte, con sus metodos, igual que hicimos 
+ayer con el ArrayList de Coches
+*/
+
+package m3_Arraylist;
+import java.util.*;
+
+public class Ej002ViajeMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("Recorrer Iterador: ");
+		recorrerIter(crearRecorrido());
+		System.out.println("************************************");
+		System.out.println("Recorrer Rapido:");
+		System.out.println("\n" +recorrerRapido(crearRecorrido()));
+		System.out.println("************************************");
+		System.out.println("Recorrer Lento:");
+		System.out.println("\n" +recorrerLento(crearRecorrido()));
+	}
+	
+	public static Ej002Viajes crearRecorrido() {
+		Ej002Viajes vs = new Ej002Viajes();
+		
+		vs.add(new Ej002Viaje("Madrid", "Barcelona", 630));
+		vs.add(new Ej002Viaje("Barcelona", "Los Angeles", 9648));
+		vs.add(new Ej002Viaje("Los Angeles", "London", 8756));
+		vs.add(new Ej002Viaje("London", "Madrid", 1263));
+		vs.add(new Ej002Viaje("Madrid", "Albacete", 263));
+		vs.add(new Ej002Viaje("Albacete", "Zarzuela", 295));
+		
+		return vs;
+	}
+	
+	public static void recorrerIter(Ej002Viajes vs) {
+		Iterator<Ej002Viaje> it = vs.getViajes().iterator();
+		int i = 0;
+		while(it.hasNext() && (i+1)<vs.getViajes().size()) {
+			System.out.println(it.next().uneViaje(vs.getViajes().get(i), vs.getViajes().get(i+1)));
+			i++;
+		}
+		System.out.println("\n");
+	}
+	
+	
+	public static String recorrerRapido(Ej002Viajes vs) {
+		String recorrido = vs.getViajes().get(0).getOrigen() +"->" ;
+		float distancia = (float)vs.getViajes().get(0).getDistancia();
+		boolean flag = true;
+		
+		for(int i=0; (i+1)<vs.getViajes().size() && flag; i++) {
+			Ej002Viaje v0 = vs.getViajes().get(i);
+			Ej002Viaje v1 = vs.getViajes().get(i+1);
+			
+			
+			if(v0.getDestino().equals(v1.getOrigen())) {
+				distancia += v1.getDistancia();
+				//System.out.println(i +": " +distancia);
+			}
+			else{
+				System.out.println("\nNo forman un recorrido correcto");
+				flag = false;
+			}
+			//el que falta, el del final:
+			if((i+2)==vs.getViajes().size()) {
+				recorrido += v1.getDestino() +": " +distancia +"\n";
+			}			
+		}
+		
+		return recorrido;
+	}
+	
+	
+	public static String recorrerLento(Ej002Viajes vs) {
+		String recorrido = "";
+		boolean flag = true;
+		for(int i=0; (i+1)<vs.getViajes().size() && flag; i++) {
+			Ej002Viaje v0 = vs.getViajes().get(i);
+			Ej002Viaje v1 = vs.getViajes().get(i+1);
+			
+			
+			if(v0.getDestino().equals(v1.getOrigen())) {
+				recorrido += v0.getOrigen() +"->" +v0.getDestino() +": " +v0.getDistancia() +"\n";
+				
+				v0 = v0.uneViaje2(v1);
+				vs.getViajes().add(i+2, v0); //vas aumentando el arraylist de vs
+				
+				//System.out.println(v0);
+				
+				i++;
+			}
+			else{
+				System.out.println("\nNo forman un recorrido correcto");
+				flag = false;
+			}
+			//el que falta, el del final:
+			if((i+2)==vs.getViajes().size()) {
+				recorrido += v0.getOrigen() +"->" +v0.getDestino() +": " +v0.getDistancia() +"\n";
+			}
+		}
+		
+		return recorrido;
+	}
+
+}
