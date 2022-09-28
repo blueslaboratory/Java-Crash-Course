@@ -16,7 +16,7 @@ public class Ej002_EjecutarAplicacionRuntime {
 		p1 = entorno.exec("C:\\Windows\\notepad.exe");
 		p2 = entorno.exec("cmd /c start"); // Desde la ventana de DOS arrancamos otra venta de DOS
 
-		// Con esta línea, main no finaliza hasta que se cierre notepad.exe
+		// Con esta linea, main no finaliza hasta que se cierre notepad.exe
 		p1.waitFor();
 		System.out.println(p1.exitValue());
 

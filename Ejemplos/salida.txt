@@ -1,0 +1,4 @@
+Microsoft Windows [Versi¢n 10.0.19044.2006]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+G:\DOCUMENTS\DA1D1E\Programaci¢n\Eclipse-workspace\Ejemplos>

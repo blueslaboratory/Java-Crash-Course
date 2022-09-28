@@ -15,7 +15,7 @@ public class Ej001_EjecutarAplicacionProcessBuilder {
 		p = pb.start();
 
 		retorno = p.waitFor();
-		System.out.println("Llegamos aquí cuando la ejecución del proceso finaliza");
+		System.out.println("Llegamos aqui cuando la ejecucion del proceso finaliza");
 		System.out.println("La ejecución devuelve: " + retorno);
 	}
 

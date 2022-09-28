@@ -1,0 +1,22 @@
+package procesos2_lectura;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Ej004_Leer {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String nombre = br.readLine();
+		
+		if (args.length < 1) {
+			System.exit(-1);
+		}
+
+		System.out.println("Mi nombre es " + args[0]);
+		System.exit(0);
+	}
+
+}

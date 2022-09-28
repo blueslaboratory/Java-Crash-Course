@@ -1,0 +1,10 @@
+package ejemplos036_procesos;
+
+public class Ej010_Leer {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
