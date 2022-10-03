@@ -1,7 +1,7 @@
 // Documentacion: https://docs.oracle.com/en/java/javase/14/docs/api/java.base/module-summary.html
 
-//ECLIPSE DARK MODE:
-//Window -> Preferences -> General -> Appearance -> Theme and select "Dark" 
+// ECLIPSE DARK MODE:
+// Window -> Preferences -> General -> Appearance -> Theme and select "Dark" 
 
 // Atajos
 // CTRL + MAYUS + 7 : Comenta todo lo que tengas seleccionado
@@ -10,25 +10,25 @@
 // ALT + SHIFT + S: CONSTRUCTORS, GETTERS, SETTERS, toString 
 // F11: RUN
 
-//Escribir main, pulsar CTRL + ESPACIO y seleccionar main method implementa: 
-//public static void main (String[] args){ }
-//Escribir sout y pulsar CTRL + ESPACIO 	Implementa: 
-//System.out.println();
+// Escribir main, pulsar CTRL + ESPACIO y seleccionar main method implementa: 
+// public static void main (String[] args){ }
+// Escribir sout o syso y pulsar CTRL + ESPACIO 	Implementa: 
+// System.out.println();
 
 
-//import java.lang.*;
-//(se importa por defecto)
+// import java.lang.*;
+// (se importa por defecto)
 
 
-//Intentos hasta resolver el ejercicio = 1
-//De ahora en adelante I=1
-//I=(1) (fallidos)
+// Intentos hasta resolver el ejercicio = 1
+// De ahora en adelante I=1
+// I=(1) (fallidos)
 
-//Ver mas proyectos de otro Workspace:
-//File -> Switch Workspace
+// Ver mas proyectos de otro Workspace:
+// File -> Switch Workspace
 
-//En el package explorer hay 2 flechitas en la esquina superior derecha
-//si lo seleccionas te autocambia entre las pestanas abiertas 
+// En el package explorer hay 2 flechitas en la esquina superior derecha
+// si lo seleccionas te autocambia entre las pestanas abiertas 
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

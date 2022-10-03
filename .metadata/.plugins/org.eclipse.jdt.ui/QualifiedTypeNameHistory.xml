@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="ejerciciorepaso.Coche"/>
-<fullyQualifiedTypeName name="ejerciciorepaso.Camion"/>
 <fullyQualifiedTypeName name="relacionable.Fraccion"/>
 <fullyQualifiedTypeName name="relacionable.Linea"/>
 <fullyQualifiedTypeName name="relacionable.Rectangulo"/>
@@ -22,7 +20,6 @@
 <fullyQualifiedTypeName name="ficheros3_fichSerializable.Ej001Asignatura"/>
 <fullyQualifiedTypeName name="ficheros3_fichSerializable.Ej002ListaClientes"/>
 <fullyQualifiedTypeName name="java.nio.charset.Charset"/>
-<fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.nio.file.FileSystems"/>
 <fullyQualifiedTypeName name="java.nio.file.FileSystem"/>
 <fullyQualifiedTypeName name="com.sun.tools.javac.util.List"/>
@@ -37,7 +34,6 @@
 <fullyQualifiedTypeName name="java.beans.Statement"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="ejemplos033_BBDD1.AccesoDatos"/>
-<fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="ejercicios_accesoDB.copy.Conexion"/>
 <fullyQualifiedTypeName name="accesoBBDD_Ej002PersonasPaises.Conexion"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
@@ -57,7 +53,11 @@
 <fullyQualifiedTypeName name="java.lang.Comparable"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.io.File"/>
 </qualifiedTypeNameHistroy>

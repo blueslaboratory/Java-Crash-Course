@@ -1,6 +1,6 @@
 //Realizar un algoritmo que lea un numero y que muestre su raiz cuadrada y su raiz cubica.
 //PSeInt no tiene ninguna funcion predefinida que permita calcular la raiz cubica,
-//Â¿como se puede calcular?
+//¿como se puede calcular?
 
 package ejercicios;
 

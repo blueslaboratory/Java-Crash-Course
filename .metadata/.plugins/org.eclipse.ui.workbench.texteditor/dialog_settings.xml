@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="field"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="is"/>
+			<item value="exitVal"/>
 			<item value="field"/>
 			<item value="prep"/>
 			<item value="`"/>
@@ -21,10 +23,10 @@
 			<item value="á"/>
 			<item value=" + "/>
 			<item value="’"/>
-			<item value="raf.ge"/>
-			<item value="actionPerformed"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
+			<item value="estadoProceso"/>
 			<item value="&apos;"/>
 			<item value=" "/>
 			<item value="n"/>
@@ -33,13 +35,12 @@
 			<item value="i"/>
 			<item value="e"/>
 			<item value="a"/>
-			<item value=""/>
 			<item value=");"/>
 			<item value="velocidad"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="710"/>
+		<item key="DIALOG_X_ORIGIN" value="663"/>
 		<item key="DIALOG_Y_ORIGIN" value="541"/>
 		<item key="DIALOG_WIDTH" value="304"/>
 		<item key="DIALOG_HEIGHT" value="434"/>

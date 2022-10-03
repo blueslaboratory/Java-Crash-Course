@@ -1,3 +1,5 @@
+// // A partir del paquete ejemplos036_procesos se corresponde a la asignatura de Programacion de Servicios y Procesos
+
 package ejemplos036_procesos;
 
 import java.io.IOException;

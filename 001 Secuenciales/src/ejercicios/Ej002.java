@@ -30,7 +30,7 @@ public class Ej002 {
 		area = base*altura;
 		
 		System.out.println("Perimetro: " +(perimetro) +"m");
-		System.out.println("Area: " +(area)  +"mÂ²");
+		System.out.println("Area: " +(area)  +"m²");
 		
 		sc.close();
 	}
