@@ -1,4 +1,4 @@
-//Diseñar un algoritmo que nos diga el dinero que tenemos (en euros y centimos) 
+//Disenar un algoritmo que nos diga el dinero que tenemos (en euros y centimos) 
 //despues de pedirnos cuantas monedas tenemos de 2e, 1e, 50 centimos, 20 centimos 
 //y 10 centimos).
 
