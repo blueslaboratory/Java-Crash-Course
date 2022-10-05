@@ -8,15 +8,17 @@ import java.util.Scanner;
 
 public class Ej009_Pedir {
 	public static void main(String[] args) throws IOException, InterruptedException {
-
+		// TODO Auto-generated method stub
+		
 		System.out.println("Escribe un numero:");
 		Scanner sc = new Scanner(System.in);
+
 		// entrada de una cadena
 		String respuesta = sc.nextLine();
-		// TODO Auto-generated method stub
 
 		// creamos objeto File al directorio donde esta Ejemplo2
-		File directorio = new File("G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\Ejemplos\\bin");
+		// G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\Ejemplos\
+		File directorio = new File("E:\\DOCUMENTS\\DA2D1E - 2\\Programacion\\Eclipse-workspace\\Ejemplos\\bin");
 
 		// El proceso a ejecutar es Ejemplo2
 		ProcessBuilder pb = new ProcessBuilder("java", "ejemplos036_procesos.Ej009_Calcular");
@@ -27,12 +29,15 @@ public class Ej009_Pedir {
 		// se ejecuta el proceso
 		Process p = pb.start();
 
+		// lectura del buffer de Ej009_Calcular
 		respuesta = respuesta + "\n";
 		OutputStream os = p.getOutputStream();
 		os.write(respuesta.getBytes());
 		os.flush(); // vacia el buffer de salida
 
-		// COMPROBACION DE ERROR - 0 bien - 1 mal
+		// COMPROBACION DE ERROR 
+		// - 0 bien
+		// - 1 mal
 		int exitVal = -1;
 		try {
 			exitVal = p.waitFor();

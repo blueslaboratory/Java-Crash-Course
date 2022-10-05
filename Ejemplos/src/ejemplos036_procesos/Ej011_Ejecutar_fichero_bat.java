@@ -17,8 +17,9 @@ public class Ej011_Ejecutar_fichero_bat {
 		pb.redirectInput(fBat);
 		// Coger los datos del buffer y meterlos en el fichero fOut
 		pb.redirectOutput(fOut);
-		
+		// Coger los datos de error y meterlos en el fichero fErr
 		pb.redirectError(fErr);
+		
 		pb.start();
 	}
 

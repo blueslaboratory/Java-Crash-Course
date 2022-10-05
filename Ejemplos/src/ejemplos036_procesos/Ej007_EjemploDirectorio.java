@@ -10,9 +10,11 @@ public class Ej007_EjemploDirectorio {
 		ProcessBuilder pb = new ProcessBuilder("CMD", "/C", "DIR");
 		pb.directory(new File("C:\\Users\\W10Alex"));
 		Process p = pb.start();
-
 		
-		// COMPROBACION DE ERROR - 0 bien - 1 mal
+		// COMPROBACION DE ERROR:
+		//  - 0 bien 
+		//  - 1 mal
+		
 		int exitVal = -1;
 		try {
 			exitVal = p.waitFor();
@@ -23,12 +25,13 @@ public class Ej007_EjemploDirectorio {
 
 		if (exitVal == 0) {
 			try {
-
 				InputStream is = p.getInputStream();
-				// mostramos en pantalla caracter a caracter
 				int c;
+				
+				// mostramos en pantalla caracter a caracter
 				while ((c = is.read()) != -1)
 					System.out.print((char) c);
+				
 				is.close();
 				System.exit(0);
 

@@ -10,15 +10,21 @@ public class Ej004_LeerFichero {
 		// TODO Auto-generated method stub
 
 		InputStreamReader isr = new InputStreamReader(System.in);
-		BufferedReader br = new BufferedReader(isr);
-		String leer = br.readLine();
-		
-		if (leer.length() < 1) {
-			System.exit(-1);
+		try {
+			BufferedReader br = new BufferedReader(isr);
+			String leer = br.readLine();
+			
+			if (leer.length() < 1) {
+				System.exit(-1);
+			}
+
+			// no lo va imprimir 
+			System.out.println(leer);
+			System.exit(5);
+		} catch (Exception e) {
+			System.exit(-9);
 		}
 
-		System.out.println(leer);
-		System.exit(1);
 	}
 
 }

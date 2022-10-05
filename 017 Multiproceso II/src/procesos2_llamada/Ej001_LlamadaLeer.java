@@ -9,9 +9,11 @@ import java.io.InputStream;
 public class Ej001_LlamadaLeer {
 	public static void main(String[] args) throws IOException, InterruptedException {
 
+		// cuidado con la ruta si vas moviendo el workspace por ahi
 		// creamos objeto File al directorio donde esta Ejemplo2
 		// File directorio = new
-		File directorio = new File("G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\016 Multiproceso\\bin");
+		// File directorio = new File("G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\016 Multiproceso\\bin");
+		File directorio = new File("E:\\DOCUMENTS\\DA2D1E - 2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
 		
 		// El proceso a ejecutar es Ejemplo2
 		ProcessBuilder pb = new ProcessBuilder("java", "procesos2_lectura.Ej001_Leer", "Jaimito");
@@ -24,8 +26,11 @@ public class Ej001_LlamadaLeer {
 		// se ejecuta el proceso
 		Process p = pb.start();
 
-		// COMPROBACION DE ERROR - 0 bien - 1 mal
+		// COMPROBACION DE ERROR 
+		// - 0 bien 
+		// - 1 mal
 		int exitVal = -1;
+		
 		try {
 			exitVal = p.waitFor();
 			System.out.println("Valor de Salida: " + exitVal);
@@ -34,8 +39,7 @@ public class Ej001_LlamadaLeer {
 		}
 
 		if (exitVal == 0) {
-
-			// obtener la salida devuelta por el proceso
+			// obtener la salida devuelta por el proceso si exitVal==0
 			try {
 				InputStream is = p.getInputStream();
 				int c;

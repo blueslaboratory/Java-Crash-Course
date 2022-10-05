@@ -24,8 +24,9 @@ public class Ej003_DestruccionProceso {
 			boolean b = p1.waitFor(5000, TimeUnit.MILLISECONDS);
 			p1.destroy();
 			System.out.println(p1.exitValue());
+			
 		} catch (IOException ex) {
-			System.err.println("Excepción de E/S!!");
+			System.err.println("Excepcion de E/S!!");
 			System.exit(-1);
 		}
 	}

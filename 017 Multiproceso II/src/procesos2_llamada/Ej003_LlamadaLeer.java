@@ -13,7 +13,8 @@ public class Ej003_LlamadaLeer {
 
 		// creamos objeto File al directorio donde esta Ejemplo2
 		// File directorio = new
-		File directorio = new File("G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\016 Multiproceso\\bin");
+		// File directorio = new File("G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\016 Multiproceso\\bin");
+		File directorio = new File("E:\\DOCUMENTS\\DA2D1E - 2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Introduce el nombre: ");
@@ -36,8 +37,11 @@ public class Ej003_LlamadaLeer {
 		os.flush();
 		os.close();
 
-		// COMPROBACION DE ERROR - 0 bien - 1 mal
+		// COMPROBACION DE ERROR 
+		// - 0 bien 
+		// - 1 mal
 		int exitVal = -1;
+		
 		try {
 			exitVal = p.waitFor();
 			System.out.println("Valor de Salida: " + exitVal);
@@ -46,13 +50,15 @@ public class Ej003_LlamadaLeer {
 		}
 
 		if (exitVal == 1) {
-
 			// obtener la salida devuelta por el proceso
+			
 			try {
 				InputStream is = p.getInputStream();
 				int c;
+		
 				while ((c = is.read()) != -1)
 					System.out.print((char) c);
+				
 				is.close();
 			} catch (Exception e) {
 				e.printStackTrace();

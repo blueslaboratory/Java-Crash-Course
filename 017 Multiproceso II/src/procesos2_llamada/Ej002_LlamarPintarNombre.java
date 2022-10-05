@@ -11,7 +11,8 @@ public class Ej002_LlamarPintarNombre {
 
 		// creamos objeto File al directorio donde esta Ejemplo2
 		// File directorio = new
-		File directorio = new File("G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\016 Multiproceso\\bin");
+		// File directorio = new File("G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\016 Multiproceso\\bin");
+		File directorio = new File("E:\\DOCUMENTS\\DA2D1E - 2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
 
 		// El proceso a ejecutar es Ejemplo2
 		// El 3er parametro es de tipo Strin[] args y lo recibe el main
@@ -29,6 +30,7 @@ public class Ej002_LlamarPintarNombre {
 		// 0 bien 
 		// -1 mal
 		int exitVal = -1;
+		
 		try {
 			exitVal = p.waitFor();
 			System.out.println("Valor de Salida: " + exitVal);

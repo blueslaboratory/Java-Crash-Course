@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="relacionable.Fraccion"/>
 <fullyQualifiedTypeName name="relacionable.Linea"/>
 <fullyQualifiedTypeName name="relacionable.Rectangulo"/>
 <fullyQualifiedTypeName name="java.time.Clock"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="java.io.OutputStream"/>
 <fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="jdk.nashorn.api.tree.TryTree"/>
 </qualifiedTypeNameHistroy>

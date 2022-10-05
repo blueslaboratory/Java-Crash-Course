@@ -27,22 +27,21 @@ public class Ej001 {
 		System.out.println("Leyendo numero del buffer");
 		String numero = br.readLine();
 		
-		// ojo que aqui se pasa el parametro a leer
-		if (args.length <= 0) {
+		if (numero == null) {
 			System.exit(-1);
 		}
 		else {
 			try {
-				Integer n = Integer.parseInt(args[0]);
+				Integer n = Integer.parseInt(numero);
 				
 				if(n<0)
-					System.exit(-2);
+					System.exit(-3);
 				else
 					System.exit(0);
 				
 			} catch (Exception e) {
 				System.out.println("No has escrito un entero");
-				System.exit(-3);
+				System.exit(-2);
 			}
 		}
 
