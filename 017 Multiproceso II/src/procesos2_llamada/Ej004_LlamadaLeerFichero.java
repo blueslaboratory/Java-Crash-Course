@@ -4,12 +4,9 @@ package procesos2_llamada;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.Scanner;
 
 public class Ej004_LlamadaLeerFichero {
-	// TIENE QUE ESTAR EN LA RUTA DEL QUE CONSUME NO DEL QUE LLAMA
+	// DEBE DE ESTAR EN LA RUTA DEL QUE CONSUME NO DEL QUE LLAMA
 	// public static final String RUTA = "G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\016 Multiproceso\\bin";
 	public static final String RUTA = "E:\\DOCUMENTS\\DA2D1E - 2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin";
 	
@@ -35,8 +32,8 @@ public class Ej004_LlamadaLeerFichero {
 		// se ejecuta el proceso
 		Process p = pb.start();
 
-		int estadoProceso;
-		estadoProceso = p.waitFor();
+		int estadoProceso; 
+		estadoProceso = p.waitFor(); // asignamos System.exit("nuestro valor");
 		
 		System.out.println("Estado del programa " + estadoProceso);
 		

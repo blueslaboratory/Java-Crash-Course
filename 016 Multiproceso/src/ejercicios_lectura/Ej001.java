@@ -28,7 +28,7 @@ public class Ej001 {
 		String numero = br.readLine();
 		
 		if (numero == null) {
-			System.exit(-1);
+			System.exit(-1); // seteando el exitVal
 		}
 		else {
 			try {

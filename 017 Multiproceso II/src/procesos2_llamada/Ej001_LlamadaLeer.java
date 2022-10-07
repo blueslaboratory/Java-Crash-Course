@@ -10,12 +10,12 @@ public class Ej001_LlamadaLeer {
 	public static void main(String[] args) throws IOException, InterruptedException {
 
 		// cuidado con la ruta si vas moviendo el workspace por ahi
-		// creamos objeto File al directorio donde esta Ejemplo2
+		// creamos objeto File al directorio donde esta Ej001_Leer
 		// File directorio = new
 		// File directorio = new File("G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\016 Multiproceso\\bin");
 		File directorio = new File("E:\\DOCUMENTS\\DA2D1E - 2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
 		
-		// El proceso a ejecutar es Ejemplo2
+		// El proceso a ejecutar es procesos2_lectura.Ej001_Leer
 		ProcessBuilder pb = new ProcessBuilder("java", "procesos2_lectura.Ej001_Leer", "Jaimito");
 
 		// se establece el directorio donde se encuentra el ejecutable
@@ -27,10 +27,9 @@ public class Ej001_LlamadaLeer {
 		Process p = pb.start();
 
 		// COMPROBACION DE ERROR 
-		// - 0 bien 
-		// - 1 mal
+		// 777 bien 
+		// -1 mal
 		int exitVal = -1;
-		
 		try {
 			exitVal = p.waitFor();
 			System.out.println("Valor de Salida: " + exitVal);
@@ -38,9 +37,10 @@ public class Ej001_LlamadaLeer {
 			e.printStackTrace();
 		}
 
-		if (exitVal == 0) {
-			// obtener la salida devuelta por el proceso si exitVal==0
+		// obtener la salida devuelta por el proceso si exitVal==777
+		if (exitVal == 777) {	
 			try {
+				// lectura del input stream del proceso si todo ha salido bien
 				InputStream is = p.getInputStream();
 				int c;
 				while ((c = is.read()) != -1)

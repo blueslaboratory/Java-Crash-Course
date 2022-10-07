@@ -28,16 +28,24 @@ public class Ej009_Pedir {
 
 		// se ejecuta el proceso
 		Process p = pb.start();
-
-		// lectura del buffer de Ej009_Calcular
+		
+		
 		respuesta = respuesta + "\n";
+		// escribimos en el buffer, es decir el output de Ej009_Pedir
 		OutputStream os = p.getOutputStream();
+		// getOutputStream()
+		// Returns the output stream connected to the normal input of the process. 
+		// Output to the stream is piped into the standard input of the process 
+		// represented by this Process object.
 		os.write(respuesta.getBytes());
+		// Writes b.length bytes from the specified byte array to this output stream.
 		os.flush(); // vacia el buffer de salida
+		// Flushes this output stream and forces any buffered output bytes to be written out.
 
+		
 		// COMPROBACION DE ERROR 
-		// - 0 bien
-		// - 1 mal
+		// 69 bien
+		// -1 mal
 		int exitVal = -1;
 		try {
 			exitVal = p.waitFor();
@@ -46,10 +54,9 @@ public class Ej009_Pedir {
 			e.printStackTrace();
 		}
 
-		if (exitVal == 0) {
-			// obtener la salida devuelta por el proceso
+		// obtener la salida devuelta por el proceso si exitVal==69
+		if (exitVal == 69) {
 			try {
-				// exitVal = p.waitFor();
 				InputStream is = p.getInputStream();
 				int c;
 				while ((c = is.read()) != -1)
@@ -59,5 +66,6 @@ public class Ej009_Pedir {
 				e.printStackTrace();
 			}
 		}
+		
 	}
 }

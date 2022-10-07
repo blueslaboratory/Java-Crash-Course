@@ -40,7 +40,7 @@ public class Ej007_LlamarEjemploDirectorio {
 		// solo entra aqui si exitVal==0
 		if (exitVal == 0) {
 
-			// obtener la salida devuelta por el proceso
+			// obtener la salida devuelta por el proceso si exitVal==0
 			try {
 				InputStream is = p.getInputStream();
 				int c;

@@ -9,7 +9,7 @@ public class Ej002_LlamarPintarNombre {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 
-		// creamos objeto File al directorio donde esta Ejemplo2
+		// creamos objeto File al directorio donde esta Ej002_PintarNombre
 		// File directorio = new
 		// File directorio = new File("G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\016 Multiproceso\\bin");
 		File directorio = new File("E:\\DOCUMENTS\\DA2D1E - 2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
@@ -27,7 +27,7 @@ public class Ej002_LlamarPintarNombre {
 		Process p = pb.start();
 
 		// COMPROBACION DE ERROR:
-		// 0 bien 
+		// 777 bien 
 		// -1 mal
 		int exitVal = -1;
 		
@@ -38,8 +38,8 @@ public class Ej002_LlamarPintarNombre {
 			e.printStackTrace();
 		}
 
-		if (exitVal == 0) {
-			// obtener la salida devuelta por el proceso
+		// obtener la salida devuelta por el proceso si exitVal==777
+		if (exitVal == 777) {
 			try {
 				InputStream is = p.getInputStream();
 				int c;

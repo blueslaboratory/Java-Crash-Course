@@ -15,11 +15,57 @@
 
 package ejercicios_lectura;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class Ej003 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		InputStreamReader in = new InputStreamReader(System.in);
+		BufferedReader br = new BufferedReader(in);
+
+		Float suma = (float) 0;
+		String r = "*";
+
+		do {
+			try {
+
+				r = br.readLine();
+				
+				//if (r.compareToIgnoreCase("*") == 0 )
+				if (r.equals("*") == true)
+					break;
+				
+				System.out.print("Suma: " + suma + "+" + r + "=");
+
+				suma = sumar(r, suma);
+				System.out.println(suma);
+
+			} catch (Exception e) {
+				System.out.println("No has introducido un numero");
+				System.exit(-1);
+				// e.printStackTrace();
+			}
+		} while (r.compareToIgnoreCase("*") != 0);
+		// } while(r.equals("*") == false);
+
+		System.out.println("Suma: " + suma);
+		System.exit(0);
+	}
+
+	public static float sumar(String r, float suma) throws Exception {
+
+		// Podemos lanzar la excepcion o capturarla aqui
+//		try {
+			suma = suma + Float.parseFloat(r);
+//		} catch (Exception e) {
+//			System.out.println("No has escrito un numero");
+//			System.exit(-1);
+//		}
+
+		return suma;
 	}
 
 }

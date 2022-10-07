@@ -20,9 +20,9 @@ public class Ej004_LeerFichero {
 
 			// no lo va imprimir 
 			System.out.println(leer);
-			System.exit(5);
+			System.exit(777);
 		} catch (Exception e) {
-			System.exit(-9);
+			System.exit(88);
 		}
 
 	}

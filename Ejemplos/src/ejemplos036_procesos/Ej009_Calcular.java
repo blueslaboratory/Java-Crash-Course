@@ -7,9 +7,11 @@ import java.io.InputStreamReader;
 public class Ej009_Calcular {
 	public static void main(String[] args) throws IOException, InterruptedException {
 
+		// leyendo del buffer de Ej009_Pedir
 		InputStreamReader in = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(in);
 		Integer numero;
+		
 
 		try {
 			// numero = br.readLine();
@@ -21,9 +23,13 @@ public class Ej009_Calcular {
 				System.out.println("El numero es impar");
 			}
 			
-			System.exit(0);
+			// seteando exitVal
+			System.exit(69);
+			
 		} catch (Exception e) {
 			e.printStackTrace();
+			
+			// seteando exitVal
 			System.exit(-1);
 		}
 	}

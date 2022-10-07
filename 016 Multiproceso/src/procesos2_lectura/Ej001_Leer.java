@@ -20,12 +20,11 @@ public class Ej001_Leer {
 		// TODO Auto-generated method stub
 
 		if (args.length < 1) {
-			System.exit(-1);
+			System.exit(-1); // exitVal = -1
 		}
 
 		System.out.println("Mi nombre es " + args[0]);
-		System.exit(0);
+		System.exit(777); // exitVal = 777
 
 	}
-
 }

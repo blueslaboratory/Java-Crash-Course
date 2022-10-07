@@ -4,7 +4,7 @@ valores:
 	- Devolvera -1 si el argumento viene vacio
 	- Devolvera -2 si el argumento no es un entero
 	- Devolvera -3 si el argumento es un entero negativo
-	- Devolvera 0 si el argumento es un entero positivo
+	- Devolvera  0 si el argumento es un entero positivo
 Escribe otro programa que pida por consola que se introduzca un numero entero positivo.
 Con el dato introducido llamara al programa anterior y le confirmara al usuario si el dato
 introducido es correcto.
@@ -51,8 +51,7 @@ public class Ej001 {
 			os.close();
 
 			// COMPROBACION DE ERROR
-			// - 0 bien
-			// - 1 mal
+			// System.exit -> exitVal
 			int exitVal = -1;
 			try {
 				exitVal = p.waitFor(); // le pide el valor del otro proceso cuando sale
@@ -79,8 +78,8 @@ public class Ej001 {
 				e.printStackTrace();
 			}
 
+			// obtener la salida devuelta por el proceso si exitVal==1
 			if (exitVal == 1) {
-				// obtener la salida devuelta por el proceso si exitVal==1
 				try {
 					InputStream is = p.getInputStream();
 					int c;

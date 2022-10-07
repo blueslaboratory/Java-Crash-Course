@@ -27,19 +27,19 @@ public class Ej003_LlamadaLeer {
 		pb.directory(directorio);
 
 		System.out.printf("Directorio de trabajo: %s%n", pb.directory());
-
+		
 		// se ejecuta el proceso
 		Process p = pb.start();
-
-		// nombre = nombre +"/n";
+		
+		// escribimos el buffer de Ej003_LlamadaLeer
 		OutputStream os = p.getOutputStream();
 		os.write(nombre.getBytes());
 		os.flush();
 		os.close();
 
 		// COMPROBACION DE ERROR 
-		// - 0 bien 
-		// - 1 mal
+		// 99 bien 
+		// -1 mal
 		int exitVal = -1;
 		
 		try {
@@ -49,9 +49,8 @@ public class Ej003_LlamadaLeer {
 			e.printStackTrace();
 		}
 
-		if (exitVal == 1) {
-			// obtener la salida devuelta por el proceso
-			
+		// obtener la salida devuelta por el proceso si exitVal=99
+		if (exitVal == 99) {
 			try {
 				InputStream is = p.getInputStream();
 				int c;

@@ -13,11 +13,11 @@ public class Ej002_PintarNombre {
 		
 		// si no hay argumento no fallo pero salgo con -1
 		if(args.length < 1) {
-			System.exit(-1);
+			System.exit(-1); // exitVal=-1
 		}
 		
 		System.out.println("Mi nombre es: " +args[0]);
-		System.exit(0);
+		System.exit(777); // exitVal=777
 	}
 
 }

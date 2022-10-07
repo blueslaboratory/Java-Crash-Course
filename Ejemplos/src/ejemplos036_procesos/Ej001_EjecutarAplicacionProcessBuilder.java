@@ -1,4 +1,5 @@
-// A partir del paquete ejemplos036_procesos se corresponde a la asignatura de Programacion de Servicios y Procesos
+// A partir del paquete ejemplos036_procesos se corresponde a la asignatura de 
+// Programacion de Servicios y Procesos
 
 package ejemplos036_procesos;
 
@@ -17,7 +18,8 @@ public class Ej001_EjecutarAplicacionProcessBuilder {
 
 		Each ProcessBuilder instance manages a collection of process attributes. 
 		The start() method creates a new Process instance with those attributes. 
-		The start() method can be invoked repeatedly from the same instance to create new subprocesses with identical or related attributes.
+		The start() method can be invoked repeatedly from the same instance to create new subprocesses 
+		with identical or related attributes.
 		*/
 		
 		ProcessBuilder pb = new ProcessBuilder("C:\\windows\\notepad.exe"); // "notas.txt"
