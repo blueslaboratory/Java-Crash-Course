@@ -15,7 +15,7 @@ public class Ej007_LlamarEjemploDirectorio {
 		File directorio = new File("E:\\DOCUMENTS\\DA2D1E - 2\\Programacion\\Eclipse-workspace\\Ejemplos\\bin");
 
 		// El proceso a ejecutar es Ejemplo2
-		ProcessBuilder pb = new ProcessBuilder("java", "ejemplos036_procesos.Ej007_EjemploDirectorio");
+		ProcessBuilder pb = new ProcessBuilder("java", "ejemplos036_procesos.Ej007EjemploDirectorio");
 
 		// se establece el directorio donde se encuentra el ejecutable
 		pb.directory(directorio);

@@ -6,11 +6,13 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="a"/>
+		<item key="selection" value="o"/>
 		<list key="findhistory">
-			<item value="á"/>
-			<item value="ú"/>
+			<item value="ó"/>
 			<item value="í"/>
+			<item value="é"/>
+			<item value="ú"/>
+			<item value="á"/>
 			<item value="is"/>
 			<item value="exitVal"/>
 			<item value="field"/>
@@ -19,22 +21,20 @@
 			<item value="\r\n"/>
 			<item value=" {"/>
 			<item value="ñ"/>
-			<item value="ó"/>
-			<item value="é"/>
 			<item value=" + "/>
 			<item value="’"/>
 		</list>
 		<list key="replacehistory">
-			<item value="a"/>
-			<item value="u"/>
+			<item value="o"/>
 			<item value="i"/>
+			<item value="e"/>
+			<item value="u"/>
+			<item value="a"/>
 			<item value=""/>
 			<item value="estadoProceso"/>
 			<item value="&apos;"/>
 			<item value=" "/>
 			<item value="n"/>
-			<item value="o"/>
-			<item value="e"/>
 			<item value=");"/>
 			<item value="velocidad"/>
 		</list>

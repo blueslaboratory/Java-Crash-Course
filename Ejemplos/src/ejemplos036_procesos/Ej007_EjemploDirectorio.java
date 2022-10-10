@@ -13,8 +13,8 @@ public class Ej007_EjemploDirectorio {
 		Process p = pb.start();
 
 		// COMPROBACION DE ERROR:
-		// - 0 bien
-		// - 1 mal
+		// 0 bien
+		// -1 mal
 
 		int exitVal = -1;
 		try {

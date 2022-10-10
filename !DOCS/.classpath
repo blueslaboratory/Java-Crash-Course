@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="Temas varios/Java Crash Course v0.1/T10/Drivers/mysql-connector-java-8.0.20.jar"/>
+	<classpathentry kind="lib" path="Temas varios/Java Crash Course v0.1/T10/Drivers/ojdbc7.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
