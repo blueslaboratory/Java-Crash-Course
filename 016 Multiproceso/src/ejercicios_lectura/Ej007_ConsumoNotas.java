@@ -28,22 +28,27 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
-public class Ej007 {
+public class Ej007_ConsumoNotas {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
+		
+		// Para recibir los args del ProcessBuilder: nombreAsignatura, nombreArchivo
+		// no vale solo con llamar, hay que coger el telefono
 		InputStreamReader in = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(in);
 
-		String notas = br.readLine();
+		//String nombreAsignatura = args[0];
+		String nombreAsignatura = "bbdd";
+		//String nombreArchivo = args[1];
+		String nombreArchivo = "notas";
 
-		String[] datos = notas.split("[*]");
-		String nombreAsignatura = datos[0];
-
-		String ruta = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin" + args[1] + ".txt";
+		String ruta = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\txts\\" +nombreArchivo +".txt";
 
 		// Lectura
-		float suma = 0, contador = 0, nota = 0;
+		float suma = 0; 
+		float contador = 0; 
+		float nota = 0;
 		int aprobados = 0;
 		
 		File file = new File(ruta);

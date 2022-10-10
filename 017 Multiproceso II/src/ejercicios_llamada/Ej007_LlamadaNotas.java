@@ -26,47 +26,33 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Scanner;
 
-public class Ej007 {
+public class Ej007_LlamadaNotas {
 
 	// TIENE QUE ESTAR EN LA RUTA DEL QUE CONSUME NO DEL QUE LLAMA
-	public static final String RUTA = "E:\\DOCUMENTS\\DA2D1E - 2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin";
+	public static final String RUTA = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin";
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 
 		Scanner sc = new Scanner(System.in);
-		String asignatura = null, nomArchivo = "";
+		String nombreAsignatura = null, nombreArchivo = "";
 
 		System.out.println("Nombre de la asignatura: ");
-		asignatura = sc.nextLine();
+		nombreAsignatura = sc.nextLine();
 
 		System.out.println("Nombre del fichero de notas: ");
-		nomArchivo = sc.nextLine();
-
-		// creamos los objetos File
-		// entrada datos consumo
-		File notasFile = new File(RUTA, nomArchivo + ".txt");
-		// entrada datos salida
-		File resumenNotas = new File(RUTA, "ResumenNotas.txt");
-		// entrada datos errores
-		File error = new File(RUTA, "error.txt");
-		// dato.txt -> hay que tenerlo creado en E:\DOCUMENTS\DA2D1E -
-		// 2\Programacion\Eclipse-workspace\016 Multiproceso\bin
+		nombreArchivo = sc.nextLine();
+		
+		// creamos objeto File al directorio donde esta notas
 		File directorio = new File(RUTA);
 
 		// El proceso a ejecutar
-		ProcessBuilder pb = new ProcessBuilder("java", "ejercicios_lectura.Ej007", asignatura, nomArchivo);
+		ProcessBuilder pb = new ProcessBuilder("java", "ejercicios_lectura.Ej007_ConsumoNotas", nombreAsignatura, nombreArchivo);
 
 		// se establece el directorio donde se encuentra el ejecutable
 		pb.directory(directorio);
 		System.out.printf("Directorio de trabajo: %s%n", pb.directory());
-
-		// redirigiendo el flujo a los ficheros
-		
-		pb.redirectInput(notasFile);
-		pb.redirectOutput(resumenNotas);
-		pb.redirectError(error);
-		
+	
 
 		// se ejecuta el proceso
 		Process p = pb.start();
@@ -82,22 +68,22 @@ public class Ej007 {
 			e.printStackTrace();
 		}
 		
-		// Imprimiendo por la consola
-		if (exitVal == 0 || exitVal == -1) {
-			try {
-				InputStream is = p.getInputStream();
-				// mostramos en pantalla caracter a caracter
-				int c;
-				while ((c = is.read()) != -1)
-					System.out.print((char) c);
-				// is.close();
-				System.exit(0);
+		// Imprimiendo por la consola si o si
+		// if (exitVal == 0 || exitVal == -1) {
+		try {
+			InputStream is = p.getInputStream();
+			// mostramos en pantalla caracter a caracter
+			int c;
+			while ((c = is.read()) != -1)
+				System.out.print((char) c);
+			// is.close();
+			System.exit(0);
 
-			} catch (Exception e) {
-				System.exit(-1);
-				e.printStackTrace();
-			}
+		} catch (Exception e) {
+			System.exit(-1);
+			e.printStackTrace();
 		}
+		//}
 
 		sc.close();
 	}
