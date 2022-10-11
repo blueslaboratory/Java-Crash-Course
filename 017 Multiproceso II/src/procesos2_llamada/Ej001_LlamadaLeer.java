@@ -13,7 +13,7 @@ public class Ej001_LlamadaLeer {
 		// creamos objeto File al directorio donde esta Ej001_Leer
 		// File directorio = new
 		// File directorio = new File("G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\016 Multiproceso\\bin");
-		File directorio = new File("E:\\DOCUMENTS\\DA2D1E - 2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
+		File directorio = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
 		
 		// El proceso a ejecutar es procesos2_lectura.Ej001_Leer
 		ProcessBuilder pb = new ProcessBuilder("java", "procesos2_lectura.Ej001_Leer", "Jaimito");

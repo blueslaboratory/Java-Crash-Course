@@ -38,10 +38,10 @@ public class Ej007_ConsumoNotas {
 		InputStreamReader in = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(in);
 
-		//String nombreAsignatura = args[0];
-		String nombreAsignatura = "bbdd";
-		//String nombreArchivo = args[1];
-		String nombreArchivo = "notas";
+		String nombreAsignatura = args[0];
+		//String nombreAsignatura = "bbdd";
+		String nombreArchivo = args[1];
+		//String nombreArchivo = "notas";
 
 		String ruta = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\txts\\" +nombreArchivo +".txt";
 

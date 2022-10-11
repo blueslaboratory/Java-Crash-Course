@@ -12,7 +12,7 @@ public class Ej002_LlamarPintarNombre {
 		// creamos objeto File al directorio donde esta Ej002_PintarNombre
 		// File directorio = new
 		// File directorio = new File("G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\016 Multiproceso\\bin");
-		File directorio = new File("E:\\DOCUMENTS\\DA2D1E - 2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
+		File directorio = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
 
 		// El proceso a ejecutar es Ejemplo2
 		// El 3er parametro es de tipo Strin[] args y lo recibe el main

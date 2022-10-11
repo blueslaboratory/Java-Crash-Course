@@ -8,14 +8,14 @@ import java.io.IOException;
 public class Ej004_LlamadaLeerFichero {
 	// DEBE DE ESTAR EN LA RUTA DEL QUE CONSUME NO DEL QUE LLAMA
 	// public static final String RUTA = "G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\016 Multiproceso\\bin";
-	public static final String RUTA = "E:\\DOCUMENTS\\DA2D1E - 2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin";
+	public static final String RUTA = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin";
 	
 	public static void main(String[] args) throws IOException, InterruptedException {	
 		
 		// creamos los objetos File 
 		// File directorio = new
 		File nombre = new File(RUTA, "nombre.txt"); 
-		// nombre.txt -> hay que tenerlo creado en E:\DOCUMENTS\DA2D1E - 2\Programacion\Eclipse-workspace\016 Multiproceso\bin
+		// nombre.txt -> hay que tenerlo creado en E:\DOCUMENTS\DA2D1E-2\Programacion\Eclipse-workspace\016 Multiproceso\bin
 		File minombre = new File(RUTA, "minombre.txt");
 		File directorio = new File(RUTA);
 		

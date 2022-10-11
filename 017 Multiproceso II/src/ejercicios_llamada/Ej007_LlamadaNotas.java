@@ -36,56 +36,67 @@ public class Ej007_LlamadaNotas {
 
 		Scanner sc = new Scanner(System.in);
 		String nombreAsignatura = null, nombreArchivo = "";
-
-		System.out.println("Nombre de la asignatura: ");
-		nombreAsignatura = sc.nextLine();
-
-		System.out.println("Nombre del fichero de notas: ");
-		nombreArchivo = sc.nextLine();
+		char respuesta;
 		
-		// creamos objeto File al directorio donde esta notas
-		File directorio = new File(RUTA);
+		do {
+			
+			System.out.println("Nombre de la asignatura: ");
+			nombreAsignatura = sc.nextLine();
 
-		// El proceso a ejecutar
-		ProcessBuilder pb = new ProcessBuilder("java", "ejercicios_lectura.Ej007_ConsumoNotas", nombreAsignatura, nombreArchivo);
+			System.out.println("Nombre del fichero de notas: ");
+			nombreArchivo = sc.nextLine();
+			
 
-		// se establece el directorio donde se encuentra el ejecutable
-		pb.directory(directorio);
-		System.out.printf("Directorio de trabajo: %s%n", pb.directory());
-	
+			// creamos objeto File al directorio donde esta notas
+			File directorio = new File(RUTA);
 
-		// se ejecuta el proceso
-		Process p = pb.start();
+			// El proceso a ejecutar
+			ProcessBuilder pb = new ProcessBuilder("java", "ejercicios_lectura.Ej007_ConsumoNotas", nombreAsignatura, nombreArchivo);
 
-		// COMPROBACION DE ERROR
-		// 0 bien
-		// -1 mal
-		int exitVal = -1;
-		try {
-			exitVal = p.waitFor(); // System.exit(estadoProceso);
-			System.out.println("Valor de Salida: " + exitVal);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+			// se establece el directorio donde se encuentra el ejecutable
+			pb.directory(directorio);
+			System.out.printf("Directorio de trabajo: %s%n", pb.directory());
+
+			// se ejecuta el proceso
+			Process p = pb.start();
+
+			// COMPROBACION DE ERROR
+			// 0 bien
+			// -1 mal
+			int exitVal = -1;
+			try {
+				exitVal = p.waitFor(); // System.exit(estadoProceso);
+				System.out.println("Valor de Salida: " + exitVal);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			
+			// Imprimiendo por la consola si o si
+			// if (exitVal == 0 || exitVal == -1) {
+			try {
+				InputStream is = p.getInputStream();
+				
+				// mostramos en pantalla caracter a caracter
+				int c;
+				while ((c = is.read()) != -1)
+					System.out.print((char) c);
+				
+				is.close();
+
+			} catch (Exception e) {
+				System.exit(-1);
+				e.printStackTrace();
+			}
+			//}
+			
+			System.out.print("Desea consultar otra asignatura (y/n): ");
+			respuesta = sc.nextLine().charAt(0);
+			
+		} while(respuesta == 'y');
 		
-		// Imprimiendo por la consola si o si
-		// if (exitVal == 0 || exitVal == -1) {
-		try {
-			InputStream is = p.getInputStream();
-			// mostramos en pantalla caracter a caracter
-			int c;
-			while ((c = is.read()) != -1)
-				System.out.print((char) c);
-			// is.close();
-			System.exit(0);
-
-		} catch (Exception e) {
-			System.exit(-1);
-			e.printStackTrace();
-		}
-		//}
-
 		sc.close();
+		System.exit(0);
+		
 	}
 
 }

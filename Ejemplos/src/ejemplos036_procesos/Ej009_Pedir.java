@@ -18,10 +18,10 @@ public class Ej009_Pedir {
 
 		// creamos objeto File al directorio donde esta Ejemplo2
 		// G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\Ejemplos\
-		File directorio = new File("E:\\DOCUMENTS\\DA2D1E - 2\\Programacion\\Eclipse-workspace\\Ejemplos\\bin");
+		File directorio = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\Ejemplos\\bin");
 
 		// El proceso a ejecutar es Ejemplo2
-		ProcessBuilder pb = new ProcessBuilder("java", "ejemplos036_procesos.Ej009Calcular");
+		ProcessBuilder pb = new ProcessBuilder("java", "ejemplos036_procesos.Ej009_Calcular");
 
 		// se establece el directorio donde se encuentra el ejecutable
 		pb.directory(directorio);

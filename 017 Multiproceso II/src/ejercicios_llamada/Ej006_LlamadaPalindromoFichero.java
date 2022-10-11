@@ -28,7 +28,7 @@ public class Ej006_LlamadaPalindromoFichero {
 		File directorio = new File(RUTA);
 
 		// El proceso a ejecutar
-		ProcessBuilder pb = new ProcessBuilder("java", "ejercicios_lectura.Ej006");
+		ProcessBuilder pb = new ProcessBuilder("java", "ejercicios_lectura.Ej006_ConsumoPalindromoFichero");
 
 		// se establece el directorio donde se encuentra el ejecutable
 		pb.directory(directorio);

@@ -32,7 +32,6 @@
 <fullyQualifiedTypeName name="ejemplos033_BBDD1.AccesoDatos"/>
 <fullyQualifiedTypeName name="ejercicios_accesoDB.copy.Conexion"/>
 <fullyQualifiedTypeName name="accesoBBDD_Ej002PersonasPaises.Conexion"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="accesoBBDD_Ej003.AccesoDatos"/>
 <fullyQualifiedTypeName name="com.sun.tools.javac.launcher.Main"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
@@ -50,7 +49,6 @@
 <fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.io.OutputStream"/>
 <fullyQualifiedTypeName name="jdk.nashorn.api.tree.TryTree"/>
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
@@ -58,6 +56,8 @@
 <fullyQualifiedTypeName name="java.lang.Float"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
 </qualifiedTypeNameHistroy>

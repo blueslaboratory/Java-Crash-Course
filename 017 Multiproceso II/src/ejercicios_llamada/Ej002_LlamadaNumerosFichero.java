@@ -18,7 +18,7 @@ public class Ej002_LlamadaNumerosFichero {
 		// creamos los objetos File
 		// File directorio = new
 		File fichero = new File(RUTA, "dato.txt");
-		// dato.txt -> hay que tenerlo creado en E:\DOCUMENTS\DA2D1E - 2\Programacion\Eclipse-workspace\016 Multiproceso\bin
+		// dato.txt -> hay que tenerlo creado en E:\DOCUMENTS\DA2D1E-2\Programacion\Eclipse-workspace\016 Multiproceso\bin
 		File directorio = new File(RUTA);
 
 		// El proceso a ejecutar
