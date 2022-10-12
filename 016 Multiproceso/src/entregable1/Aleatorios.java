@@ -1,4 +1,4 @@
-package entregable;
+package entregable1;
 
 /*
 
@@ -27,6 +27,7 @@ public class Aleatorios {
 		// TODO Auto-generated method stub
 
 		ArrayList<Integer> aleatorios = new ArrayList<Integer>();
+		String stringAleatorios = "";
 
 		// En general, para conseguir un numero entero entre [N, M]
 		// con N < M y ambos incluidos, debemos usar esta formula:
@@ -45,8 +46,13 @@ public class Aleatorios {
 		}
 
 		for (int index = 0; index < counter; index++) {
-			System.out.println("nº " + index + ": " + aleatorios.get(index));
+			// System.out.println("nº " + index + ": " + aleatorios.get(index));
+			stringAleatorios += aleatorios.get(index) +"\n";
 		}
 
+		System.out.println(stringAleatorios);
+		
+		//seteando el exitVal = 69
+		System.exit(69);
 	}
 }

@@ -1,4 +1,4 @@
-package entregable;
+package entregable1;
 /*
 
 Escribe un programa Java que genera 10 numeros aleatorios impares y los escribe en la
@@ -44,12 +44,15 @@ public class Ordenar {
 			}
 		} while(counter>0);
 		
-		System.out.println("\nLos numeros ordenados son: ");
+		
 		Collections.sort(desordenados);
+		
 		
 		for(Integer i : desordenados)
 	     	System.out.println(i);
 		
+		
+		System.exit(69);
 		
 	}
 	
