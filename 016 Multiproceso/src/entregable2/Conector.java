@@ -9,6 +9,7 @@ programa y la salida de este se enviara a un fichero llamado orden.
 package entregable2;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -26,6 +27,8 @@ public class Conector {
 		String desordenados = "";
 		String ordenados = "";
 
+		
+		/**********************************/
 		// ALEATORIOS
 		try {
 			System.out.println("Desordenados:");
@@ -34,7 +37,11 @@ public class Conector {
 			System.out.println("error: funcion aleatorios");
 			e.printStackTrace();
 		}
+		
+		escribirFichero("impares.txt", desordenados);
 
+	
+		/**********************************/
 		// ORDENAR
 		try {
 			System.out.println("Ordenados:");
@@ -45,8 +52,37 @@ public class Conector {
 			e.printStackTrace();
 		}
 		
+		escribirFichero("ordenados.txt", ordenados);
 	}
 
+	
+	public static void escribirFichero(String nombreFichero, String datos) {
+		// Metiendolo en un file
+		// creando el archivo nombreFichero.txt
+		try {
+			File fileOrdenados = new File(nombreFichero);
+			if (fileOrdenados.createNewFile()) {
+				System.out.println("Exito al crear el archivo: " + fileOrdenados.getName());
+			} else {
+				System.out.println("Ya existe el archivo");
+			}
+		} catch (IOException e) {
+			System.out.println("Error al crear el archivo");
+			e.printStackTrace();
+		}
+
+		// escribiendo en el file datos
+		try {
+			FileWriter fw = new FileWriter(nombreFichero, false); // overwrites file
+			fw.write(datos);
+			fw.close();
+			System.out.println("Exito al escribir en el archivo");
+		} catch (IOException e) {
+			System.out.println("Error al escribir en el archivo");
+			e.printStackTrace();
+		}
+	}
+	
 	public static String aleatorios(File directorio) throws IOException {
 
 		String numeros = "";
@@ -101,9 +137,9 @@ public class Conector {
 	}
 
 	public static String ordenar(File directorio, String numeros) throws IOException {
-		
+
 		String ordenados = "";
-		
+
 		// El proceso a ejecutar es Ordenar
 		ProcessBuilder pb2 = new ProcessBuilder("java", "entregable2.Ordenar");
 
@@ -143,7 +179,7 @@ public class Conector {
 		// solo entra aqui si exitVal==69
 		// obtener la salida devuelta por el proceso si exitVal==69
 		if (exitVal == 69) {
-			
+
 			try {
 				InputStream is = p2.getInputStream();
 				int c;
@@ -159,7 +195,7 @@ public class Conector {
 				e.printStackTrace();
 			}
 		}
-		
+
 		return ordenados;
 	}
 }

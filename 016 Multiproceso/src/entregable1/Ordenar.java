@@ -1,4 +1,3 @@
-package entregable1;
 /*
 
 Escribe un programa Java que genera 10 numeros aleatorios impares y los escribe en la
@@ -13,6 +12,8 @@ el primer programa ordenados por el segundo programa.
 Prueba y documenta.
 
 */
+
+package entregable1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -44,17 +45,12 @@ public class Ordenar {
 			}
 		} while(counter>0);
 		
-		
 		Collections.sort(desordenados);
-		
 		
 		for(Integer i : desordenados)
 	     	System.out.println(i);
 		
-		
-		System.exit(69);
-		
+		System.exit(69);	
 	}
 	
-
 }

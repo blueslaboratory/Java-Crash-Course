@@ -1,3 +1,18 @@
+/*
+
+Escribe un programa Java que genera 10 numeros aleatorios impares y los escribe en la
+salida estandar.
+
+Escribe otro programa Java que recibe por la entrada estandar 10 numeros, los ordena de
+menor a mayor y escribe en la salida estandar los 10 numeros ya ordenados.
+
+Escribe un tercer programa Java que llama al primer programa, conecta la salida del primer
+programa con el del segundo programa y escribe en la salida los 10 numeros generados por
+el primer programa ordenados por el segundo programa.
+Prueba y documenta.
+
+*/
+
 package entregable1;
 
 import java.io.File;

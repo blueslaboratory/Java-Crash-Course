@@ -64,31 +64,6 @@ public class Ordenar {
 			System.out.println(i);
 		}
 		
-		
-		// Metiendolo en un file
-		// creando el archivo ordenados.txt
-		try {
-			File fileOrdenados = new File("ordenados.txt");
-			if (fileOrdenados.createNewFile()) {
-				System.out.println("Exito al crear el archivo: " + fileOrdenados.getName());
-			} else {
-				System.out.println("Ya existe el archivo");
-			}
-		} catch (IOException e) {
-			System.out.println("Error al crear el archivo");
-			e.printStackTrace();
-		}
-
-		// escribiendo en el file
-		try {
-			FileWriter fw = new FileWriter("ordenados.txt", false); //overwrites file
-			fw.write(stringOrdenados);
-			fw.close();
-			System.out.println("Exito al escribir en el archivo");
-		} catch (IOException e) {
-			System.out.println("Error al escribir en el archivo");
-			e.printStackTrace();
-		}
 
 		System.exit(69);
 

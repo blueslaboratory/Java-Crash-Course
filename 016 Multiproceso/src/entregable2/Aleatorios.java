@@ -44,30 +44,7 @@ public class Aleatorios {
 
 		System.out.println(stringAleatorios);
 
-		// Metiendolo en un file
-		// creando el archivo impares.txt
-		try {
-			File fileImpares = new File("impares.txt");
-			if (fileImpares.createNewFile()) {
-				System.out.println("Exito al crear el archivo: " + fileImpares.getName());
-			} else {
-				System.out.println("Ya existe el archivo");
-			}
-		} catch (IOException e) {
-			System.out.println("Error al crear el archivo");
-			e.printStackTrace();
-		}
-
-		// escribiendo en el file
-		try {
-			FileWriter fw = new FileWriter("impares.txt", false); // overwrites file
-			fw.write(stringAleatorios);
-			fw.close();
-			System.out.println("Exito al escribir en el archivo");
-		} catch (IOException e) {
-			System.out.println("Error al escribir en el archivo");
-			e.printStackTrace();
-		}
+		
 
 		System.exit(69);
 	}

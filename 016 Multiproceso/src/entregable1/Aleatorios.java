@@ -1,5 +1,3 @@
-package entregable1;
-
 /*
 
 Escribe un programa Java que genera 10 numeros aleatorios impares y los escribe en la
@@ -15,11 +13,11 @@ Prueba y documenta.
 
 */
 
+
+package entregable1;
+
 import java.util.ArrayList;
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 
 public class Aleatorios {
 
