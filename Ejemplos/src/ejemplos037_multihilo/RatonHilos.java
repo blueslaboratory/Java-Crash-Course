@@ -1,28 +1,26 @@
 package ejemplos037_multihilo;
 
-public class RatonHilos extends Thread{
-	
-	private String nombre;
+public class RatonHilos extends Thread {
 
+	private String nombre;
 	private int tiempoAlimentacion;
 
 	public RatonHilos(String nombre, int tiempoAlimentacion) {
-	
-		super ();
+		super();
 		this.nombre = nombre;
 		this.tiempoAlimentacion = tiempoAlimentacion;
-		}
-		
+	}
+
 	public void comer() {
 		try {
-			System.out.printf ("El ratón " +this.nombre+" ha comenzado a alimentarse%n",nombre) ;
+			System.out.printf("El raton " + this.nombre + " ha comenzado a alimentarse%n", nombre);
 			this.sleep(tiempoAlimentacion * 1000);
-			System.out.printf ("El ratón " +this.nombre+" ha terminado de alimentarse%n",nombre) ;
-		}catch (InterruptedException e) {
-			e.printStackTrace () ;
-		}														
+			System.out.printf("El raton " + this.nombre + " ha terminado de alimentarse%n", nombre);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
-	
+
 	@Override
 	public void run() {
 		this.comer();
@@ -33,13 +31,11 @@ public class RatonHilos extends Thread{
 		RatonHilos jerry = new RatonHilos("Jerry", 5);
 		RatonHilos pinky = new RatonHilos("Pinky", 3);
 		RatonHilos mickey = new RatonHilos("Mickey", 6);
-		
+
 		fievel.start();
 		jerry.start();
 		pinky.start();
 		mickey.start();
 	}
-		
-		
+
 }
-		

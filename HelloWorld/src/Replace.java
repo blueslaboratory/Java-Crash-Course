@@ -15,7 +15,7 @@ public class Replace {
 	
 	public static void main(String[] args) {
 		
-		final String FICH = "src/aleatorios.java"; //en la carpeta src busca un archivo llamado *.java
+		final String FICH = "src/Ej002.java"; //en la carpeta src busca un archivo llamado *.java
 		final String FICH2 = "Temporal.java";
 		
 		File f = new File(FICH);

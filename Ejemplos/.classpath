@@ -6,7 +6,9 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="G:/DOCUMENTS/DA1D1E/Programación/T10 Acceso a BBDD/Drivers/mysql-connector-java-8.0.20.jar"/>
-	<classpathentry kind="lib" path="G:/DOCUMENTS/DA1D1E/Programación/T10 Acceso a BBDD/Drivers/ojdbc7.jar"/>
+	<classpathentry kind="lib" path="E:/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/!Drivers/mysql-connector-java-8.0.20.jar"/>
+	<classpathentry kind="lib" path="E:/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/!Drivers/ojdbc7.jar"/>
+	<classpathentry kind="lib" path="E:/DOCUMENTS/DA2D1E-2/Programacion/T10 Acceso a BBDD/Drivers/mysql-connector-java-8.0.20.jar"/>
+	<classpathentry kind="lib" path="E:/DOCUMENTS/DA2D1E-2/Programacion/T10 Acceso a BBDD/Drivers/ojdbc7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

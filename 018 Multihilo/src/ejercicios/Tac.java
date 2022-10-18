@@ -17,7 +17,7 @@ public class Tac extends Thread{
 			System.out.println("tac" +this.info);
 			// esto al parar los hilos daria un problema: una excepcion
 			// es mejor hacer un extends, 
-			// dn java no hay multiherencia
+			// en java no hay multiherencia
 			Thread.sleep(tiempoTac * 1000);
 		}catch (InterruptedException e) {
 			e.printStackTrace () ;

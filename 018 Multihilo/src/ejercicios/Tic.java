@@ -6,7 +6,6 @@ public class Tic extends Thread{
 	private int tiempoTic;
 
 	public Tic(String info, int tiempoTac) {
-	
 		super ();
 		this.info = info;
 		this.tiempoTic = tiempoTac;
@@ -17,7 +16,7 @@ public class Tic extends Thread{
 			System.out.println("tic " +this.info);
 			// esto al parar los hilos daria un problema: una excepcion
 			// es mejor hacer un extends, 
-			// dn java no hay multiherencia
+			// en java no hay multiherencia
 			Thread.sleep(tiempoTic * 1000);
 		}catch (InterruptedException e) {
 			e.printStackTrace () ;

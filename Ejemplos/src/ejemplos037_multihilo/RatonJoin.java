@@ -3,11 +3,9 @@ package ejemplos037_multihilo;
 public class RatonJoin extends Thread implements Runnable {
 
 	private String nombre;
-
 	private int tiempoAlimentacion;
 
 	public RatonJoin(String nombre, int tiempoAlimentacion) {
-
 		super();
 		this.nombre = nombre;
 		this.tiempoAlimentacion = tiempoAlimentacion;
@@ -37,8 +35,11 @@ public class RatonJoin extends Thread implements Runnable {
 
 		new Thread(fievel).start();
 		new Thread(jerry).start();
+
 		Thread p = new Thread(pinky);
+
 		p.start();
+
 		try {
 			p.join();
 			// el join es para ordenar hilos
@@ -46,9 +47,11 @@ public class RatonJoin extends Thread implements Runnable {
 			// no me saques la parte de abajo del join
 
 		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
 
 		new Thread(mickey).start();
+		
 		System.out.println("FINAL DE PROGRAMA");
 	}
 
