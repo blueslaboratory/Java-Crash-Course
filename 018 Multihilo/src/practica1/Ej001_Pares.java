@@ -37,9 +37,11 @@ public class Ej001_Pares extends Thread{
 	
 	@Override
 	public void run() {
+		// meto lo que quiero que se ejecute cuando hago el start()
 		this.pares();
 	}
 
+	// main opcional, para que funcione suelto
 	public static void main(String[] args) {
 		Ej001_Pares p = new Ej001_Pares("", 1);
 		

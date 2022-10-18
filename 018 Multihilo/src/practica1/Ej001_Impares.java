@@ -40,6 +40,7 @@ public class Ej001_Impares implements Runnable{
 		this.impares();
 	}
 
+	// main opcional, para que funcione suelto
 	public static void main(String[] args) {
 		
 		Ej001_Impares i = new Ej001_Impares("", 1);
