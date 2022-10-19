@@ -6,6 +6,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace"/>
 			<item value="E:\DOCUMENTS\DA2D1E-2\Programacion\Eclipse-workspace\juanito"/>
 			<item value="E:\DOCUMENTS\DA2D1E-2\Programacion\Eclipse-workspace\017_Multiproceso"/>
 			<item value="E:\DOCUMENTS\DA2D1E-2\Programacion\Eclipse-workspace\!DOCS"/>

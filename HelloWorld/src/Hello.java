@@ -30,11 +30,6 @@
 // En el package explorer hay 2 flechitas en la esquina superior derecha
 // si lo seleccionas te autocambia entre las pestanas abiertas
 
-// ERROR: java.lang.ClassNotFoundException
-// se soluciona importando de nuevo los conectores
-// E:\DOCUMENTS\DA2D1E-2\Programacion\T10 Acceso a BBDD\Drivers
-// E:\DOCUMENTS\DA2D1E-2\Programacion\Eclipse-workspace\!Drivers
-
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -43,7 +38,12 @@ import java.time.LocalTime;
 public class Hello {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+		// ERROR: java.lang.ClassNotFoundException
+		// se soluciona importando de nuevo los conectores
+		// E:\DOCUMENTS\DA2D1E-2\Programacion\T10 Acceso a BBDD\Drivers
+		// E:\DOCUMENTS\DA2D1E-2\Programacion\Eclipse-workspace\!Drivers
+
 		
 		System.out.print("Hello, hello. ");
 		System.out.println("Hello World!");

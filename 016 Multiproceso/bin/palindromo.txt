@@ -1,6 +1,0 @@
-
-Dentro del metodo palindromo
-cadena: asdffdsa
-cadena auxiliar: asdffdsa
-
-palindromo: true

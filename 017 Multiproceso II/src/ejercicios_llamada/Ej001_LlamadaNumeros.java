@@ -27,6 +27,7 @@ public class Ej001_LlamadaNumeros {
 		// creamos objeto File al directorio donde esta Ejemplo2
 		// File directorio = new
 		File directorio = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
+		// File directorio = new File("/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/016 Multiproceso/bin");
 		Scanner sc = new Scanner(System.in);
 
 		do {
