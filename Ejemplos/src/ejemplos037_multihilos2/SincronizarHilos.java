@@ -24,7 +24,8 @@ class Contador4 {
 	}
 
 	public void incrementa() {
-	//public synchronized void incrementa() {
+	// public synchronized void incrementa() {
+	// synchronized: hasta que no suelte el metodo incrementa no se lo dejes a otro hilo
 		c = c + 1;
 	}
 
@@ -48,7 +49,9 @@ class HiloA4 extends Thread {
 		// synchronized: palabra reservada para que en el metodo 
 		// solo entre 1 hilo cada vez, es parecido al join
 		
+
 		// synchronized (contador) {
+		// synchronized: hasta que no suelte el objeto contador no se lo dejes a otro hilo
 			for (int j = 0; j < 5000; j++) {
 				contador.incrementa();
 				/*try {
