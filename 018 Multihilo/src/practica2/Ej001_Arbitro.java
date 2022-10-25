@@ -57,11 +57,89 @@ Jugador 2 gana, adivino el numero! ! !
 
 package practica2;
 
-public class Ej001_Arbitro {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+// ARBITRO NO ES THREAD
+public class Ej001_Arbitro{
 
+
+	// se podria usar un COUNTER para incrementar los ids de forma automatica
+	private int nTotalJugadores, turno, numAdivinar;
+	static boolean FINISH = false;
+
+	public Ej001_Arbitro(int nTotalJugadores) {
+	
+		super ();
+		this.numAdivinar = 1 + (int)(10*Math.random());
+		this.nTotalJugadores = nTotalJugadores;
+		this.turno = 1;
+	} 
+	
+	
+	
+	public int getnTotalJugadores() {
+		return nTotalJugadores;
+	}
+	public void setnTotalJugadores(int nTotalJugadores) {
+		this.nTotalJugadores = nTotalJugadores;
 	}
 
+
+	public int getTurno() {
+		return turno;
+	}
+	public void setTurno(int turno) {
+		this.turno = turno;
+	}
+
+	
+	public int getNumAdivinar() {
+		return numAdivinar;
+	}
+	public void setNumAdivinar(int numAdivinar) {
+		this.numAdivinar = numAdivinar;
+	}
+	
+	
+	public boolean isAcabado() {
+		return FINISH;
+	}
+	public void setAcabado(boolean Acabado) {
+		FINISH = Acabado;
+	}
+
+	
+
+	// sincronizamos el metodo mejor
+	// el arbitro sincroniza todos los jugadores, por eso tiene que estar aqui
+	public synchronized void jugadaMaestra(int jugada, int id) {
+		
+		System.out.println("Jugador" +id + " dice: " +jugada);
+		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		// comprobar si ha acertado
+		if (jugada!=numAdivinar) {
+			System.out.println("\tSigue intentandolo jugador" +turno);
+			turno++;
+			if(turno>nTotalJugadores) {
+				turno=1;
+			}
+			System.out.println("\tSiguiente jugador: jugador" +turno);
+			
+		}
+		else {
+			FINISH = true;
+			System.out.println("\tEl jugador" +id +" ha adivinado el numero");
+			System.out.println("***WINNER: PLAYER" +id +"***");
+			System.out.println("Fin de la partida");
+		}
+
+		
+	}
+	
+	
 }

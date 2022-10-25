@@ -12,7 +12,7 @@ Runnable. Comprueba el resultado
 La magia de este ejemplo esta en el synchronized del run
 */
 
-package ejemplos037_multihilos2;
+package ejemplos037_multihilos1;
 
 
 //CONTADOR

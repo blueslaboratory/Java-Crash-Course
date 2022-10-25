@@ -55,13 +55,27 @@ Jugador 2 gana, adivino el numero! ! !
 
 */
 
+// INTENTOS: 1
+
 package practica2;
 
 public class Ej001_MainAdivina {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		Ej001_Arbitro arbitro = new Ej001_Arbitro(3);
+		
+		
+		Ej001_Jugador j1 = new Ej001_Jugador(1, arbitro);
+		Ej001_Jugador j2 = new Ej001_Jugador(2, arbitro);
+		Ej001_Jugador j3 = new Ej001_Jugador(3, arbitro);
+		
+		System.out.println("Numero a adivinar: " +arbitro.getNumAdivinar());
+		
+		
+		j1.start();
+		j2.start();
+		j3.start();
 	}
 
 }

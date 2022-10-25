@@ -57,20 +57,10 @@ Jugador 2 gana, adivino el numero! ! !
 
 package practica2;
 
-/*
- * copia:
-- Jugador. Extiende Thread. Su constructor recibe un identificador de jugador y el 
-arbitro, todos los hilos comparten el arbitro. El jugador dentro del metodo run 
-comprobara si es su turno, en ese caso generara un numero aleatorio entre 1 y 10 y 
-creara la jugada usando el metodo correspondiente del arbitro. Este proceso Se 
-repetira hasta que el juego se acabe.
-*/
-
 public class Ej001_Jugador extends Thread{
 
 
 	// se podria usar un COUNTER para incrementar los ids de forma automatica
-	private static int COUNTER = 0;
 	private int id;
 	private Ej001_Arbitro arbitro;
 	
@@ -81,29 +71,39 @@ public class Ej001_Jugador extends Thread{
 		this.id = id;
 		this.arbitro = arbitro;
 	} 
-		
-	public void jugadaMaestra() {
-		int jugada = 1 + (int)(10*Math.random()); 
-		try {
-			System.out.println("Jugador" +this.id +" dice: " +jugada);
-			// esto al parar los hilos daria un problema: una excepcion
-			// es mejor hacer un extends, 
-			// en java no hay multiherencia
-			Thread.sleep(1000);
-		}catch (InterruptedException e) {
-			e.printStackTrace () ;
-		}														
+	
+	
+	public long getId() {
+		return id;
 	}
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Ej001_Arbitro getArbitro() {
+		return arbitro;
+	}
+	public void setArbitro(Ej001_Arbitro arbitro) {
+		this.arbitro = arbitro;
+	}
+	
+	
+	public void jugada() {
+		int n = 1 + (int) (10 * Math.random());
+
+		// para soltar el synchronize
+		if ((arbitro.getTurno()) == this.id)
+			arbitro.jugadaMaestra(n, id);
+		
+	}
+	
 	
 	@Override
 	public void run() {
-		this.jugadaMaestra();
+		while(this.arbitro.isAcabado() == false) {
+			jugada();
+		}
 	}
 
-	public static void main(String[] args) {
-		Ej001_Arbitro arbitro1 = new Ej001_Arbitro(); 
-		Ej001_Jugador jugador1 = new Ej001_Jugador(0, arbitro1);
-		
-		jugador1.start(); // llama al run
-	}
+
 }

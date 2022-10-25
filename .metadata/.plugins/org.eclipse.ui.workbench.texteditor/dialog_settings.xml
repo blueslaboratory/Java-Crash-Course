@@ -6,13 +6,13 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="u"/>
 		<list key="findhistory">
 			<item value="ú"/>
 			<item value="ó"/>
+			<item value="í"/>
 			<item value="é"/>
 			<item value="á"/>
-			<item value="í"/>
 			<item value="is"/>
 			<item value="exitVal"/>
 			<item value="field"/>
@@ -27,9 +27,9 @@
 		<list key="replacehistory">
 			<item value="u"/>
 			<item value="o"/>
+			<item value="i"/>
 			<item value="e"/>
 			<item value="a"/>
-			<item value="i"/>
 			<item value=""/>
 			<item value="estadoProceso"/>
 			<item value="&apos;"/>
@@ -42,9 +42,9 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="663"/>
 		<item key="DIALOG_Y_ORIGIN" value="541"/>
-		<item key="DIALOG_WIDTH" value="304"/>
-		<item key="DIALOG_HEIGHT" value="434"/>
-		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|10.5|0|WINDOWS|1|-14|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_WIDTH" value="337"/>
+		<item key="DIALOG_HEIGHT" value="445"/>
+		<item key="DIALOG_FONT_NAME" value="1|Noto Sans|9.0|0|GTK|1|"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="205"/>

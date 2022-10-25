@@ -1,4 +1,4 @@
-package ejemplos037_multihilos2;
+package ejemplos037_multihilos1;
 
 class Contador {
 	private int c = 0;
