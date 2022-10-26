@@ -8,6 +8,7 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value="u"/>
 		<list key="findhistory">
+			<item value="jugadaMaestra"/>
 			<item value="ú"/>
 			<item value="ó"/>
 			<item value="í"/>
@@ -22,7 +23,6 @@
 			<item value=" {"/>
 			<item value="ñ"/>
 			<item value=" + "/>
-			<item value="’"/>
 		</list>
 		<list key="replacehistory">
 			<item value="u"/>
