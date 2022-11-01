@@ -7,9 +7,9 @@ Recorrera este fichero y calculara por un lado la media de notas en la asignatur
 numero de aprobados en esa asignatura. Dejara en la salida estandar del programa algo
 como esto:
 
-“En la asignatura PSP
+ï¿½En la asignatura PSP
 Han aprobado 3 alumnos
-La media es 5.3”
+La media es 5.3ï¿½
 
 Haz otro programa que le pida al usuario que vaya metiendo nombres de asignaturas y
 nombres del fichero por consola. Por cada asignatura y fichero debe llamar al programa
@@ -29,7 +29,9 @@ import java.util.Scanner;
 public class Ej007_LlamadaNotas {
 
 	// TIENE QUE ESTAR EN LA RUTA DEL QUE CONSUME NO DEL QUE LLAMA
-	public static final String RUTA = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin";
+	// public static final String RUTA = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin";
+	public static final String RUTA = "/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/016 Multiproceso/bin";
+	
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
@@ -61,7 +63,7 @@ public class Ej007_LlamadaNotas {
 			Process p = pb.start();
 
 			// COMPROBACION DE ERROR
-			// 0 bien
+			//  0 bien
 			// -1 mal
 			int exitVal = -1;
 			try {

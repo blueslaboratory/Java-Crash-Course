@@ -19,8 +19,9 @@ public class Conector {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 
-		String ruta = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin";
-
+		//String ruta = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin";
+		String ruta = "/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/016 Multiproceso/bin";
+		
 		// creamos objeto File al directorio donde esta Aleatorios
 		File directorio = new File(ruta);
 

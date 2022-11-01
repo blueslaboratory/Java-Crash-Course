@@ -26,8 +26,8 @@ public class Ej001_LlamadaNumeros {
 
 		// creamos objeto File al directorio donde esta Ejemplo2
 		// File directorio = new
-		File directorio = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
-		// File directorio = new File("/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/016 Multiproceso/bin");
+		// File directorioWindows = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
+		File directorioLinux = new File("/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/016 Multiproceso/bin");
 		Scanner sc = new Scanner(System.in);
 
 		do {
@@ -38,7 +38,7 @@ public class Ej001_LlamadaNumeros {
 			ProcessBuilder pb = new ProcessBuilder("java", "ejercicios_lectura.Ej001_ConsumoNumeros");
 
 			// se establece el directorio donde se encuentra el ejecutable
-			pb.directory(directorio);
+			pb.directory(directorioLinux);
 
 			// System.out.printf("Directorio de trabajo: %s%n", pb.directory());
 
@@ -46,8 +46,8 @@ public class Ej001_LlamadaNumeros {
 			Process p = pb.start();
 
 			// nombre = nombre +"/n";
-			OutputStream os = p.getOutputStream();
-			os.write(numero.getBytes());
+			OutputStream os = p.getOutputStream(); // get el output de Ej001_ConsumoNumeros.java
+			os.write(numero.getBytes()); // escribir en el OutputStream de Ej001_ConsumoNumeros.java el string numero
 			os.flush();
 			os.close();
 

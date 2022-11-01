@@ -7,9 +7,9 @@ Recorrera este fichero y calculara por un lado la media de notas en la asignatur
 numero de aprobados en esa asignatura. Dejara en la salida estandar del programa algo
 como esto:
 
-“En la asignatura PSP
+ï¿½En la asignatura PSP
 Han aprobado 3 alumnos
-La media es 5.3”
+La media es 5.3ï¿½
 
 Haz otro programa que le pida al usuario que vaya metiendo nombres de asignaturas y
 nombres del fichero por consola. Por cada asignatura y fichero debe llamar al programa
@@ -43,7 +43,8 @@ public class Ej007_ConsumoNotas {
 		String nombreArchivo = args[1];
 		//String nombreArchivo = "notas";
 
-		String ruta = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\txts\\" +nombreArchivo +".txt";
+		//String ruta = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\txts\\" +nombreArchivo +".txt";
+		String ruta = "/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/txts/" +nombreArchivo +".txt";
 
 		// Lectura
 		float suma = 0; 

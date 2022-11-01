@@ -7,11 +7,24 @@ public class Ej011_EjecutarFicheroBat {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		ProcessBuilder pb = new ProcessBuilder("CMD");
+
+		
+		
+		// WINDOWS 
+		// ProcessBuilder pb = new ProcessBuilder("CMD");
+		
+		
+		// LINUX
+		ProcessBuilder pb = new ProcessBuilder();
+		pb.command("bash", "-c", "ls /home/alejandro/");
+		Process p = pb.start();
+		
+		
 		
 		File fBat = new File("fichero.bat");
 		File fOut = new File("salida.txt");
 		File fErr = new File("error.txt");
+		
 		
 		// Coger los datos de fBat y meterlos en el buffer
 		pb.redirectInput(fBat);
@@ -19,6 +32,7 @@ public class Ej011_EjecutarFicheroBat {
 		pb.redirectOutput(fOut);
 		// Coger los datos de error y meterlos en el fichero fErr
 		pb.redirectError(fErr);
+		
 		
 		pb.start();
 	}

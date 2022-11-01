@@ -7,16 +7,18 @@ import java.io.InputStream;
 public class Ej007_LlamarEjemploDirectorio {
 	public static void main(String[] args) throws IOException, InterruptedException {
 
-		String ruta = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\Ejemplos\\bin";
+		String rutaWindows = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\Ejemplos\\bin";
+		String rutaLinux = "/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/Ejemplos/bin";
 		
 		// creamos objeto File al directorio donde esta Ejemplo2
 		// File directorio = new
 		// File("C:\\Users\\jhorn\\eclipse-workspace\\Ejemplo1\\bin");
 		
-		// G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\Ejemplos\\bin
-		File directorio = new File(ruta);
+		// G:\\DOCUMENTS\\DA1D1E\\Programaciï¿½n\\Eclipse-workspace\\Ejemplos\\bin
+		// File directorio = new File(rutaWindows);
+		File directorio = new File(rutaLinux);
 
-		// El proceso a ejecutar es Ejemplo2
+		// El proceso a ejecutar es ejemplos036_procesos.Ej007_EjemploDirectorio
 		ProcessBuilder pb = new ProcessBuilder("java", "ejemplos036_procesos.Ej007_EjemploDirectorio");
 
 		// se establece el directorio donde se encuentra el ejecutable
@@ -28,8 +30,8 @@ public class Ej007_LlamarEjemploDirectorio {
 		Process p = pb.start();
 
 		// COMPROBACION DE ERROR:
-		// - 0 bien 
-		// - 1 mal
+		//   0 bien 
+		//  -1 mal
 		
 		int exitVal = -1;
 		try {

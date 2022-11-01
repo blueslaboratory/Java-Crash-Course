@@ -17,8 +17,9 @@ public class Ej004_Environment {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		
-		ProcessBuilder pb = new ProcessBuilder("C:\\windows\\notepad.exe");
-
+		ProcessBuilder pbWindows = new ProcessBuilder("C:\\windows\\notepad.exe");
+		ProcessBuilder pbLinux = new ProcessBuilder("gnome-terminal");
+		
 		/*
 		Map<K,V>  --> Map<Key, Value>
 		
@@ -27,11 +28,11 @@ public class Ej004_Environment {
 		
 		Mas info:
 		https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html
-		PildorasInformaticas: Curso Java. Colecciones XI Mapas. Vídeo 189
+		PildorasInformaticas: Curso Java. Colecciones XI Mapas. Vï¿½deo 189
 		*/
 		
-		java.util.Map<String, String> env = pb.environment();
-		System.out.println("Nº procesadores: " + env.get("NUMBER_OF_PROCESSORS"));
+		java.util.Map<String, String> env = pbLinux.environment();
+		System.out.println("Numeros de procesadores: " + env.get("NUMBER_OF_PROCESSORS"));
 	}
 
 }

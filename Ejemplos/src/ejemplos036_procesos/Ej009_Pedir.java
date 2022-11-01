@@ -16,22 +16,23 @@ public class Ej009_Pedir {
 		// entrada de una cadena
 		String respuesta = sc.nextLine();
 
-		// creamos objeto File al directorio donde esta Ejemplo2
-		// G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\Ejemplos\
-		File directorio = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\Ejemplos\\bin");
+		// creamos objeto File al directorio donde esta ejemplos036_procesos.Ej009_Calcular
+		// G:\\DOCUMENTS\\DA1D1E\\Programaciï¿½n\\Eclipse-workspace\\Ejemplos\
+		File directorioWindows = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\Ejemplos\\bin");
+		File directorioLinux = new File("/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/Ejemplos/bin");
 
 		// El proceso a ejecutar es Ejemplo2
 		ProcessBuilder pb = new ProcessBuilder("java", "ejemplos036_procesos.Ej009_Calcular");
 
 		// se establece el directorio donde se encuentra el ejecutable
-		pb.directory(directorio);
+		pb.directory(directorioLinux);
 
 		// se ejecuta el proceso
 		Process p = pb.start();
 		
 		
 		respuesta = respuesta + "\n";
-		// escribimos en el buffer, es decir el output de Ej009_Pedir
+		// escribimos en el buffer, es decir el output de Ej009_Calcular
 		OutputStream os = p.getOutputStream();
 		// getOutputStream()
 		// Returns the output stream connected to the normal input of the process. 

@@ -2,7 +2,7 @@
 // Crea un programa que lee desde la entrada estandar hasta escribir un *. Por cada linea
 // leida debe validar si es un numero, una cadena o un *.
 // Si en alguna linea hay una cadena, el programa saldra con un error -1 (System.exit()).
-// Si no hay cadenas, los numeros se sumaran hasta que aparezca un “*”.
+// Si no hay cadenas, los numeros se sumaran hasta que aparezca un ï¿½*ï¿½.
 // Cuando lea un *, dejara de leer la entrada estandar.El programa dejara en la salida 
 // estandar la suma de los numeros recibidos y devolvera que todo ha ido correctamente.
 // Haz otro programa que le pida al usuario que vaya metiendo numeros por consola. El
@@ -24,15 +24,16 @@ public class Ej003_LlamadaAsterisco {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		// creamos objeto File al directorio donde esta ejercicios_lectura.Ej003
-		File directorio = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
+		// creamos objeto File al directorio donde esta ejercicios_lectura.Ej003_ConsumoAsterisco
+		// File directorioWindows = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
+		File directorioLinux = new File("/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/016 Multiproceso/bin");
 		Scanner sc = new Scanner(System.in);
 
 		// El proceso a ejecutar es Ej003
 		ProcessBuilder pb = new ProcessBuilder("java", "ejercicios_lectura.Ej003_ConsumoAsterisco");
 
 		// se establece el directorio donde se encuentra el ejecutable
-		pb.directory(directorio);
+		pb.directory(directorioLinux);
 
 		System.out.printf("Directorio de trabajo: %s%n", pb.directory());
 
@@ -51,8 +52,8 @@ public class Ej003_LlamadaAsterisco {
 		Process p = pb.start();
 
 		// nombre = nombre +"/n";
-		OutputStream os = p.getOutputStream();
-		os.write(cadena.getBytes());
+		OutputStream os = p.getOutputStream(); // get el OutputStream de Ej003_ConsumoAsterisco.java
+		os.write(cadena.getBytes()); // escribir cadena en el OutputStream de Ej003_ConsumoAsterisco.java
 		os.flush();
 		os.close();
 

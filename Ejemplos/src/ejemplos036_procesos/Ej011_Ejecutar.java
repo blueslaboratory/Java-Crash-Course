@@ -7,10 +7,23 @@ public class Ej011_Ejecutar {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		ProcessBuilder pb = new ProcessBuilder("CMD", "/C", "DIR");
+		
+		
+		
+		// WINDOWS
+		//ProcessBuilder pb = new ProcessBuilder("CMD", "/C", "DIR");
+		
+		
+		// LINUX
+		ProcessBuilder pb = new ProcessBuilder();
+		pb.command("bash", "-c", "ls /home/alejandro/");
+		Process p = pb.start();
+		
+		
 		
 		File fOut = new File("salida.txt");
 		File fErr = new File("error.txt");
+		
 		
 		pb.redirectOutput(fOut);
 		pb.redirectError(fErr);

@@ -29,10 +29,10 @@ public class Ordenar {
 		// String nombreArchivo = args[0];
 		String nombreArchivo = "impares";
 
-		String ruta = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\" 
-					  + nombreArchivo
-					  + ".txt";
-
+		//String ruta = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\" + nombreArchivo +".txt";
+		String ruta = "/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/016 Multiproceso/" +nombreArchivo +".txt";
+		
+		
 		// Leyendo del file
 		File file = new File(ruta);
 		FileReader fr = new FileReader(file);

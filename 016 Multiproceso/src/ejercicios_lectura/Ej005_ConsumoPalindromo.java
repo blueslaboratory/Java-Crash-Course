@@ -40,16 +40,17 @@ public class Ej005_ConsumoPalindromo {
 		System.out.println("cadena: " +cad);
 
 		// facilito
-		cadAux = new StringBuilder(cad).reverse().toString();
+		// cadAux = new StringBuilder(cad).reverse().toString();
 
-		// System.out.println("Cadena: " + cad);
-		// System.out.println("Cadena auxiliar:" + cadAux);
+		
+		// complicadito
 		cadAux = "";
-
+		
 		for (int i = cad.length() - 1; i >= 0; i--) {
 			cadAux += cad.charAt(i);
 		}
 
+		
 		System.out.println("cadena auxiliar: " + cadAux);
 		
 		if(cad.equals(cadAux))

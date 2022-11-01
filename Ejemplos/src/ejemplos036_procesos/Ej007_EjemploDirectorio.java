@@ -7,11 +7,22 @@ import java.io.InputStream;
 public class Ej007_EjemploDirectorio {
 	public static void main(String[] args) throws IOException {
 
-		// Creando otro proceso
+		
+		// WINDOWS: Creando otro proceso que lista el directorio C:\\Users\\W10Alex
+		/*
 		ProcessBuilder pb = new ProcessBuilder("CMD", "/C", "DIR");
 		pb.directory(new File("C:\\Users\\W10Alex"));
 		Process p = pb.start();
-
+		*/
+		
+		
+		// LINUX: Creando otro proceso que lista el directorio /home/alejandro/
+		ProcessBuilder pb = new ProcessBuilder();
+		pb.command("bash", "-c", "ls /home/alejandro/");
+		Process p = pb.start();
+		
+		
+		
 		// COMPROBACION DE ERROR:
 		// 0 bien
 		// -1 mal

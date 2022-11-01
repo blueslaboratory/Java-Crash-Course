@@ -1,10 +1,12 @@
+// ejercicios_lectura va con el proyecto 017 Multiproces II: ejercicios_llamada
+
 /*
 Escribe un programa que reciba un argumento y que retorne (System.exit()) los siguientes
 valores:
 	- Devolvera -1 si el argumento viene vacio
 	- Devolvera -2 si el argumento no es un entero
 	- Devolvera -3 si el argumento es un entero negativo
-	- Devolvera 0 si el argumento es un entero positivo
+	- Devolvera  0 si el argumento es un entero positivo
 Escribe otro programa que pida por consola que se introduzca un numero entero positivo.
 Con el dato introducido llamara al programa anterior y le confirmara al usuario si el dato
 introducido es correcto.

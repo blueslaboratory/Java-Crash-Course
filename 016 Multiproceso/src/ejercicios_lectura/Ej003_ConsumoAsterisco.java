@@ -2,7 +2,7 @@
 // Crea un programa que lee desde la entrada estandar hasta escribir un *. Por cada linea
 // leida debe validar si es un numero, una cadena o un *.
 // Si en alguna linea hay una cadena, el programa saldra con un error -1 (System.exit()).
-// Si no hay cadenas, los numeros se sumaran hasta que aparezca un “*”.
+// Si no hay cadenas, los numeros se sumaran hasta que aparezca un *.
 // Cuando lea un *, dejara de leer la entrada estandar.El programa dejara en la salida 
 // estandar la suma de los numeros recibidos y devolvera que
 // todo ha ido correctamente.

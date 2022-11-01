@@ -31,6 +31,7 @@ public class Ordenar {
 		Integer numero, counter=10;
 		
 		do {
+			
 			try {
 				numero = Integer.parseInt(br.readLine());
 				desordenados.add(numero);
@@ -43,6 +44,7 @@ public class Ordenar {
 				// seteando exitVal
 				// System.exit(-1);
 			}
+			
 		} while(counter>0);
 		
 		Collections.sort(desordenados);

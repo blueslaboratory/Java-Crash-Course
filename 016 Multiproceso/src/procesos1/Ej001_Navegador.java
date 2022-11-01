@@ -21,7 +21,7 @@ public class Ej001_Navegador {
 		// String cadena = entrada.nextLine();
 
 		ProcessBuilder pb = new ProcessBuilder("C:\\Program Files\\Mozilla Firefox\\firefox.exe", cadena); // "notas.txt"
-		// pb.directory(new File("c:/Julio/"));
+		
 
 		Process p = null;
 		p = pb.start();

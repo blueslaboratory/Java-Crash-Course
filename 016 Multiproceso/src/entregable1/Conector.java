@@ -25,7 +25,8 @@ public class Conector {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 
-		String ruta = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin";
+		// String ruta = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin";
+		String ruta = "/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/016 Multiproceso/bin";
 
 		// creamos objeto File al directorio donde esta Aleatorios
 		File directorio = new File(ruta);
@@ -54,6 +55,8 @@ public class Conector {
 		
 	}
 
+	
+	
 	public static String aleatorios(File directorio) throws IOException {
 
 		String numeros = "";
@@ -107,6 +110,8 @@ public class Conector {
 
 	}
 
+	
+	
 	public static String ordenar(File directorio, String numeros) throws IOException {
 		
 		String ordenados = "";
@@ -126,13 +131,13 @@ public class Conector {
 		// 69 bien
 		// -1 mal
 
-		// escribimos en el buffer, es decir el output de Ordenar
-		OutputStream os = p2.getOutputStream();
+		
+		OutputStream os = p2.getOutputStream(); // recogemos el OutputStream de Ordenar
 		// getOutputStream()
 		// Returns the output stream connected to the normal input of the process.
 		// Output to the stream is piped into the standard input of the process
 		// represented by this Process object.
-		os.write(numeros.getBytes());
+		os.write(numeros.getBytes()); // escribimos en el buffer, es decir el output de Ordenar
 		// Writes b.length bytes from the specified byte array to this output stream.
 		os.flush(); // vacia el buffer de salida
 		// Flushes this output stream and forces any buffered output bytes to be written

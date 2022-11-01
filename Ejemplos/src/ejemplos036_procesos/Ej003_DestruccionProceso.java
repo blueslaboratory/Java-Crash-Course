@@ -4,13 +4,7 @@
  */
 package ejemplos036_procesos;
 
-/**
- *
- * @author jhorn
- */
-
 import java.io.*;
-import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class Ej003_DestruccionProceso {
@@ -19,11 +13,30 @@ public class Ej003_DestruccionProceso {
 		Runtime entorno = Runtime.getRuntime();
 
 		try {
-			Process p1;
-			p1 = entorno.exec("C:\\Windows\\notepad.exe");
-			boolean b = p1.waitFor(5000, TimeUnit.MILLISECONDS);
-			p1.destroy();
-			System.out.println(p1.exitValue());
+			Process p;
+			
+			
+			
+			// WINDOWS
+			// p = entorno.exec("C:\\Windows\\notepad.exe");
+			
+			
+			
+			
+			// LINUX
+			p = entorno.exec("ls /home/alejandro");
+			p = entorno.exec("/bin/bash -c ls /home/alejandro");
+			
+			// Abriendo la terminal en Linux Mint
+			ProcessBuilder pbTerminal = new ProcessBuilder("gnome-terminal");
+			Process pTerminal = pbTerminal.start();
+			
+			
+			
+			
+			boolean b = p.waitFor(5000, TimeUnit.MILLISECONDS);
+			p.destroy();
+			System.out.println(p.exitValue());
 			
 		} catch (IOException ex) {
 			System.err.println("Excepcion de E/S!!");

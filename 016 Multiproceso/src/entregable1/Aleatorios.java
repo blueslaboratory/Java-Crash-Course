@@ -44,7 +44,7 @@ public class Aleatorios {
 		}
 
 		for (int index = 0; index < counter; index++) {
-			// System.out.println("nº " + index + ": " + aleatorios.get(index));
+			// System.out.println("nï¿½ " + index + ": " + aleatorios.get(index));
 			stringAleatorios += aleatorios.get(index) +"\n";
 		}
 

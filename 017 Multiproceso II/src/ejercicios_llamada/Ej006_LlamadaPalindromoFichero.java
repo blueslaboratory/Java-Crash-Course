@@ -12,19 +12,20 @@ import java.io.IOException;
 public class Ej006_LlamadaPalindromoFichero {
 
 	// TIENE QUE ESTAR EN LA RUTA DEL QUE CONSUME NO DEL QUE LLAMA
-	public static final String RUTA = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin";
+	// public static final String RUTA = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin";
+	public static final String RUTA = "/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/016 Multiproceso/bin";
 
+	
 	public static void main(String[] args) throws IOException, InterruptedException {
 
 		// creamos los objetos File
 		// entrada datos consumo
-		File fichero = new File(RUTA, "texto.txt");
+		File fichero = new File(RUTA, "texto.txt"); // tiene que estar creado en RUTA
 		// entrada datos salida
 		File salida = new File(RUTA, "palindromo.txt");
 		// entrada datos errores
 		File error = new File(RUTA, "error.txt");
-		// dato.txt -> hay que tenerlo creado en E:\DOCUMENTS\DA2D1E -
-		// 2\Programacion\Eclipse-workspace\016 Multiproceso\bin
+		
 		File directorio = new File(RUTA);
 
 		// El proceso a ejecutar

@@ -12,10 +12,11 @@ public class Ej005_LlamadaPalindromo {
 		// TODO Auto-generated method stub
 
 		// creamos objeto File al directorio donde esta ejercicios_lectura.Ej003
-		File directorio = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
+		// File directorio = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
+		File directorio = new File("/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/016 Multiproceso/bin");
 		Scanner sc = new Scanner(System.in);
 
-		// El proceso a ejecutar es Ej003
+		// El proceso a ejecutar es Ej005_ConsumoPalindromo
 		ProcessBuilder pb = new ProcessBuilder("java", "ejercicios_lectura.Ej005_ConsumoPalindromo");
 
 		// se establece el directorio donde se encuentra el ejecutable
@@ -35,8 +36,8 @@ public class Ej005_LlamadaPalindromo {
 		Process p = pb.start();
 
 		// nombre = nombre +"/n";
-		OutputStream os = p.getOutputStream();
-		os.write(cadena.getBytes());
+		OutputStream os = p.getOutputStream(); // get el OutputStream de Ej005_ConsumoPalindromo.java
+		os.write(cadena.getBytes()); // escribir cadena en el OutputStream de Ej005_ConsumoPalindromo.java
 		os.flush();
 		os.close();
 

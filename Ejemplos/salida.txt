@@ -1,33 +1,14 @@
- El volumen de la unidad E es MSI DATA
- El n£mero de serie del volumen es: 802E-1D22
-
- Directorio de E:\DOCUMENTS\DA2D1E - 2\Programacion\Eclipse-workspace\Ejemplos
-
-03/10/2022  08:28    <DIR>          .
-03/10/2022  08:28    <DIR>          ..
-13/05/2021  15:14               635 .classpath
-20/10/2020  19:23               367 .project
-03/10/2022  08:28    <DIR>          .settings
-04/10/2022  16:48    <DIR>          bin
-16/05/2021  21:10               129 cliente.obj
-16/05/2021  20:53               624 datos.obj
-16/05/2021  20:08           187.275 Desierto.jpg
-16/05/2021  20:07               583 destino.txt
-07/10/2022  16:05                 0 error.txt
-05/04/2021  20:50                51 fich1.txt
-28/09/2022  19:48                 0 fichero.bat
-17/05/2021  20:29               264 fichero1.txt
-16/05/2021  20:54               163 media.obj
-16/05/2021  19:24               144 notas.dat
-16/05/2021  19:45                43 notasNombres.dat
-07/04/2021  12:22               583 origen.txt
-16/05/2021  21:25               400 prueba.dat
-05/05/2021  18:25               364 registro.txt
-07/10/2022  16:05                 0 salida.txt
-03/10/2022  08:28    <DIR>          src
-16/05/2021  17:16               358 test.txt
-16/05/2021  18:54               381 texto.txt
-14/04/2021  16:43                47 texto1.txt
-16/05/2021  18:38               251 texto2.txt
-              21 archivos        192.662 bytes
-               5 dirs  125.942.620.160 bytes libres
+bin
+Desktop
+Documents
+Downloads
+imwheel-script.sh
+Music
+Pictures
+Programs
+Public
+Run sh script
+Steam
+Templates
+Videos
+VirtualBox VMs
