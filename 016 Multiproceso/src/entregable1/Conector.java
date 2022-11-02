@@ -25,8 +25,9 @@ public class Conector {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 
-		// String ruta = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin";
-		String ruta = "/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/016 Multiproceso/bin";
+		// ruta de Aleatorios y Ordenar
+		String ruta = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin";
+		// String ruta = "/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/016 Multiproceso/bin";
 
 		// creamos objeto File al directorio donde esta Aleatorios
 		File directorio = new File(ruta);
@@ -34,6 +35,7 @@ public class Conector {
 		String desordenados = "";
 		String ordenados = "";
 
+		/**********************************/
 		// ALEATORIOS
 		try {
 			System.out.println("Desordenados:");
@@ -43,6 +45,7 @@ public class Conector {
 			e.printStackTrace();
 		}
 
+		/**********************************/
 		// ORDENAR
 		try {
 			System.out.println("Ordenados:");

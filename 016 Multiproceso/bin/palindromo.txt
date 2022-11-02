@@ -1,6 +1,0 @@
-
-Dentro del metodo palindromo
-cadena: palindreameestaatseemaerdnilap
-cadena auxiliar: palindreameestaatseemaerdnilap
-
-palindromo: true
