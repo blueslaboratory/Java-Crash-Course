@@ -7,8 +7,8 @@ import java.io.IOException;
 
 public class Ej004_LlamadaLeerFichero {
 	// DEBE DE ESTAR EN LA RUTA DEL QUE CONSUME NO DEL QUE LLAMA
-	// public static final String RUTA = "G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\016 Multiproceso\\bin";
-	public static final String RUTA = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin";
+	// public static final String RUTA = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin";
+	public static final String RUTA = "/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/016 Multiproceso/bin";
 	
 	public static void main(String[] args) throws IOException, InterruptedException {	
 		
@@ -26,8 +26,8 @@ public class Ej004_LlamadaLeerFichero {
 		pb.directory(directorio);
 		System.out.printf("Directorio de trabajo: %s%n", pb.directory());
 
-		pb.redirectInput(nombre);
-		pb.redirectOutput(minombre);
+		pb.redirectInput(nombre); 		// coge el input del file nombre
+		pb.redirectOutput(minombre);	// metelo en el output del file minombre
 		
 		// se ejecuta el proceso
 		Process p = pb.start();
@@ -37,7 +37,5 @@ public class Ej004_LlamadaLeerFichero {
 		
 		System.out.println("Estado del programa " + estadoProceso);
 		
-		
-
 	}
 }

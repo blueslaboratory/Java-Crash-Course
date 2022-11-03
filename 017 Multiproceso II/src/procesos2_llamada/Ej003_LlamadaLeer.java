@@ -13,8 +13,9 @@ public class Ej003_LlamadaLeer {
 
 		// creamos objeto File al directorio donde esta Ejemplo2
 		// File directorio = new
-		// File directorio = new File("G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\016 Multiproceso\\bin");
-		File directorio = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
+		File directorioWindows = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
+		File directorioLinux = new File("/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/016 Multiproceso/bin");
+		
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Introduce el nombre: ");
@@ -24,16 +25,15 @@ public class Ej003_LlamadaLeer {
 		ProcessBuilder pb = new ProcessBuilder("java", "procesos2_lectura.Ej003_Leer");
 
 		// se establece el directorio donde se encuentra el ejecutable
-		pb.directory(directorio);
+		pb.directory(directorioLinux);
 
 		System.out.printf("Directorio de trabajo: %s%n", pb.directory());
 		
 		// se ejecuta el proceso
 		Process p = pb.start();
 		
-		// escribimos el buffer de Ej003_LlamadaLeer
-		OutputStream os = p.getOutputStream();
-		os.write(nombre.getBytes());
+		OutputStream os = p.getOutputStream(); // get el OutputStream de Ej003_Leer.java
+		os.write(nombre.getBytes()); // escribir nombre en el OutputStream de Ej003_Leer.java
 		os.flush();
 		os.close();
 

@@ -11,15 +11,15 @@ public class Ej002_LlamarPintarNombre {
 
 		// creamos objeto File al directorio donde esta Ej002_PintarNombre
 		// File directorio = new
-		// File directorio = new File("G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\016 Multiproceso\\bin");
-		File directorio = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
-
+		// File directorioWindows = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
+		File directorioLinux = new File("/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/016 Multiproceso/bin");
+				
 		// El proceso a ejecutar es Ejemplo2
 		// El 3er parametro es de tipo Strin[] args y lo recibe el main
 		ProcessBuilder pb = new ProcessBuilder("java", "procesos2_lectura.Ej002_PintarNombre", "Pepito");
 
 		// se establece el directorio donde se encuentra el ejecutable
-		pb.directory(directorio);
+		pb.directory(directorioLinux);
 
 		System.out.printf("Directorio de trabajo: %s%n", pb.directory());
 

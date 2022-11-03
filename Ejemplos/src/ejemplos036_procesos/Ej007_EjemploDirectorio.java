@@ -24,7 +24,7 @@ public class Ej007_EjemploDirectorio {
 		
 		
 		// COMPROBACION DE ERROR:
-		// 0 bien
+		//  0 bien
 		// -1 mal
 
 		int exitVal = -1;
@@ -37,6 +37,7 @@ public class Ej007_EjemploDirectorio {
 
 		if (exitVal == 0) {
 			try {
+				// Redirigimos la salida al flujo de datos de salida
 				InputStream is = p.getInputStream();
 				int c;
 

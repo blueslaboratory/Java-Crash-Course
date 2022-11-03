@@ -14,15 +14,23 @@ public class Ej001_Navegador {
 	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 		
-		String cadena = "google.com";
+		String cadena = "https://www.google.com";
 		cadena = JOptionPane.showInputDialog("Introduce una Url");
+		
 		// Scanner entrada = new Scanner(System.in);
 		// System.out.println("Introduce una Url ");
 		// String cadena = entrada.nextLine();
-
-		ProcessBuilder pb = new ProcessBuilder("C:\\Program Files\\Mozilla Firefox\\firefox.exe", cadena); // "notas.txt"
 		
-
+		
+		// WINDOWS
+		// ProcessBuilder pb = new ProcessBuilder("C:\\Program Files\\Mozilla Firefox\\firefox.exe", cadena); // "notas.txt"
+		
+		
+		// LINUX
+		ProcessBuilder pb = new ProcessBuilder("/usr/bin/firefox", cadena); // "notas.txt"
+		
+		
+		
 		Process p = null;
 		p = pb.start();
 		

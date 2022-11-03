@@ -8,8 +8,8 @@ public class Ej009_Calcular {
 	public static void main(String[] args) throws IOException, InterruptedException {
 
 		// leyendo del buffer de Ej009_Pedir
-		InputStreamReader in = new InputStreamReader(System.in);
-		BufferedReader br = new BufferedReader(in);
+		InputStreamReader isr = new InputStreamReader(System.in);
+		BufferedReader br = new BufferedReader(isr);
 		Integer numero;
 		
 
@@ -32,5 +32,8 @@ public class Ej009_Calcular {
 			// seteando exitVal
 			System.exit(-1);
 		}
+		
+		br.close();
+		isr.close();
 	}
 }

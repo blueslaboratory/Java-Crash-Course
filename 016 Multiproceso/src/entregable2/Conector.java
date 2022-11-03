@@ -78,7 +78,7 @@ public class Conector {
 			FileWriter fw = new FileWriter(nombreFichero, false); // overwrites file
 			fw.write(datos);
 			fw.close();
-			System.out.println("Exito al escribir en el archivo");
+			System.out.println("Exito al escribir en el archivo\n");
 		} catch (IOException e) {
 			System.out.println("Error al escribir en el archivo");
 			e.printStackTrace();
@@ -116,6 +116,8 @@ public class Conector {
 		if (exitVal == 69) {
 
 			// obtener la salida devuelta por el proceso si exitVal==69
+			// getInputStream(): Proporciona un InputStream conectado a la salida normal del proceso
+			// (vamos que lee los datos)
 			try {
 				InputStream is = p.getInputStream();
 				int c;
@@ -143,22 +145,22 @@ public class Conector {
 		String ordenados = "";
 
 		// El proceso a ejecutar es Ordenar
-		ProcessBuilder pb2 = new ProcessBuilder("java", "entregable2.Ordenar");
+		ProcessBuilder pb = new ProcessBuilder("java", "entregable2.Ordenar");
 
 		// se establece el directorio donde se encuentra el ejecutable
-		pb2.directory(directorio);
+		pb.directory(directorio);
 
-		System.out.printf("Directorio de trabajo: %s%n", pb2.directory());
+		System.out.printf("Directorio de trabajo: %s%n", pb.directory());
 
 		// se ejecuta el proceso
-		Process p2 = pb2.start();
+		Process p = pb.start();
 
 		// COMPROBACION DE ERROR:
 		// 69 bien
 		// -1 mal
 
 		// escribimos en el buffer, es decir el output de Ordenar
-		OutputStream os = p2.getOutputStream();
+		OutputStream os = p.getOutputStream();
 		// getOutputStream()
 		// Returns the output stream connected to the normal input of the process.
 		// Output to the stream is piped into the standard input of the process
@@ -172,7 +174,7 @@ public class Conector {
 
 		int exitVal = -1;
 		try {
-			exitVal = p2.waitFor();
+			exitVal = p.waitFor();
 			System.out.println("Valor de Salida: " + exitVal);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
@@ -183,7 +185,7 @@ public class Conector {
 		if (exitVal == 69) {
 
 			try {
-				InputStream is = p2.getInputStream();
+				InputStream is = p.getInputStream();
 				int c;
 
 				while ((c = is.read()) != -1) {

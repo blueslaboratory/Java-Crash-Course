@@ -32,7 +32,14 @@ public class Ej004_Environment {
 		*/
 		
 		java.util.Map<String, String> env = pbLinux.environment();
+		System.out.println(env +"\n");
+		
+		// WINDOWS
 		System.out.println("Numeros de procesadores: " + env.get("NUMBER_OF_PROCESSORS"));
+		
+		// LINUX
+		System.out.println("User: " + env.get("USER"));
+		System.out.println("Path: " + env.get("PATH"));
 	}
 
 }

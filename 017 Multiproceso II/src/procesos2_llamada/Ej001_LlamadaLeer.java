@@ -12,14 +12,14 @@ public class Ej001_LlamadaLeer {
 		// cuidado con la ruta si vas moviendo el workspace por ahi
 		// creamos objeto File al directorio donde esta Ej001_Leer
 		// File directorio = new
-		// File directorio = new File("G:\\DOCUMENTS\\DA1D1E\\Programación\\Eclipse-workspace\\016 Multiproceso\\bin");
-		File directorio = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
+		// File directorioWindows = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\016 Multiproceso\\bin");
+		File directorioLinux = new File("/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/016 Multiproceso/bin");
 		
 		// El proceso a ejecutar es procesos2_lectura.Ej001_Leer
 		ProcessBuilder pb = new ProcessBuilder("java", "procesos2_lectura.Ej001_Leer", "Jaimito");
 
 		// se establece el directorio donde se encuentra el ejecutable
-		pb.directory(directorio);
+		pb.directory(directorioLinux);
 
 		System.out.printf("Directorio de trabajo: %s%n", pb.directory());
 

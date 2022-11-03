@@ -24,7 +24,7 @@ public class Ej003_DestruccionProceso {
 			
 			
 			// LINUX
-			p = entorno.exec("ls /home/alejandro");
+			// p = entorno.exec("ls /home/alejandro");
 			p = entorno.exec("/bin/bash -c ls /home/alejandro");
 			
 			// Abriendo la terminal en Linux Mint
