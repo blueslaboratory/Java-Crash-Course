@@ -2,7 +2,7 @@
 Instrucciones de uso:
 	1. Copiar al paquete HelloWorld la clase a la que quieres quitar caracteres especiales
 	2. Cambiar el nombre del String FICH incluyendo el nombre de la clase copiada
-	3. Correr el archivo y voilá
+	3. Correr el archivo y voilï¿½
 */
 
 import java.io.BufferedReader;
@@ -15,7 +15,7 @@ public class Replace {
 	
 	public static void main(String[] args) {
 		
-		final String FICH = "src/Ej002.java"; //en la carpeta src busca un archivo llamado *.java
+		final String FICH = "src/MainNaufragos.java"; //en la carpeta src busca un archivo llamado *.java
 		final String FICH2 = "Temporal.java";
 		
 		File f = new File(FICH);
@@ -58,12 +58,24 @@ public class Replace {
 	
 	public static String reemplazar(String linea) {
 		
-		linea = linea.replaceAll("á", "a");
-		linea = linea.replaceAll("é", "e");
-		linea = linea.replaceAll("í", "i");
-		linea = linea.replaceAll("ó", "o");
-		linea = linea.replaceAll("ú", "u");
-		linea = linea.replaceAll("ñ", "n");
+		// WINDOWS
+		/*
+		linea = linea.replaceAll("ï¿½", "a");
+		linea = linea.replaceAll("ï¿½", "e");
+		linea = linea.replaceAll("ï¿½", "i");
+		linea = linea.replaceAll("ï¿½", "o");
+		linea = linea.replaceAll("ï¿½", "u");
+		linea = linea.replaceAll("ï¿½", "n");
+		*/
+		
+		// LINUX
+		linea = linea.replaceAll("Ã¡", "a");
+		linea = linea.replaceAll("Ã©", "e");
+		linea = linea.replaceAll("Ã­", "i");
+		linea = linea.replaceAll("Ã³", "o");
+		linea = linea.replaceAll("Ãº", "u");
+		linea = linea.replaceAll("Ã±", "n");
+		
 		
 		return linea;
 	}

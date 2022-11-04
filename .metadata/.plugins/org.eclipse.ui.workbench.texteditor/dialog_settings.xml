@@ -6,14 +6,16 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="u"/>
+		<item key="selection" value="embar"/>
 		<list key="findhistory">
-			<item value="jugadaMaestra"/>
+			<item value="embar"/>
 			<item value="ú"/>
 			<item value="ó"/>
 			<item value="í"/>
 			<item value="é"/>
 			<item value="á"/>
+			<item value="ñ"/>
+			<item value="jugadaMaestra"/>
 			<item value="is"/>
 			<item value="exitVal"/>
 			<item value="field"/>
@@ -21,8 +23,6 @@
 			<item value="`"/>
 			<item value="\r\n"/>
 			<item value=" {"/>
-			<item value="ñ"/>
-			<item value=" + "/>
 		</list>
 		<list key="replacehistory">
 			<item value="u"/>
@@ -30,18 +30,18 @@
 			<item value="i"/>
 			<item value="e"/>
 			<item value="a"/>
+			<item value="n"/>
 			<item value=""/>
 			<item value="estadoProceso"/>
 			<item value="&apos;"/>
 			<item value=" "/>
-			<item value="n"/>
 			<item value=");"/>
 			<item value="velocidad"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="663"/>
-		<item key="DIALOG_Y_ORIGIN" value="541"/>
+		<item key="DIALOG_X_ORIGIN" value="842"/>
+		<item key="DIALOG_Y_ORIGIN" value="688"/>
 		<item key="DIALOG_WIDTH" value="337"/>
 		<item key="DIALOG_HEIGHT" value="445"/>
 		<item key="DIALOG_FONT_NAME" value="1|Noto Sans|9.0|0|GTK|1|"/>

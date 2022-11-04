@@ -24,7 +24,7 @@ public class Ej011_Ejecutar {
 		File fOut = new File("salida.txt");
 		File fErr = new File("error.txt");
 		
-		
+		// redireccioname el output de pb.command a fOut:
 		pb.redirectOutput(fOut);
 		pb.redirectError(fErr);
 		pb.start();
