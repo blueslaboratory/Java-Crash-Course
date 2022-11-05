@@ -27,8 +27,8 @@ public class MainNaufragos {
 
 	public static void main(String[] args) {
 		
+		// SIEMPRE: CREAR EL SEMAFORO EN EL MAIN Y PASARLO
 		// en la isla solo caben 2 balsas a la vez
-		// SIEMPRE: CREAR EL SEMAFORO EN EL MAIN
 		Semaphore semaforo = new Semaphore(2); 
 
 		
@@ -52,10 +52,17 @@ public class MainNaufragos {
 		
 		System.out.println("COMIENZA OPERACION RESCATE");
 		System.out.println();
+		
+		
+		// NUNCA INICIARLOS CON RUN, SIEMPRE CON START		
 		b0.start();
 		b1.start();
 		b2.start();
-		
+		/*
+		b0.run();
+		b1.run();
+		b2.run();
+		*/
 		
 		try {
 			Thread.sleep(10000);

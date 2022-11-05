@@ -1,4 +1,4 @@
-// Documentacion: https://docs.oracle.com/en/java/javase/14/docs/api/java.base/module-summary.html
+// Documentacion: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/module-summary.html
 
 // ECLIPSE DARK MODE:
 // Window -> Preferences -> General -> Appearance -> Theme and select "Dark" 
@@ -39,11 +39,14 @@ public class Hello {
 
 	public static void main(String[] args) {
 
+		// SI TODOS LOS PROYECTOS DAN ERROR
+		// AL CAMBIAR DE SO A WINDOWS PUEDE SER NECESARIO REIMPORTAR EL JDK11
+		
 		// ERROR: java.lang.ClassNotFoundException
 		// se soluciona importando de nuevo los conectores
 		// E:\DOCUMENTS\DA2D1E-2\Programacion\T10 Acceso a BBDD\Drivers
 		// E:\DOCUMENTS\DA2D1E-2\Programacion\Eclipse-workspace\!Drivers
-
+		
 		
 		System.out.print("Hello, hello. ");
 		System.out.println("Hello World!");

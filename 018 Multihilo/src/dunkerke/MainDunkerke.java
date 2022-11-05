@@ -3,6 +3,7 @@
 /*
 
 OPERACION DINAMO
+CONTEXTO (TRIVIAL):
 La evacuacion de Dunkerque
 En 1939, tras la invasion de Polonia por parte de la Alemania nazi, que supuso el inicio de la
 Segunda Guerra Mundial, los britanicos enviaron la Fuerza Expedicionaria Britanica (BEF)
@@ -32,6 +33,9 @@ La evacuacion comenzaria el 26 de Mayo de 1940. Bajo un intenso fuego de artille
 baterias alemanas y bombardeos de aparatos de la Luftwaffe, miles de soldados britanicos,
 franceses y belgas hacian colas en la playa, mientras siete divisiones francesas ofrecian
 resistencia en los ochenta kilometros del frente.
+
+
+ENUNCIADO:
 La Armada britanica habia preparado una flota con cuarenta destructores y ciento treinta
 barcos mercantes y de pasajeros, que debian embarcar las tropas en condiciones muy
 precarias, pues el puerto de Dunkerque habia sido devastado por la Luftwaffe. Para
@@ -99,7 +103,7 @@ OPERACION DINAMO - STATUS: FINALIZADA
 
 
 
-OPERACIoN DINAMO - Lo que pudo ser
+OPERACION DINAMO - Lo que pudo ser
 Aunque la evacuacion de Dunkerque ha pasado a la historia como un milagro y el rescate/
 retirada mas famoso de la 2ª guerra mundial, un alumno de FP analizando los datos cree
 que se pudo mejorar. Para ello se debieron seguir los siguientes pasos:

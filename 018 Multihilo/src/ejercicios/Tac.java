@@ -29,9 +29,12 @@ public class Tac extends Thread{
 		this.tac();
 	}
 
+	
+	// Probando la clase
 	public static void main(String[] args) {
 		Tac t = new Tac("", 1);
 		
+		// System.out.println(args);
 		t.start(); // llama al run
 	}
 }

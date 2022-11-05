@@ -29,6 +29,8 @@ public class Tic extends Thread{
 		this.tic();
 	}
 
+	
+	// Probando la clase
 	public static void main(String[] args) {
 		Tic t = new Tic("", 1);
 		
