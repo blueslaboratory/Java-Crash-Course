@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="embar"/>
+		<item key="selection" value="lancha"/>
 		<list key="findhistory">
+			<item value="lancha"/>
+			<item value="barca"/>
 			<item value="embar"/>
 			<item value="ú"/>
 			<item value="ó"/>
@@ -21,8 +23,6 @@
 			<item value="field"/>
 			<item value="prep"/>
 			<item value="`"/>
-			<item value="\r\n"/>
-			<item value=" {"/>
 		</list>
 		<list key="replacehistory">
 			<item value="u"/>
@@ -41,7 +41,7 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="842"/>
-		<item key="DIALOG_Y_ORIGIN" value="688"/>
+		<item key="DIALOG_Y_ORIGIN" value="566"/>
 		<item key="DIALOG_WIDTH" value="337"/>
 		<item key="DIALOG_HEIGHT" value="445"/>
 		<item key="DIALOG_FONT_NAME" value="1|Noto Sans|9.0|0|GTK|1|"/>

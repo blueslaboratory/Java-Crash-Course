@@ -32,6 +32,7 @@ public class Tac extends Thread{
 	
 	// Probando la clase
 	public static void main(String[] args) {
+		
 		Tac t = new Tac("", 1);
 		
 		// System.out.println(args);

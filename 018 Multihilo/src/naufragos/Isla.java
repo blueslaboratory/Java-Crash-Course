@@ -25,7 +25,7 @@ import java.util.concurrent.Semaphore;
 public class Isla {
 
 	private int totalNaufragos;
-	// en la isla solo caben 2 balsas a la vez, pero el sema:
+	// en la isla solo caben 2 balsas a la vez, pero el semaforo
 	// se declara en el main y se pasa a cada barca
 	// Semaphore semaforo = new Semaphore(2); 
 

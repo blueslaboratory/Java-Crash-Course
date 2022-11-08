@@ -1,4 +1,4 @@
-// HACER PRIMERO EL DE NAUFRAGO
+// HACER/VER PRIMERO EL DE NAUFRAGO
 
 /*
 
@@ -28,14 +28,16 @@ antiguas fortificaciones y contaba con la playa de arena de mayor longitud de Eu
 Tras varios enfrentamientos y un intento fallido por parte de los Aliados de atacar el flanco
 de las fuerzas alemanas el 21 de mayo en Arras, la BEF quedo atrapada junto con los
 restos de las fuerzas belgas y los tres ejercitos franceses en un area situada en la costa
-norte francesa. 400.000 soldados de los aliados estaban a merced del ejercito aleman.
+norte francesa. 
+
+
+ENUNCIADO:
+400.000 soldados de los aliados estaban a merced del ejercito aleman.
 La evacuacion comenzaria el 26 de Mayo de 1940. Bajo un intenso fuego de artilleria de las
 baterias alemanas y bombardeos de aparatos de la Luftwaffe, miles de soldados britanicos,
 franceses y belgas hacian colas en la playa, mientras siete divisiones francesas ofrecian
 resistencia en los ochenta kilometros del frente.
 
-
-ENUNCIADO:
 La Armada britanica habia preparado una flota con cuarenta destructores y ciento treinta
 barcos mercantes y de pasajeros, que debian embarcar las tropas en condiciones muy
 precarias, pues el puerto de Dunkerque habia sido devastado por la Luftwaffe. Para

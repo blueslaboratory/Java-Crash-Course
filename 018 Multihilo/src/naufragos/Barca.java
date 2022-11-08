@@ -47,6 +47,10 @@ public class Barca extends Thread {
 		return rescatados;
 	}
 	
+	public void setRescatados(int rescatados) {
+		this.rescatados = rescatados;
+	}
+	
 	
 	// RUN
 	public void run() {
@@ -62,12 +66,6 @@ public class Barca extends Thread {
 		}
 	}
 	
-
-
-	public void setRescatados(int rescatados) {
-		this.rescatados = rescatados;
-	}
-
 
 	// RESCATANDO
 	public void rescate() throws InterruptedException {
@@ -113,5 +111,4 @@ public class Barca extends Thread {
 	}
 	
 	
-
 }
