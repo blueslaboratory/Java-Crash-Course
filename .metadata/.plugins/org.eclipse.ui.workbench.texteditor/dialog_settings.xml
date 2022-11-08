@@ -6,8 +6,11 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="lancha"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="4 - Han embarcado 2"/>
+			<item value="5 -"/>
+			<item value="5"/>
 			<item value="lancha"/>
 			<item value="barca"/>
 			<item value="embar"/>
@@ -20,9 +23,6 @@
 			<item value="jugadaMaestra"/>
 			<item value="is"/>
 			<item value="exitVal"/>
-			<item value="field"/>
-			<item value="prep"/>
-			<item value="`"/>
 		</list>
 		<list key="replacehistory">
 			<item value="u"/>

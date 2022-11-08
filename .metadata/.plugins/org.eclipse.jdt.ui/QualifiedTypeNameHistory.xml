@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="ejercicios1_fichTexto.Ej001EscribirEnFichero"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
-    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
     <fullyQualifiedTypeName name="java.io.UTFDataFormatException"/>
     <fullyQualifiedTypeName name="ejemplos030_ficherosSerializable1.Persona"/>
     <fullyQualifiedTypeName name="ejemplos030_ficherosSerializable.Persona"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="naufragos.Barca"/>
     <fullyQualifiedTypeName name="naufragos.Isla"/>
     <fullyQualifiedTypeName name="java.util.concurrent.Semaphore"/>
+    <fullyQualifiedTypeName name="dunkerke.RoyalNavy"/>
+    <fullyQualifiedTypeName name="dunkerke.Playa"/>
+    <fullyQualifiedTypeName name="dunkerke.Libreria"/>
 </qualifiedTypeNameHistroy>

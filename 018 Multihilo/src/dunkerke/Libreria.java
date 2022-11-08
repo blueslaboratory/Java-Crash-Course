@@ -1,8 +1,10 @@
 package dunkerke;
 
-public class Libreria {
+public class Libreria extends Thread{
 
+	
 	// OTROS METODOS
+	// RANDOM
 	public static int random(int min, int max) {
 
 		// En general, para conseguir un numero entero entre [N, M]
@@ -14,4 +16,36 @@ public class Libreria {
 		return nRandom;
 	}
 
+	
+	// CUENTA ATRÁS
+	public static boolean COUNTER = true;
+	public static void cuentaAtras() throws InterruptedException {
+		int c = 0;
+		
+		while(COUNTER) {
+			
+			for(c=0; c<6; c++) {
+				Thread.sleep(24*100);
+				System.out.println();
+				System.out.println("********************************");
+				System.out.println("5 - HAN PASADO " +(c+1) +" DIAS DE COMBATE");
+				System.out.println("********************************");
+			}
+			
+			COUNTER = false;
+			
+		}
+	}
+	
+	
+	// RUN
+	public void run() {
+		try {
+			cuentaAtras();
+		} catch (InterruptedException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+	
 }

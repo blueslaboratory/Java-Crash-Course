@@ -135,11 +135,77 @@ de todos.
 
 package dunkerke;
 
+import java.util.concurrent.Semaphore;
+
 public class MainDunkerke {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		Libreria lib = new Libreria();
+		
+		Playa dunkerquePlaya = new Playa();
+		Semaphore semaforoRescate = new Semaphore(1);
+		
+		
+		RoyalNavy royalNavy = new RoyalNavy();
+		Semaphore semaforoDesembarco = new Semaphore(1);
+		
+		
+		Embarcacion lanchas = new Embarcacion("LANCHAS", 500, 1000, 
+											   dunkerquePlaya, royalNavy,
+											   semaforoRescate, semaforoDesembarco);
+		
+		Embarcacion botes = new Embarcacion("BOTES SALVAVIDAS", 1500, 2000,
+											 dunkerquePlaya, royalNavy,
+											 semaforoRescate, semaforoDesembarco);
+		
+		
+		
+		System.out.println("CONDICIONES INICIALES EN LA PLAYA");
+		System.out.println("\tHay " +dunkerquePlaya.getSoldadosAliadosLuchando() + " soldados luchando en Dunkerque");
+		System.out.println();
+		
+		System.out.println("EMBARCACIONES");
+		System.out.println(lanchas);
+		System.out.println(botes);
+		System.out.println();
+		
+		System.out.println("***COMIENZA LA OPERACION DINAMO***");
+		System.out.println();
+		
+		// NUNCA INICIARLOS CON RUN, SIEMPRE CON START
+		lib.start();
+		lanchas.start();
+		botes.start();
+		
+		
+		// que no pase de aqui hasta que la guerra haya acabado o todos hayan sido rescatados
+		while(Libreria.COUNTER == true) {
+			try {
+				Thread.sleep(50);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		
+		
+		// Ahogados
+		lanchas.stop();
+		botes.stop();
+		
+		int ahogados = 400000 -(royalNavy.getSoldadosAliadosRescatados()+dunkerquePlaya.getSoldadosAliadosLuchando());
+		
+		// Total soldados
+		int totalSoldados = ahogados + royalNavy.getSoldadosAliadosRescatados()+dunkerquePlaya.getSoldadosAliadosLuchando();
+		
+				
+		System.out.println("\n***OPERACION DINAMO FINALIZADA***");
+		System.out.println("Se han salvado " +royalNavy.getSoldadosAliadosRescatados() +" soldados en total");
+		System.out.println("Se han quedado en la playa " +dunkerquePlaya.getSoldadosAliadosLuchando() + " que deberan rendirse al ejercito aleman");
+		System.out.println("Se han ahogado: " +ahogados +" soldados");
+		System.out.println("\nParticiparo un total de " +totalSoldados +" soldados");
 	}
 
 }

@@ -15,7 +15,7 @@ public class Embarcacion extends Thread {
 	private Playa dunkerquePlaya;
 	private RoyalNavy royalNavy;
 	private int rescatados = 0;
-	
+	private int desembarcados = 0;
 	
 	
 	// CONSTRUCTOR
@@ -28,32 +28,57 @@ public class Embarcacion extends Thread {
 		this.semaforoDesembarco = semaforoDesembarco;
 		
 		this.nombreEmbarcacion = nombreEmbarcacion; // LANCHAS o BOTES SALVAVIDAS
-		this.capacidadEmbarcacion = Libreria.random(min, max);
-		// this.capacidadEmbarcacion = min;
+		// this.capacidadEmbarcacion = Libreria.random(min, max);
+		this.capacidadEmbarcacion = min;
 		
 		this.dunkerquePlaya = dunkerquePlaya;
 		this.royalNavy = royalNavy;
 		
 	}
-
 	
 	
-	// SETTERS Y GETTER
+	
+	// SETTERS Y GETTER: ALT + SHIFT + S
+	// Playa Dunkerque
+	public Playa getDunkerquePlaya() {
+		return dunkerquePlaya;
+	}
+	public void setDunkerquePlaya(Playa dunkerquePlaya) {
+		this.dunkerquePlaya = dunkerquePlaya;
+	}
+	
+	// Rescatados
 	public int getRescatados() {
 		return rescatados;
 	}
-
 	public void setRescatados(int rescatados) {
 		this.rescatados = rescatados;
 	}
 	
+
+	// Royal Navy
+	public RoyalNavy getRoyalNavy() {
+		return royalNavy;
+	}
+	public void setRoyalNavy(RoyalNavy royalNavy) {
+		this.royalNavy = royalNavy;
+	}
 	
-	
+	// Desembarcados
+	public int getDesembarcados() {
+		return desembarcados;
+	}
+	public void setDesembarcados(int desembarcados) {
+		this.desembarcados = desembarcados;
+	}
+
+
+
 	// RUN
 	public void run() {
 		try {
 
-			while (dunkerquePlaya.getSoldadosAliadosLuchando() > 0) {
+			while (dunkerquePlaya.getSoldadosAliadosLuchando() > 0 && Libreria.COUNTER) {
 				rescate();
 				desembarco();
 			}
@@ -71,11 +96,12 @@ public class Embarcacion extends Thread {
 
 		semaforoRescate.acquire();
 		
+		/*
 		if(nombreEmbarcacion.toUpperCase().equalsIgnoreCase("LANCHAS"))
 			capacidadEmbarcacion = Libreria.random(500, 1000);
 		else if(nombreEmbarcacion.toUpperCase().equalsIgnoreCase("BOTES SALVAVIDAS"))
 			capacidadEmbarcacion = Libreria.random(1500, 2000);
-		
+		*/
 		
 		// Si quedan naufragos: rescatamos
 		if (dunkerquePlaya.getSoldadosAliadosLuchando() > 0) {
@@ -92,8 +118,11 @@ public class Embarcacion extends Thread {
 				System.out.println();
 				System.out.println("Los ultimos soldados por rescatar: " + rescatar);
 				dunkerquePlaya.setSoldadosAliadosLuchando(0);
-				System.out.println("** Rescatados: " + rescatar + " en la barca " + this.getName() + " **");
+				System.out.println("** Rescatados: " + rescatar + " en " + nombreEmbarcacion + " **");
 				rescatados += rescatar;
+				
+				// Se han rescatado a los ultimos soldados
+				Libreria.COUNTER = false;
 			} else {
 				dunkerquePlaya.setSoldadosAliadosLuchando(rescatar);
 				//System.out.println("** Rescatados: " + capacidadEmbarcacion + " en la barca " + this.getName() + " **");
@@ -102,7 +131,7 @@ public class Embarcacion extends Thread {
 			}
 
 			System.out.println("2 - Quedan: " + dunkerquePlaya.getSoldadosAliadosLuchando() + " soldados en la playa");
-			System.out.println("    -> Rescatados barca " + nombreEmbarcacion + ": " + rescatados);
+			System.out.println("    -> Rescatados en " + nombreEmbarcacion + ": " + rescatados);
 
 		}
 
@@ -122,8 +151,8 @@ public class Embarcacion extends Thread {
 		// desembarcar es media hora
 		Thread.sleep(500);
 		
-		int desembarcados = royalNavy.getSoldadosAliadosRescatados();
-		desembarcados += desembarcados + capacidadEmbarcacion;
+		desembarcados = royalNavy.getSoldadosAliadosRescatados();
+		desembarcados += capacidadEmbarcacion;
 		royalNavy.setSoldadosAliadosRescatados(desembarcados);
 		
 		System.out.println("3 - Han desembarcado en los barcos de alta mar " +capacidadEmbarcacion + " soldados desde " +nombreEmbarcacion);
@@ -137,7 +166,7 @@ public class Embarcacion extends Thread {
 	
 	@Override
 	public String toString() {
-		return "\tBarca: " + nombreEmbarcacion + "\n\tCapacidad: " + capacidadEmbarcacion;
+		return "\tEmbarcacion: " + nombreEmbarcacion + "\n\tCapacidad: " + capacidadEmbarcacion;
 	}
 
 }
