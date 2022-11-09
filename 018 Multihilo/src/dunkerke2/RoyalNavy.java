@@ -1,4 +1,4 @@
-package dunkerke;
+package dunkerke2;
 
 public class RoyalNavy {
 

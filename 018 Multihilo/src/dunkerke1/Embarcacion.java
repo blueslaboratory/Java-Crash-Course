@@ -1,6 +1,6 @@
 // HACER/VER PRIMERO EL DE NAUFRAGO
 
-package dunkerke;
+package dunkerke1;
 
 import java.util.concurrent.Semaphore;
 
@@ -16,6 +16,7 @@ public class Embarcacion extends Thread {
 	private RoyalNavy royalNavy;
 	private int rescatados = 0;
 	private int desembarcados = 0;
+	private int desembarcadosEmbarcacion = 0;
 	
 	
 	// CONSTRUCTOR
@@ -28,8 +29,8 @@ public class Embarcacion extends Thread {
 		this.semaforoDesembarco = semaforoDesembarco;
 		
 		this.nombreEmbarcacion = nombreEmbarcacion; // LANCHAS o BOTES SALVAVIDAS
-		// this.capacidadEmbarcacion = Libreria.random(min, max);
-		this.capacidadEmbarcacion = min;
+		this.capacidadEmbarcacion = Libreria.random(min, max);
+		//this.capacidadEmbarcacion = max;
 		
 		this.dunkerquePlaya = dunkerquePlaya;
 		this.royalNavy = royalNavy;
@@ -54,7 +55,6 @@ public class Embarcacion extends Thread {
 	public void setRescatados(int rescatados) {
 		this.rescatados = rescatados;
 	}
-	
 
 	// Royal Navy
 	public RoyalNavy getRoyalNavy() {
@@ -71,9 +71,18 @@ public class Embarcacion extends Thread {
 	public void setDesembarcados(int desembarcados) {
 		this.desembarcados = desembarcados;
 	}
+	
+	// DesembarcadosEmbarcacion
+	public int getDesembarcadosEmbarcacion() {
+		return desembarcadosEmbarcacion;
+	}
+	public void setDesembarcadosEmbarcacion(int desembarcadosEmbarcacion) {
+		this.desembarcadosEmbarcacion = desembarcadosEmbarcacion;
+	}
 
 
 
+	
 	// RUN
 	public void run() {
 		try {
@@ -96,12 +105,12 @@ public class Embarcacion extends Thread {
 
 		semaforoRescate.acquire();
 		
-		/*
+		
 		if(nombreEmbarcacion.toUpperCase().equalsIgnoreCase("LANCHAS"))
 			capacidadEmbarcacion = Libreria.random(500, 1000);
 		else if(nombreEmbarcacion.toUpperCase().equalsIgnoreCase("BOTES SALVAVIDAS"))
 			capacidadEmbarcacion = Libreria.random(1500, 2000);
-		*/
+		
 		
 		// Si quedan naufragos: rescatamos
 		if (dunkerquePlaya.getSoldadosAliadosLuchando() > 0) {
@@ -154,6 +163,9 @@ public class Embarcacion extends Thread {
 		desembarcados = royalNavy.getSoldadosAliadosRescatados();
 		desembarcados += capacidadEmbarcacion;
 		royalNavy.setSoldadosAliadosRescatados(desembarcados);
+		
+		// counter de embarcados por el tipo de objeto, empieza en 0
+		desembarcadosEmbarcacion += capacidadEmbarcacion;
 		
 		System.out.println("3 - Han desembarcado en los barcos de alta mar " +capacidadEmbarcacion + " soldados desde " +nombreEmbarcacion);
 		System.out.println("4 - Han embarcado " +royalNavy.getSoldadosAliadosRescatados() +" soldados en total");

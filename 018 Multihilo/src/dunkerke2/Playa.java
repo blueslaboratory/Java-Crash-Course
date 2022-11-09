@@ -1,4 +1,4 @@
-package dunkerke;
+package dunkerke2;
 
 import java.util.concurrent.Semaphore;
 
