@@ -43,6 +43,7 @@ public class Ej001_Pares extends Thread{
 
 	// main opcional, para que funcione suelto
 	public static void main(String[] args) {
+		
 		Ej001_Pares p = new Ej001_Pares("", 1);
 		
 		p.start(); // llama al run

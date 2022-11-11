@@ -16,7 +16,8 @@ public class Ej011_EjecutarFicheroBat {
 		
 		// LINUX
 		ProcessBuilder pb = new ProcessBuilder();
-		pb.command("bash", "-c", "ls /home/alejandro/");
+		// "consola bash", "comando -c", "comando a ejecutar"
+		pb.command("bash", "-c", "ls /home");
 		Process p = pb.start();
 		
 		

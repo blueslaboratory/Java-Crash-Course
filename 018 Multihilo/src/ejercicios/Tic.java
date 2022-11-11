@@ -6,6 +6,7 @@ public class Tic extends Thread{
 	private int tiempoTic;
 
 	public Tic(String info, int tiempoTac) {
+		
 		super ();
 		this.info = info;
 		this.tiempoTic = tiempoTac;
@@ -23,7 +24,6 @@ public class Tic extends Thread{
 		}														
 	}
 	
-	
 	@Override
 	public void run() {
 		this.tic();
@@ -32,8 +32,10 @@ public class Tic extends Thread{
 	
 	// Probando la clase
 	public static void main(String[] args) {
+		
 		Tic t = new Tic("", 1);
 		
+		// System.out.println(args);
 		t.start(); //llama al run
 	}
 }

@@ -87,7 +87,7 @@ public class Embarcacion extends Thread {
 	public void run() {
 		try {
 
-			while (dunkerquePlaya.getSoldadosAliadosLuchando() > 0 && Libreria.COUNTER) {
+			while (dunkerquePlaya.getSoldadosAliadosLuchando() > 0) {
 				rescate();
 				desembarco();
 			}
@@ -105,14 +105,14 @@ public class Embarcacion extends Thread {
 
 		semaforoRescate.acquire();
 		
-		
+		/*
 		if(nombreEmbarcacion.toUpperCase().equalsIgnoreCase("LANCHAS"))
 			capacidadEmbarcacion = Libreria.random(500, 1000);
 		else if(nombreEmbarcacion.toUpperCase().equalsIgnoreCase("BOTES SALVAVIDAS"))
 			capacidadEmbarcacion = Libreria.random(1500, 2000);
+		*/
 		
-		
-		// Si quedan naufragos: rescatamos
+		// Si quedan soldados: rescatamos
 		if (dunkerquePlaya.getSoldadosAliadosLuchando() > 0) {
 			
 			// 1hora = 1000ms

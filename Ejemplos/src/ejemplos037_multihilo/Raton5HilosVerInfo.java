@@ -1,11 +1,11 @@
 package ejemplos037_multihilo;
 
-public class RatonHilosVerInfo extends Thread {
+public class Raton5HilosVerInfo extends Thread {
 
 	private String nombre;
 	private int tiempoAlimentacion;
 
-	public RatonHilosVerInfo(String nombre, int tiempoAlimentacion) {
+	public Raton5HilosVerInfo(String nombre, int tiempoAlimentacion) {
 		super();
 		this.nombre = nombre;
 		this.tiempoAlimentacion = tiempoAlimentacion;
@@ -24,18 +24,18 @@ public class RatonHilosVerInfo extends Thread {
 	@Override
 	public void run() {
 		System.out.println("Dentro del Hilo  : " + Thread.currentThread().getName() 
-				+ "\n\tPrioridad    : "+ Thread.currentThread().getPriority() 
-				+ "\n\tID           : " + Thread.currentThread().getId()
-				+ "\n\tHilos activos: " + Thread.currentThread().activeCount());
+					     + "\n\tPrioridad    : " + Thread.currentThread().getPriority() 
+					     + "\n\tID           : " + Thread.currentThread().getId()
+					     + "\n\tHilos activos: " + Thread.currentThread().activeCount());
 		this.comer();
 
 	}
 
 	public static void main(String[] args) {
-		RatonHilosVerInfo fievel = new RatonHilosVerInfo("Fievel", 4);
-		RatonHilosVerInfo jerry = new RatonHilosVerInfo("Jerry", 5);
-		RatonHilosVerInfo pinky = new RatonHilosVerInfo("Pinky", 3);
-		RatonHilosVerInfo mickey = new RatonHilosVerInfo("Mickey", 6);
+		Raton5HilosVerInfo fievel = new Raton5HilosVerInfo("Fievel", 4);
+		Raton5HilosVerInfo jerry = new Raton5HilosVerInfo("Jerry", 5);
+		Raton5HilosVerInfo pinky = new Raton5HilosVerInfo("Pinky", 3);
+		Raton5HilosVerInfo mickey = new Raton5HilosVerInfo("Mickey", 6);
 
 		fievel.start();
 		jerry.start();

@@ -9,6 +9,7 @@ public class Ej004_LeerFichero {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		
+		// Leemos el buffer de Ej004_LlamadaLeerFichero
 		try (InputStreamReader isr = new InputStreamReader(System.in);
 			 BufferedReader br = new BufferedReader(isr);) {
 			

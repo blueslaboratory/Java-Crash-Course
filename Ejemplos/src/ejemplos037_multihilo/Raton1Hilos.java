@@ -15,7 +15,7 @@ public class Raton1Hilos extends Thread {
 	public void comer() {
 		try {
 			System.out.printf("El raton " + this.nombre + " ha comenzado a alimentarse%n", nombre);
-			this.sleep(tiempoAlimentacion * 1000);
+			Thread.sleep(tiempoAlimentacion * 1000);
 			System.out.printf("El raton " + this.nombre + " ha terminado de alimentarse%n", nombre);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
@@ -27,6 +27,7 @@ public class Raton1Hilos extends Thread {
 		this.comer();
 	}
 
+	
 	public static void main(String[] args) {
 		Raton1Hilos fievel = new Raton1Hilos("Fievel", 4);
 		Raton1Hilos jerry = new Raton1Hilos("Jerry", 5);
@@ -40,6 +41,10 @@ public class Raton1Hilos extends Thread {
 		jerry.start();
 		pinky.start();
 		mickey.start();
+		
+		
+		
+		// Llamandolos con run()
 		try {
 			Thread.sleep(7000);
 		} catch (InterruptedException e) {
@@ -47,8 +52,7 @@ public class Raton1Hilos extends Thread {
 			e.printStackTrace();
 		}
 		
-		System.out.println();
-		System.out.println("Llamandolos con run() es secuencial");
+		System.out.println("\nLlamandolos con run() es secuencial");
 		fievel.run();
 		jerry.run();
 		pinky.run();

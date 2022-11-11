@@ -1,26 +1,37 @@
 package ejemplos037_multihilos1;
 
-class Contador2 {
-	private int c = 0;
 
+
+//Clase Contador2
+class Contador2 {
+
+	private int c = 0;
+	
+	// CONSTRUCTOR
 	Contador2(int c) {
 		this.c = c;
 	}
 
-	public void incrementa() {
-		c = c + 1;
-	}
-
-	public void decrementa() {
-		c = c - 1;
-	}
-
+	// GETTERS Y SETTERS: ALT+SHIFT+S
 	public int getValor() {
 		return c;
 	}
+	public void setC(int c) {
+		this.c = c;
+	}
 
-}// CONTADOR
+	// OTROS METODOS
+	public void incrementa() {
+		c = c + 1;
+	}
+	public void decrementa() {
+		c = c - 1;
+	}
+}
 
+
+
+//Clase HiloA2: incrementa
 class HiloA2 extends Thread {
 	private Contador2 contador;
 
@@ -45,8 +56,11 @@ class HiloA2 extends Thread {
 		}
 
 	}
-}// HILOA
+}
 
+
+
+//Clase HiloB2: decrementa
 class HiloB2 extends Thread {
 	private Contador2 contador;
 
@@ -56,6 +70,9 @@ class HiloB2 extends Thread {
 	}
 
 	public void run() {
+		// synchronized: palabra reservada para que en el metodo 
+		// solo entre 1 hilo cada vez
+		
 		synchronized (contador) {
 			for (int j = 0; j < 300; j++) {
 				contador.decrementa();
@@ -67,7 +84,9 @@ class HiloB2 extends Thread {
 			System.out.println(getName() + " contador vale " + contador.getValor());
 		}
 	}
-}// HILOB
+}
+
+
 
 public class Compartir2 {
 	public static void main(String[] args) {

@@ -1,11 +1,11 @@
 package ejemplos037_multihilo;
 
-public class RatonGrupos extends Thread {
+public class Raton3Grupos extends Thread {
 
 	private String nombre;
 	private int tiempoAlimentacion;
 
-	public RatonGrupos(String nombre, int tiempoAlimentacion) {
+	public Raton3Grupos(String nombre, int tiempoAlimentacion) {
 
 		super();
 		this.nombre = nombre;
@@ -15,7 +15,7 @@ public class RatonGrupos extends Thread {
 	public void comer() {
 		try {
 			System.out.printf("El raton " + this.nombre + " ha comenzado a alimentarse%n", nombre);
-			this.sleep(tiempoAlimentacion * 1000);
+			Thread.sleep(tiempoAlimentacion * 1000);
 			System.out.printf("El raton " + this.nombre + " ha terminado de alimentarse%n", nombre);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
@@ -24,7 +24,7 @@ public class RatonGrupos extends Thread {
 
 	@Override
 	public void run() {
-		System.out.println("\nInformacion del hilo: " + Thread.currentThread().toString());
+		System.out.println("\nInformacion del hilo: " + Thread.currentThread().toString() + "-" +this.nombre);
 		this.comer();
 	}
 
@@ -32,19 +32,22 @@ public class RatonGrupos extends Thread {
 
 		ThreadGroup grupo = new ThreadGroup("Grupo de hilos");
 
-		RatonGrupos fievel = new RatonGrupos("Fievel", 4);
+		
+		Raton3Grupos fievel = new Raton3Grupos("Fievel", 4);
 		Thread t1 = new Thread(grupo, fievel);
-		
-		RatonGrupos jerry = new RatonGrupos("Jerry", 5);
-		
-		RatonGrupos pinky = new RatonGrupos("Pinky", 3);
+		Raton3Grupos pinky = new Raton3Grupos("Pinky", 3);
 		Thread t3 = new Thread(grupo, pinky);
 		
-		RatonGrupos mickey = new RatonGrupos("Mickey", 6);
+		
+		Raton3Grupos jerry = new Raton3Grupos("Jerry", 5);
+		Raton3Grupos mickey = new Raton3Grupos("Mickey", 6);
 
+		
 		t1.start();
-		jerry.start();
 		t3.start();
+		
+		
+		jerry.start();
 		mickey.start();
 	}
 

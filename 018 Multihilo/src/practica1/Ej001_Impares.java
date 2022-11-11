@@ -37,6 +37,7 @@ public class Ej001_Impares implements Runnable{
 	
 	@Override
 	public void run() {
+		// meto lo que quiero que se ejecute cuando hago el start()
 		this.impares();
 	}
 

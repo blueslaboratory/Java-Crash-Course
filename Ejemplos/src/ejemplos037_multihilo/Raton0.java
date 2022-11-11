@@ -24,10 +24,12 @@ public class Raton0 {
 
 	public static void main(String[] args) {
 		
-		Raton0 fievel = new Raton0("Fievel", 4);
-		Raton0 jerry = new Raton0("Jerry", 5);
-		Raton0 pinky = new Raton0("Pinky", 3);
-		Raton0 mickey = new Raton0("Mickey", 6);
+		// Ejecucion secuencial no concurrente
+		
+		Raton0 fievel = new Raton0("Fievel", 4); 	//4s
+		Raton0 jerry = new Raton0("Jerry", 5); 		//4+5=9
+		Raton0 pinky = new Raton0("Pinky", 3);		//4+5+3=12
+		Raton0 mickey = new Raton0("Mickey", 6);	//4+5+3+6=18
 
 		fievel.comer();
 		jerry.comer();

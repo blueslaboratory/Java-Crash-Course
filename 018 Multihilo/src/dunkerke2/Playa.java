@@ -1,13 +1,11 @@
 package dunkerke2;
 
-import java.util.concurrent.Semaphore;
-
 public class Playa {
 
 	private int soldadosAliadosLuchando;
 	// en la playa solo cabe 1 embarcacion cada vez, pero el semaforo
 	// se declara en el main y se pasa a cada embarcacion
-	// Semaphore semaforo = new Semaphore(1);
+	// Semaphore semaforo = new Semaphore(10);
 
 	
 	// CONSTRUCTOR

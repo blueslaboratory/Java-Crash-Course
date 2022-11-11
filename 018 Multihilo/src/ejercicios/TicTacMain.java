@@ -11,6 +11,7 @@ public class TicTacMain {
 		
 		
 		// Esto crearia hilos de forma secuencial
+		
 		do {
 			tac.tac();
 			tic.tic();

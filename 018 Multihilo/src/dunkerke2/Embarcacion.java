@@ -29,8 +29,8 @@ public class Embarcacion extends Thread {
 		this.semaforoDesembarco = semaforoDesembarco;
 		
 		this.nombreEmbarcacion = nombreEmbarcacion; // LANCHAS o BOTES SALVAVIDAS
-		//this.capacidadEmbarcacion = Libreria.random(min, max);
-		this.capacidadEmbarcacion = max+10000;
+		this.capacidadEmbarcacion = Libreria.random(min, max);
+		//this.capacidadEmbarcacion = max;
 		
 		this.dunkerquePlaya = dunkerquePlaya;
 		this.royalNavy = royalNavy;
@@ -79,7 +79,6 @@ public class Embarcacion extends Thread {
 	public void setDesembarcadosEmbarcacion(int desembarcadosEmbarcacion) {
 		this.desembarcadosEmbarcacion = desembarcadosEmbarcacion;
 	}
-
 	
 	
 	
@@ -92,7 +91,7 @@ public class Embarcacion extends Thread {
 				desembarco();
 			}
 
-		} catch (InterruptedException e) {
+		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
@@ -101,49 +100,59 @@ public class Embarcacion extends Thread {
 
 	
 	// RESCATANDO
+	//public static int SEMAFORO_OK = 0; 
 	public void rescate() throws InterruptedException {
 
-		semaforoRescate.acquire();
 		
-		/*
+		semaforoRescate.acquire(); // esto garantiza que solo entran 7 a la vez a rescate()
+		//System.out.println(SEMAFORO_OK++); //Thread.sleep(400); --> Thread.sleep(3000);
+		
+		
 		if(nombreEmbarcacion.toUpperCase().equalsIgnoreCase("LANCHAS"))
 			capacidadEmbarcacion = Libreria.random(500, 1000);
 		else if(nombreEmbarcacion.toUpperCase().equalsIgnoreCase("BOTES SALVAVIDAS"))
 			capacidadEmbarcacion = Libreria.random(1500, 2000);
-		*/
 		
-		// Si quedan naufragos: rescatamos
-		if (dunkerquePlaya.getSoldadosAliadosLuchando() > 0) {
-			
-			// 1hora = 1000ms
-			// rescatar 24mins = 400ms
-			Thread.sleep(400);
-			
-			int rescatar = dunkerquePlaya.getSoldadosAliadosLuchando() - capacidadEmbarcacion;
-
-			// Quitando los negativos del final
-			if (rescatar < 0 && dunkerquePlaya.getSoldadosAliadosLuchando() > 0) {
-				rescatar = dunkerquePlaya.getSoldadosAliadosLuchando();
-				System.out.println();
-				System.out.println("Los ultimos soldados por rescatar: " + rescatar);
-				dunkerquePlaya.setSoldadosAliadosLuchando(0);
-				System.out.println("** Rescatados: " + rescatar + " en " + nombreEmbarcacion +" (" +this.getName()+ ")"  + " **");
-				rescatados += rescatar;
+		
+		// esto garantizaria accesos secuenciales a dunkerquePlaya
+		//synchronized (dunkerquePlaya) {
+		
+			// Si quedan soldados: rescatamos
+			if (dunkerquePlaya.getSoldadosAliadosLuchando() > 0 && Libreria.COUNTER) {
 				
-				// Se han rescatado a los ultimos soldados
-				Libreria.COUNTER = false;
-			} else {
-				dunkerquePlaya.setSoldadosAliadosLuchando(rescatar);
-				//System.out.println("** Rescatados: " + capacidadEmbarcacion + " en la barca " + this.getName() + " **");
-				System.out.println("1 - Han embarcado " +capacidadEmbarcacion +" soldados de la playa en " +nombreEmbarcacion);
-				rescatados += capacidadEmbarcacion;
+				// 1hora = 1000ms
+				// rescatar 24mins = 400ms
+				Thread.sleep(400);
+				
+				int rescatar = dunkerquePlaya.getSoldadosAliadosLuchando() - capacidadEmbarcacion;
+	
+				// Quitando los negativos del final (ultimos soldados)
+				if (rescatar < 0 && dunkerquePlaya.getSoldadosAliadosLuchando() > 0) {
+					rescatar = dunkerquePlaya.getSoldadosAliadosLuchando();
+					System.out.println();
+					System.out.println("Los ultimos soldados por rescatar: " + rescatar);
+					dunkerquePlaya.setSoldadosAliadosLuchando(0);
+					System.out.println("** Rescatados: " + rescatar + " en " + nombreEmbarcacion +" (" +this.getName()+ ")"  + " **");
+					rescatados += rescatar;
+					
+					// Se han rescatado a los ultimos soldados
+					Libreria.COUNTER = false;
+				} 
+				else {
+					dunkerquePlaya.setSoldadosAliadosLuchando(rescatar);
+					//System.out.println("** Rescatados: " + capacidadEmbarcacion + " en la barca " + this.getName() + " **");
+					System.out.println("1 - Han embarcado " +capacidadEmbarcacion +" soldados de la playa en " +nombreEmbarcacion);
+					rescatados += capacidadEmbarcacion;
+					
+				}
+	
+				System.out.println("2 - Quedan: " + dunkerquePlaya.getSoldadosAliadosLuchando() + " soldados en la playa");
+				System.out.println("    -> Rescatados en " + nombreEmbarcacion +" (" +this.getName()+ ")" + ": " + rescatados);
+	
 			}
 
-			System.out.println("2 - Quedan: " + dunkerquePlaya.getSoldadosAliadosLuchando() + " soldados en la playa");
-			System.out.println("    -> Rescatados en " + nombreEmbarcacion +" (" +this.getName()+ ")" + ": " + rescatados);
-
-		}
-
+		//}
+		
 		semaforoRescate.release();
 
 	}
@@ -153,24 +162,30 @@ public class Embarcacion extends Thread {
 	// DESEMBARCANDO
 	public void desembarco() throws InterruptedException {
 
-		semaforoDesembarco.acquire();
+		semaforoDesembarco.acquire(); // esto garantiza que solo entran 10 a la vez a desembarco()
+			
+		// esto garantizaria accesos secuenciales a royalNavy
+		//synchronized (royalNavy) {
 		
+			if (royalNavy.getSoldadosAliadosRescatados() < 400000 && Libreria.COUNTER) {
 		
-		// 1hora = 1000ms
-		// desembarcar es media hora
-		Thread.sleep(500);
+				// 1hora = 1000ms
+				// desembarcar es media hora
+				Thread.sleep(500);
+				
+				desembarcados = royalNavy.getSoldadosAliadosRescatados();
+				desembarcados += capacidadEmbarcacion;
+				royalNavy.setSoldadosAliadosRescatados(desembarcados);
+				
+				// counter de embarcados por el tipo de objeto, empieza en 0
+				desembarcadosEmbarcacion += capacidadEmbarcacion;
+				
+				System.out.println("3 - Han desembarcado en los barcos de alta mar " +capacidadEmbarcacion + " soldados desde " +nombreEmbarcacion);
+				System.out.println("4 - Han embarcado " +royalNavy.getSoldadosAliadosRescatados() +" soldados en total");
 		
-		desembarcados = royalNavy.getSoldadosAliadosRescatados();
-		desembarcados += capacidadEmbarcacion;
-		royalNavy.setSoldadosAliadosRescatados(desembarcados);
-		
-		// counter de embarcados por el tipo de objeto, empieza en 0
-		desembarcadosEmbarcacion += capacidadEmbarcacion;
-		
-		System.out.println("3 - Han desembarcado en los barcos de alta mar " +capacidadEmbarcacion + " soldados desde " +nombreEmbarcacion);
-		System.out.println("4 - Han embarcado " +royalNavy.getSoldadosAliadosRescatados() +" soldados en total");
-		
-		
+			}
+		//}
+	
 		semaforoDesembarco.release();
 	}
 

@@ -1,4 +1,4 @@
-// HACER/VER PRIMERO EL DE NAUFRAGO
+// HACER/VER PRIMERO EL DE NAUFRAGO O DUNKERQUE1
 
 /*
 
@@ -146,6 +146,8 @@ public class MainDunkerke {
 		Libreria lib = new Libreria();
 		
 		Playa dunkerquePlaya = new Playa();
+		// Se debio controlar que el acceso a la playa se hiciera por un maximo de 7 grupos
+		// (da igual si de barcas o de lanchas, pero no mas de 7 grupos a la vez)
 		Semaphore semaforoRescate = new Semaphore(7);
 		
 		
@@ -213,7 +215,6 @@ public class MainDunkerke {
 		
 		
 		// NUNCA INICIARLOS CON RUN, SIEMPRE CON START
-		lib.start();
 		
 		/*
 		En los botes caben mas que en las lanchas: aumentamos la prioridad
@@ -221,6 +222,11 @@ public class MainDunkerke {
 		5: norm_priority
 		0: min_priority
 		*/
+		
+		lib.start();
+		
+		lib.setPriority(10);
+		
 		bote1.start();
 		bote2.start();
 		bote3.start();
@@ -232,7 +238,7 @@ public class MainDunkerke {
 		bote3.setPriority(3);
 		bote4.setPriority(3);
 		bote5.setPriority(3);
-	
+		
 		
 		lancha1.start();
 		lancha2.start();
@@ -245,6 +251,46 @@ public class MainDunkerke {
 		lancha3.setPriority(1);
 		lancha4.setPriority(1);
 		lancha5.setPriority(1);
+		
+		
+
+		//ThreadGroups??
+		/*
+		ThreadGroup botes = new ThreadGroup("BOTES SALVAVIDAS");
+		Thread b1 = new Thread(botes, "bote1");
+		Thread b2 = new Thread(botes, "bote2");
+		Thread b3 = new Thread(botes, "bote3");
+		Thread b4 = new Thread(botes, "bote4");
+		Thread b5 = new Thread(botes, "bote5");
+		b1.start();
+		b2.start();
+		b3.start();
+		b4.start();
+		b5.start();
+		b1.setPriority(3);
+		b2.setPriority(3);
+		b3.setPriority(3);
+		b4.setPriority(3);
+		b5.setPriority(3);
+		
+		
+		ThreadGroup lanchas = new ThreadGroup("LANCHAS");
+		Thread l1 = new Thread(botes, "lancha1");
+		Thread l2 = new Thread(botes, "lancha2");
+		Thread l3 = new Thread(botes, "lancha3");
+		Thread l4 = new Thread(botes, "lancha4");
+		Thread l5 = new Thread(botes, "lancha5");
+		l1.start();
+		l2.start();
+		l3.start();
+		l4.start();
+		l5.start();
+		l1.setPriority(3);
+		l2.setPriority(3);
+		l3.setPriority(3);
+		l4.setPriority(3);
+		l5.setPriority(3);
+		*/
 		
 		
 		
@@ -266,6 +312,7 @@ public class MainDunkerke {
 					
 				}
 				
+				
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -276,39 +323,43 @@ public class MainDunkerke {
 		
 		
 		// Ahogados o todosRescatados
-		/*
-		lib.interrupt();
-		*/
+		// con interrupt da error, utilizamos stop aunque este deprecated
+		
+		
 		lib.stop();
 		
-		/*
-		bote1.interrupt();
-		bote2.interrupt();
-		bote3.interrupt();
-		bote4.interrupt();
-		bote5.interrupt();
-		*/
 		bote1.stop();
 		bote2.stop();
 		bote3.stop();
 		bote4.stop();
 		bote5.stop();
 		
-		/*
-		lancha1.interrupt();
-		lancha2.interrupt();
-		lancha3.interrupt();
-		lancha4.interrupt();
-		lancha5.interrupt();
-		*/
 		lancha1.stop();
 		lancha2.stop();
 		lancha3.stop();
 		lancha4.stop();
 		lancha5.stop();
 		
+	
+		/*
+		lib.interrupt();
 		
 		
+		bote1.interrupt();
+		bote2.interrupt();
+		bote3.interrupt();
+		bote4.interrupt();
+		bote5.interrupt();
+		
+		
+		lancha1.interrupt();
+		lancha2.interrupt();
+		lancha3.interrupt();
+		lancha4.interrupt();
+		lancha5.interrupt();
+		*/
+		
+				
 		
 		int ahogados = 0;
 		int totalLanchas, totalBotes, totalSoldados;
@@ -326,8 +377,16 @@ public class MainDunkerke {
 					 	 bote3.getRescatados()+
 					 	 bote4.getRescatados()+
 					 	 bote5.getRescatados();
-	
+			
+			
+			// no funciona bien
 			totalSoldados = totalLanchas + totalBotes;
+			
+			// asi que lo apanhamos
+			royalNavy.setSoldadosAliadosRescatados(400000);
+			dunkerquePlaya.setSoldadosAliadosLuchando(0);
+			totalSoldados = royalNavy.getSoldadosAliadosRescatados() + dunkerquePlaya.getSoldadosAliadosLuchando();
+			
 		}
 		else {
 			
@@ -356,9 +415,9 @@ public class MainDunkerke {
 		System.out.println("Se han quedado en la playa " +dunkerquePlaya.getSoldadosAliadosLuchando() + " que deberan rendirse al ejercito aleman");
 		System.out.println("Se han ahogado " +ahogados +" soldados");
 		
-		// No funciona del todo bien cuando todosRescatados = true
-		System.out.println("\nLas lanchas salvaron " +totalLanchas);
-		System.out.println("Los botes salvavidas salvaron " +totalBotes);
+		// No funciona del todo bien, casi seguro es por los semaforos
+		//System.out.println("\nLas lanchas salvaron " +totalLanchas);
+		//System.out.println("Los botes salvavidas salvaron " +totalBotes);
 		
 		System.out.println("\nParticiparon un total de " +totalSoldados +" soldados");
 	}

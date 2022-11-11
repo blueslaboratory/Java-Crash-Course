@@ -1,11 +1,11 @@
 package ejemplos037_multihilo;
 
-public class RatonRunnable implements Runnable {
+public class Raton2Runnable implements Runnable {
 
 	private String nombre;
 	private int tiempoAlimentacion;
 
-	public RatonRunnable(String nombre, int tiempoAlimentacion) {
+	public Raton2Runnable(String nombre, int tiempoAlimentacion) {
 
 		super();
 		this.nombre = nombre;
@@ -29,10 +29,10 @@ public class RatonRunnable implements Runnable {
 
 	public static void main(String[] args) {
 
-		RatonRunnable fievel = new RatonRunnable("Fievel", 4);
-		RatonRunnable jerry = new RatonRunnable("Jerry", 5);
-		RatonRunnable pinky = new RatonRunnable("Pinky", 3);
-		RatonRunnable mickey = new RatonRunnable("Mickey", 6);
+		Raton2Runnable fievel = new Raton2Runnable("Fievel", 4);
+		Raton2Runnable jerry = new Raton2Runnable("Jerry", 5);
+		Raton2Runnable pinky = new Raton2Runnable("Pinky", 3);
+		Raton2Runnable mickey = new Raton2Runnable("Mickey", 6);
 
 		new Thread(fievel).start();
 		new Thread(jerry).start();

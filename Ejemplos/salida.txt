@@ -1,14 +1,2 @@
-bin
-Desktop
-Documents
-Downloads
-imwheel-script.sh
-Music
-Pictures
-Programs
-Public
-Run sh script
-Steam
-Templates
-Videos
-VirtualBox VMs
+alejandro
+lost+found

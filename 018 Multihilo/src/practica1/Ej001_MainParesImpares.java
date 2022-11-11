@@ -17,6 +17,8 @@ public class Ej001_MainParesImpares {
 		Scanner sc = new Scanner(System.in);
 		int opcion = 0;
 		
+		
+		// MENU
 		System.out.println("***** MENU *****");
 		System.out.println("  1. Pares");
 		System.out.println("  2. Impares");
@@ -36,18 +38,21 @@ public class Ej001_MainParesImpares {
 		} while(opcion!=1 && opcion!=2 && opcion!=3);
 		
 		
+		// opcion=1
 		if(opcion==1) {
 			Ej001_Pares pares = new Ej001_Pares("", 1);
 			// Con extends Thread
 			pares.start();
 		}
 		
+		// opcion=2
 		if(opcion==2) {
 			Ej001_Impares impares = new Ej001_Impares("", 1);
 			// Con implements Runnable
 			new Thread(impares).start();
 		}
 		
+		// opcion=3
 		if(opcion==3) {
 			Ej001_Pares pares = new Ej001_Pares("", 1);
 			Ej001_Impares impares = new Ej001_Impares("", 1);

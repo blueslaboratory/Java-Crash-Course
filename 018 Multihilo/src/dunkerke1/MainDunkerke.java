@@ -234,6 +234,7 @@ public class MainDunkerke {
 		System.out.println("Se han quedado en la playa " +dunkerquePlaya.getSoldadosAliadosLuchando() + " que deberan rendirse al ejercito aleman");
 		System.out.println("Se han ahogado " +ahogados +" soldados");
 		
+		// Aqui esto funciona bien
 		System.out.println("\nLas lanchas salvaron " +totalLanchas +" soldados");
 		System.out.println("Los botes salvavidas salvaron " +totalBotes +" soldados");
 		

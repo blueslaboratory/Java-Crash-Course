@@ -16,6 +16,7 @@ public class Ej011_Ejecutar {
 		
 		// LINUX
 		ProcessBuilder pb = new ProcessBuilder();
+		// "consola bash", "comando -c", "comando a ejecutar"
 		pb.command("bash", "-c", "ls /home/alejandro/");
 		Process p = pb.start();
 		
