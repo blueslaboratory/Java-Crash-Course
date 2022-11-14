@@ -18,13 +18,13 @@ Hay una carrera entre:
 - Juan: corre a 7 km / hora, en bici va a 18 km / hora y nada a 2.000 m / hora
 - Vicente: corre a 6 km / hora, en bici va a 30 km / hora y nada a 1.000 m / hora
 
-Todos evidentemente empiezan a competir a la vez. ¿Quien gana? Prueba y documenta
+Todos evidentemente empiezan a competir a la vez. ï¿½Quien gana? Prueba y documenta
 */
 
 
 package practica1;
 
-// Con extends Thread
+// Con Runable
 public class Ej002_ParticipanteRunnable implements Runnable{
 
 	private String nombre;
@@ -32,7 +32,7 @@ public class Ej002_ParticipanteRunnable implements Runnable{
 	private int tiempoTotal = 0;
 
 	public Ej002_ParticipanteRunnable(String nombre, int vCorrer, int vBici, int vNadar) {
-		super ();
+		super();
 		this.nombre = nombre;
 		this.vCorrer = vCorrer;
 		this.vBici = vBici;
@@ -108,7 +108,7 @@ public class Ej002_ParticipanteRunnable implements Runnable{
 		Ej002_ParticipanteRunnable Juan = new Ej002_ParticipanteRunnable("Juan", 7, 18, 2);
 		Ej002_ParticipanteRunnable Vicente = new Ej002_ParticipanteRunnable("Vicente", 6, 30, 1);
 		
-		// llamando al run
+		// llamando al run con un implements runnable
 		new Thread(Pedro).start(); 
 		new Thread(Juan).start();
 		new Thread(Vicente).start();

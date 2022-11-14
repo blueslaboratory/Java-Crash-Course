@@ -24,7 +24,7 @@ class Contador4 {
 	}
 
 	public void incrementa() {
-	//public synchronized void incrementa() {
+	// public synchronized void incrementa() {
 	// synchronized: hasta que no suelte el metodo incrementa no se lo dejes a otro hilo
 		c = c + 1;
 	}

@@ -31,8 +31,8 @@ public class Ej005_Artificero extends Thread{
 		System.out.println("Comienza la desactivacion");
 		
 		try {
-			Thread.sleep(this.tDesactivar);
-			System.out.println("Bomba status: desactivada en " +this.tDesactivar +"ms");
+			Thread.sleep(tDesactivar);
+			System.out.println("Bomba status: desactivada en " +tDesactivar +"ms");
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			// e.printStackTrace();

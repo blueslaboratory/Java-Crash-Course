@@ -44,7 +44,7 @@ public class Ej005_MainDesactivar {
 		if(bomba.isAlive()) {
 			bomba.interrupt();
 		}
-		// termina bomba antes y el artificero muere
+		// si termina la bomba antes sale del bucle y el artificero muere
 		else {
 			artificero.interrupt();
 		}

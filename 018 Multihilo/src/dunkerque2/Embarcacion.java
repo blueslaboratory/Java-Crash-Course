@@ -1,6 +1,6 @@
 // HACER/VER PRIMERO EL DE NAUFRAGO
 
-package dunkerke2;
+package dunkerque2;
 
 import java.util.concurrent.Semaphore;
 
@@ -93,7 +93,9 @@ public class Embarcacion extends Thread {
 
 		} catch (Exception e) {
 			// TODO: handle exception
-			e.printStackTrace();
+			System.exit(0);
+			//return;
+			//e.printStackTrace();
 		}
 	}
 
@@ -109,9 +111,9 @@ public class Embarcacion extends Thread {
 		
 		
 		if(nombreEmbarcacion.toUpperCase().equalsIgnoreCase("LANCHAS"))
-			capacidadEmbarcacion = Libreria.random(500, 1000);
+			capacidadEmbarcacion = Libreria.random(100, 200);
 		else if(nombreEmbarcacion.toUpperCase().equalsIgnoreCase("BOTES SALVAVIDAS"))
-			capacidadEmbarcacion = Libreria.random(1500, 2000);
+			capacidadEmbarcacion = Libreria.random(300, 400);
 		
 		
 		// esto garantizaria accesos secuenciales a dunkerquePlaya

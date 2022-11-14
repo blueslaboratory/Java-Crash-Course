@@ -28,7 +28,7 @@ public class Ej005_Bomba extends Thread{
 	
 	public void countdown() {
 		
-		for(int i=this.contador; i>0; i--) {
+		for(int i=contador; i>0; i--) {
 			
 			try {
 				Thread.sleep(1000);

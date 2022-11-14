@@ -1,6 +1,6 @@
 /*
 Utilizando la clase anterior, o una copia ya que posiblemente necesites hacerle alguna
-modificación, haz un proyecto y anade otra clase con la que los equipos de España y
+modificaciï¿½n, haz un proyecto y anade otra clase con la que los equipos de Espaï¿½a y
 EEUU van a hacer una carrera de relevos:
 */
 
@@ -62,7 +62,8 @@ public class Ej004_RelevosThreadEquipo extends Thread{
 	
 	@Override
 	public void run() {
-		this.relevos(); 
+		this.relevos();
+		//relevos();
 	}
 
 	public static int aleatorio() {

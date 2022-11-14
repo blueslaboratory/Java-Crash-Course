@@ -18,7 +18,7 @@ Hay una carrera entre:
 - Juan: corre a 7 km / hora, en bici va a 18 km / hora y nada a 2.000 m / hora
 - Vicente: corre a 6 km / hora, en bici va a 30 km / hora y nada a 1.000 m / hora
 
-Todos evidentemente empiezan a competir a la vez. ¿Quien gana? Prueba y documenta
+Todos evidentemente empiezan a competir a la vez. ï¿½Quien gana? Prueba y documenta
 */
 
 
@@ -32,7 +32,7 @@ public class Ej002_ParticipanteThread extends Thread{
 	private int tiempoTotal = 0;
 
 	public Ej002_ParticipanteThread(String nombre, int vCorrer, int vBici, int vNadar) {
-		super ();
+		super();
 		this.nombre = nombre;
 		this.vCorrer = vCorrer;
 		this.vBici = vBici;

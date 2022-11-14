@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="5 -"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="Los botes salva"/>
 			<item value="5 -"/>
 			<item value="desembarcados"/>
 			<item value="setDesembarcados"/>
@@ -22,7 +23,6 @@
 			<item value="é"/>
 			<item value="á"/>
 			<item value="ñ"/>
-			<item value="jugadaMaestra"/>
 		</list>
 		<list key="replacehistory">
 			<item value="u"/>

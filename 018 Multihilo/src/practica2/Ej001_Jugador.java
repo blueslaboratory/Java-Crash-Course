@@ -66,11 +66,10 @@ public class Ej001_Jugador extends Thread{
 	
 
 	public Ej001_Jugador(int id, Ej001_Arbitro arbitro) {
-	
-		super ();
+		super();
 		this.id = id;
 		this.arbitro = arbitro;
-	} 
+	}
 	
 	
 	public long getId() {
@@ -89,7 +88,7 @@ public class Ej001_Jugador extends Thread{
 	
 	
 	public void jugada() {
-		int n = 1 + (int) (10 * Math.random());
+		int n = 1 + (int)(10*Math.random());
 
 		// para soltar el synchronize
 		if ((arbitro.getTurno()) == this.id)

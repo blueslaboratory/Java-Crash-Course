@@ -67,8 +67,7 @@ public class Ej001_Arbitro{
 	static boolean FINISH = false;
 
 	public Ej001_Arbitro(int nTotalJugadores) {
-	
-		super ();
+		super();
 		this.numAdivinar = 1 + (int)(10*Math.random());
 		this.nTotalJugadores = nTotalJugadores;
 		this.turno = 1;
@@ -116,7 +115,7 @@ public class Ej001_Arbitro{
 		System.out.println("Jugador" +id + " dice: " +jugada);
 		
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

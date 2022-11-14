@@ -1,4 +1,4 @@
-package dunkerke2;
+package dunkerque2;
 
 public class Playa {
 

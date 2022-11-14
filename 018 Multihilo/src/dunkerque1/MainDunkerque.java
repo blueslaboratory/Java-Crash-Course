@@ -1,4 +1,4 @@
-// HACER/VER PRIMERO EL DE NAUFRAGO O DUNKERQUE1
+// HACER/VER PRIMERO EL DE NAUFRAGO
 
 /*
 
@@ -112,7 +112,7 @@ que se pudo mejorar. Para ello se debieron seguir los siguientes pasos:
 - La playa era muy grande, pero no tenia capacidad para que todas lanchas y barcas
 salvavidas entraran a la vez y se molestaban. Se debio dividir tanto a las barcas
 como a las lanchas en 5 grupos (5 grupos de cada)
-- Cada grupo de botes tenia capacidad para rescatar entre 300-400 soldados
+- Cada grupo de barcas tenia capacidad para rescatar entre 300-400 soldados
 - Cada grupo de lanchas tenia capacidad para rescatar entre 100-200
 soldados.
 - Se debio controlar que el acceso a la playa se hiciera por un maximo de 7 grupos
@@ -133,62 +133,32 @@ de todos.
 
 */
 
-package dunkerke2;
-//DUNKERQUE LO QUE PUDO SER
+package dunkerque1;
 
 import java.util.concurrent.Semaphore;
 
-
-public class MainDunkerke {
+public class MainDunkerque {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Libreria lib = new Libreria();
 		
 		Playa dunkerquePlaya = new Playa();
-		// Se debio controlar que el acceso a la playa se hiciera por un maximo de 7 grupos
-		// (da igual si de barcas o de lanchas, pero no mas de 7 grupos a la vez)
-		Semaphore semaforoRescate = new Semaphore(7);
+		Semaphore semaforoRescate = new Semaphore(1);
 		
 		
 		RoyalNavy royalNavy = new RoyalNavy();
-		// se distribuye la llegada entre los distintos barcos de forma que pueda que 
-		// ningun grupo de barcas o lanchas tenga que esperar a otron grupo: todos a la vez
-		Semaphore semaforoDesembarco = new Semaphore(10);
+		Semaphore semaforoDesembarco = new Semaphore(1);
 		
 		
-		Embarcacion lancha1 = new Embarcacion("LANCHAS", 100, 200, 
-											  dunkerquePlaya, royalNavy,
-											  semaforoRescate, semaforoDesembarco);
-		Embarcacion lancha2 = new Embarcacion("LANCHAS", 100, 200, 
-				   							  dunkerquePlaya, royalNavy,
-				   							  semaforoRescate, semaforoDesembarco);
-		Embarcacion lancha3 = new Embarcacion("LANCHAS", 100, 200, 
-				   							  dunkerquePlaya, royalNavy,
-				   							  semaforoRescate, semaforoDesembarco);
-		Embarcacion lancha4 = new Embarcacion("LANCHAS", 100, 200, 
-				   							  dunkerquePlaya, royalNavy,
-				   							  semaforoRescate, semaforoDesembarco);
-		Embarcacion lancha5 = new Embarcacion("LANCHAS", 100, 200, 
-				   							  dunkerquePlaya, royalNavy,
-				   							  semaforoRescate, semaforoDesembarco);
+		Embarcacion lanchas = new Embarcacion("LANCHAS", 500, 1000, 
+											   dunkerquePlaya, royalNavy,
+											   semaforoRescate, semaforoDesembarco);
 		
+		Embarcacion botes = new Embarcacion("BOTES SALVAVIDAS", 1500, 2000,
+											 dunkerquePlaya, royalNavy,
+											 semaforoRescate, semaforoDesembarco);
 		
-		Embarcacion bote1 = new Embarcacion("BOTES SALVAVIDAS", 300, 400,
-											dunkerquePlaya, royalNavy,
-											semaforoRescate, semaforoDesembarco);
-		Embarcacion bote2 = new Embarcacion("BOTES SALVAVIDAS", 300, 400,
-											dunkerquePlaya, royalNavy,
-											semaforoRescate, semaforoDesembarco);
-		Embarcacion bote3 = new Embarcacion("BOTES SALVAVIDAS", 300, 400,
-											dunkerquePlaya, royalNavy,
-											semaforoRescate, semaforoDesembarco);
-		Embarcacion bote4 = new Embarcacion("BOTES SALVAVIDAS", 300, 400,
-											dunkerquePlaya, royalNavy,
-											semaforoRescate, semaforoDesembarco);
-		Embarcacion bote5 = new Embarcacion("BOTES SALVAVIDAS", 300, 400,
-											dunkerquePlaya, royalNavy,
-											semaforoRescate, semaforoDesembarco);
 		
 		
 		System.out.println("CONDICIONES INICIALES EN LA PLAYA");
@@ -196,110 +166,24 @@ public class MainDunkerke {
 		System.out.println();
 		
 		System.out.println("EMBARCACIONES");
-		
-		System.out.println(lancha1);
-		System.out.println(lancha2);
-		System.out.println(lancha3);
-		System.out.println(lancha4);
-		System.out.println(lancha5);
-		
-		System.out.println(bote1);
-		System.out.println(bote2);
-		System.out.println(bote3);
-		System.out.println(bote4);
-		System.out.println(bote5);
+		System.out.println(lanchas);
+		System.out.println(botes);
 		System.out.println();
 		
 		System.out.println("***COMIENZA LA OPERACION DINAMO***");
 		System.out.println();
 		
-		
 		// NUNCA INICIARLOS CON RUN, SIEMPRE CON START
-		
-		/*
-		En los botes caben mas que en las lanchas: aumentamos la prioridad
-		10: max_priority
-		5: norm_priority
-		0: min_priority
-		*/
-		
 		lib.start();
-		
-		lib.setPriority(10);
-		
-		bote1.start();
-		bote2.start();
-		bote3.start();
-		bote4.start();
-		bote5.start();
-		
-		bote1.setPriority(3);
-		bote2.setPriority(3);
-		bote3.setPriority(3);
-		bote4.setPriority(3);
-		bote5.setPriority(3);
-		
-		
-		lancha1.start();
-		lancha2.start();
-		lancha3.start();
-		lancha4.start();
-		lancha5.start();
-		
-		lancha1.setPriority(1);
-		lancha2.setPriority(1);
-		lancha3.setPriority(1);
-		lancha4.setPriority(1);
-		lancha5.setPriority(1);
-		
-		
-
-		//ThreadGroups??
-		/*
-		ThreadGroup botes = new ThreadGroup("BOTES SALVAVIDAS");
-		Thread b1 = new Thread(botes, "bote1");
-		Thread b2 = new Thread(botes, "bote2");
-		Thread b3 = new Thread(botes, "bote3");
-		Thread b4 = new Thread(botes, "bote4");
-		Thread b5 = new Thread(botes, "bote5");
-		b1.start();
-		b2.start();
-		b3.start();
-		b4.start();
-		b5.start();
-		b1.setPriority(3);
-		b2.setPriority(3);
-		b3.setPriority(3);
-		b4.setPriority(3);
-		b5.setPriority(3);
-		
-		
-		ThreadGroup lanchas = new ThreadGroup("LANCHAS");
-		Thread l1 = new Thread(botes, "lancha1");
-		Thread l2 = new Thread(botes, "lancha2");
-		Thread l3 = new Thread(botes, "lancha3");
-		Thread l4 = new Thread(botes, "lancha4");
-		Thread l5 = new Thread(botes, "lancha5");
-		l1.start();
-		l2.start();
-		l3.start();
-		l4.start();
-		l5.start();
-		l1.setPriority(3);
-		l2.setPriority(3);
-		l3.setPriority(3);
-		l4.setPriority(3);
-		l5.setPriority(3);
-		*/
-		
-		
+		lanchas.start();
+		botes.start();
 		
 		
 		// que no pase de aqui hasta que la guerra haya acabado o todos hayan sido rescatados
 		boolean todosRescatados = false;
 		while(Libreria.COUNTER == true) {
 			try {
-				Thread.sleep(1);
+				Thread.sleep(1000);
 				
 				if(royalNavy.getSoldadosAliadosRescatados() >= 400000 ||
 				   dunkerquePlaya.getSoldadosAliadosLuchando() <= 0) {
@@ -308,10 +192,8 @@ public class MainDunkerke {
 					todosRescatados = true;
 					
 					royalNavy.setSoldadosAliadosRescatados(400000);
-					dunkerquePlaya.setSoldadosAliadosLuchando(0);
-					
+					//dunkerquePlaya.setSoldadosAliadosLuchando(0);
 				}
-				
 				
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
@@ -321,103 +203,40 @@ public class MainDunkerke {
 		
 		
 		
-		
-		// Ahogados o todosRescatados
-		// con interrupt da error, utilizamos stop aunque este deprecated
-		
-		
+		// ahogados o todosRescatados
+		//lib.interrupt();
 		lib.stop();
+		//lanchas.interrupt();
+		lanchas.stop();
+		//botes.interrupt();
+		botes.stop();
 		
-		bote1.stop();
-		bote2.stop();
-		bote3.stop();
-		bote4.stop();
-		bote5.stop();
-		
-		lancha1.stop();
-		lancha2.stop();
-		lancha3.stop();
-		lancha4.stop();
-		lancha5.stop();
-		
-	
-		/*
-		lib.interrupt();
-		
-		
-		bote1.interrupt();
-		bote2.interrupt();
-		bote3.interrupt();
-		bote4.interrupt();
-		bote5.interrupt();
-		
-		
-		lancha1.interrupt();
-		lancha2.interrupt();
-		lancha3.interrupt();
-		lancha4.interrupt();
-		lancha5.interrupt();
-		*/
-		
-				
 		
 		int ahogados = 0;
 		int totalLanchas, totalBotes, totalSoldados;
-		
 		if(todosRescatados) {
+			totalLanchas = lanchas.getRescatados();
+			totalBotes = botes.getRescatados();
 			
-			totalLanchas = lancha1.getRescatados()+
-					   	   lancha2.getRescatados()+
-					   	   lancha3.getRescatados()+
-					   	   lancha4.getRescatados()+
-					   	   lancha5.getRescatados();
-			
-			totalBotes = bote1.getRescatados()+
-					 	 bote2.getRescatados()+
-					 	 bote3.getRescatados()+
-					 	 bote4.getRescatados()+
-					 	 bote5.getRescatados();
-			
-			
-			// no funciona bien
 			totalSoldados = totalLanchas + totalBotes;
-			
-			// asi que lo apanhamos
-			royalNavy.setSoldadosAliadosRescatados(400000);
-			dunkerquePlaya.setSoldadosAliadosLuchando(0);
-			totalSoldados = royalNavy.getSoldadosAliadosRescatados() + dunkerquePlaya.getSoldadosAliadosLuchando();
-			
 		}
 		else {
-			
-			totalLanchas = lancha1.getDesembarcadosEmbarcacion()+
-					   	   lancha2.getDesembarcadosEmbarcacion()+
-					   	   lancha3.getDesembarcadosEmbarcacion()+
-					   	   lancha4.getDesembarcadosEmbarcacion()+
-					   	   lancha5.getDesembarcadosEmbarcacion();
-			
-			totalBotes = bote1.getDesembarcadosEmbarcacion()+
-						 bote2.getDesembarcadosEmbarcacion()+
-						 bote3.getDesembarcadosEmbarcacion()+
-						 bote4.getDesembarcadosEmbarcacion()+
-						 bote5.getDesembarcadosEmbarcacion();
-			
+			totalLanchas = lanchas.getDesembarcadosEmbarcacion();
+			totalBotes = botes.getDesembarcadosEmbarcacion();
 			ahogados = 400000 - (royalNavy.getSoldadosAliadosRescatados()+dunkerquePlaya.getSoldadosAliadosLuchando());
 			
 			totalSoldados = ahogados + royalNavy.getSoldadosAliadosRescatados() + dunkerquePlaya.getSoldadosAliadosLuchando();
 		}
+		
 				
-		
-		
-		
 		System.out.println("\n***OPERACION DINAMO FINALIZADA***");
 		System.out.println("Se han salvado " +royalNavy.getSoldadosAliadosRescatados() +" soldados en total");
 		System.out.println("Se han quedado en la playa " +dunkerquePlaya.getSoldadosAliadosLuchando() + " que deberan rendirse al ejercito aleman");
 		System.out.println("Se han ahogado " +ahogados +" soldados");
 		
-		// No funciona del todo bien, casi seguro es por los semaforos
-		//System.out.println("\nLas lanchas salvaron " +totalLanchas);
-		//System.out.println("Los botes salvavidas salvaron " +totalBotes);
+		// Aqui esto funciona bien
+		System.out.println("\nLas lanchas salvaron " +totalLanchas +" soldados");
+		System.out.println("Los botes salvavidas salvaron " +totalBotes +" soldados");
 		
 		System.out.println("\nParticiparon un total de " +totalSoldados +" soldados");
 	}
