@@ -302,8 +302,7 @@ public class MainDunkerque {
 			try {
 				Thread.sleep(1);
 				
-				if(royalNavy.getSoldadosAliadosRescatados() >= 400000 ||
-				   dunkerquePlaya.getSoldadosAliadosLuchando() <= 0) {
+				if(royalNavy.getSoldadosAliadosRescatados() == 400000) {
 					
 					Libreria.COUNTER = false;
 					todosRescatados = true;
@@ -345,12 +344,14 @@ public class MainDunkerque {
 	
 		System.out.println("\n***Parando hilos***");
 		
+		/*
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		*/
 		
 		lib.interrupt();
 		
@@ -410,7 +411,7 @@ public class MainDunkerque {
 						 bote3.getDesembarcadosEmbarcacion()+
 						 bote4.getDesembarcadosEmbarcacion()+
 						 bote5.getDesembarcadosEmbarcacion();
-			
+	
 			ahogados = 400000 - (royalNavy.getSoldadosAliadosRescatados()+dunkerquePlaya.getSoldadosAliadosLuchando());
 			
 			totalSoldados = ahogados + royalNavy.getSoldadosAliadosRescatados() + dunkerquePlaya.getSoldadosAliadosLuchando();		
@@ -418,11 +419,11 @@ public class MainDunkerque {
 					
 		System.out.println("\n***OPERACION DINAMO FINALIZADA***");
 		System.out.println("Se han salvado " +royalNavy.getSoldadosAliadosRescatados() +" soldados en total");
-		System.out.println("Se han salvado " +totalSoldados +" soldados en total");
+		//System.out.println("Se han salvado " +totalSoldados +" soldados en total");
 		System.out.println("Se han quedado en la playa " +dunkerquePlaya.getSoldadosAliadosLuchando() + " que deberan rendirse al ejercito aleman");
 		System.out.println("Se han ahogado " +ahogados +" soldados");
 				
-		// No funciona del todo bien, casi seguro es por los semaforos
+		// Ya funciona bien :)
 		System.out.println("\nLas lanchas salvaron " +totalLanchas);
 		System.out.println("Los botes salvavidas salvaron " +totalBotes);
 		

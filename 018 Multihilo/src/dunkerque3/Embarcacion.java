@@ -147,7 +147,7 @@ public class Embarcacion extends Thread {
 					
 					
 					// Se han rescatado a los ultimos soldados
-					Libreria.COUNTER = false;
+					//Libreria.COUNTER = false;
 				} 
 				else if (rescatar > 0){
 					// Cambio esto JHB
@@ -191,14 +191,18 @@ public class Embarcacion extends Thread {
 				royalNavy.setSoldadosAliadosRescatados(capacidadEmbarcacion); // suma dentro del set
 				
 				// counter de embarcados por el tipo de objeto, empieza en 0
-				// desembarcadosEmbarcacion += capacidadEmbarcacion;
+				desembarcadosEmbarcacion += capacidadEmbarcacion;
 				
 				System.out.println("3 - Han desembarcado en los barcos de alta mar " +capacidadEmbarcacion + " soldados desde " +nombreEmbarcacion);
 				System.out.println("4 - Han embarcado " +royalNavy.getSoldadosAliadosRescatados() +" soldados en total");
-		
+					/*
+				if(royalNavy.getSoldadosAliadosRescatados() == 400000 )
+					Libreria.COUNTER = false;
+					*/
 			}
 			
 			// else if para que de tiempo a que llegue el ultimo hilo, sin esto no entra ese hilo
+			/*
 			else if (royalNavy.getSoldadosAliadosRescatados() < 400000 && !Libreria.COUNTER) {
 				
 				royalNavy.setSoldadosAliadosRescatados(capacidadEmbarcacion); // suma dentro del set
@@ -209,6 +213,7 @@ public class Embarcacion extends Thread {
 				System.out.println("3 - Han desembarcado en los barcos de alta mar " +capacidadEmbarcacion + " soldados desde " +nombreEmbarcacion);
 				System.out.println("4 - Han embarcado " +royalNavy.getSoldadosAliadosRescatados() +" soldados en total");
 			}
+			*/
 		//}
 	
 		semaforoDesembarco.release();

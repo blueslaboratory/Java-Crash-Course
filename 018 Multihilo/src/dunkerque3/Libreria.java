@@ -25,7 +25,7 @@ public class Libreria extends Thread{
 		while(COUNTER) {
 			
 			for(c=0; c<6; c++) {
-				Thread.sleep(24*100);
+				Thread.sleep(24*1000);
 				System.out.println();
 				System.out.println("********************************");
 				System.out.println("5 - HAN PASADO " +(c+1) +" DIAS DE COMBATE");
