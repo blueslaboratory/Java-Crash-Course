@@ -5,18 +5,19 @@ import java.util.Random;
 
 public class EscribeFichero {
 	public static void main(String[] args) {
-		// Simulamos la recepción de un fichero de transferencias generándolo
-		// Si hay algún error, salimos con negativos. Si todo va bien, con 0.
+		// Simulamos la recepcion de un fichero de transferencias generandolo
+		// Si hay algun error, salimos con negativos. Si todo va bien, con 0.
 		FileWriter fichero = null;
 		PrintWriter pw = null;
 
 		String nombreArchivo = "transferencias";
 
-		// String ruta =
-		// "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\txts\\"
-		// +nombreArchivo +".txt";
+		// String ruta = "E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\txts\\"
+		//			   + nombreArchivo 
+		//			   + ".txt";
 		String ruta = "/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/txts/"
-				+ nombreArchivo + ".txt";
+				    + nombreArchivo 
+				    + ".txt";
 
 		try {
 			// fichero = new FileWriter("C:\\Julio\\transferencias.txt");
@@ -27,23 +28,26 @@ public class EscribeFichero {
 			Double importeTransferencia = (double) 0;
 
 			for (int i = 0; i < 100; i++) {
-				importeTransferencia = (rnd.nextDouble() * (2000 - 500 + 1) + 500);
+				importeTransferencia = (rnd.nextDouble() * (2000 - 500 + 1) + 500); //(M-N+1)+N
 				importeTransferencia = Math.round(importeTransferencia * 100.0) / 100.0;
 				pw.println(importeTransferencia);
-
 			}
+			
 		} catch (Exception e) {
 			System.exit(-1);
+			
 		} finally {
 			try {
 				// Nuevamente aprovechamos el finally para
 				// asegurarnos que se cierra el fichero.
-				if (null != fichero)
+				if (fichero != null)
 					fichero.close();
 			} catch (Exception e2) {
 				System.exit(-2);
 			}
 		}
+		
+		// sale fuera sin errores, exitVal = 0
 		System.exit(0);
 	}
 }

@@ -1,8 +1,9 @@
+// Se diferencia del anterior en que este es con semaforos
+
 package ejemplos037_multihilos5;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.concurrent.Semaphore;
 
 public class Principal {
 
@@ -25,9 +26,10 @@ public class Principal {
 		
 		// COMPROBACION DE ERROR
 		//	 0 bien 
-		//	 1 mal
+		//	-1 mal
 		
 		int exitVal = -1;
+		
 		try {
 			exitVal = p.waitFor();
 			System.out.println("Valor de Salida: " + exitVal);
@@ -36,28 +38,28 @@ public class Principal {
 		}
 
 		if (exitVal == 0) {
-			int j = 3; // numero de hilos
+			// numero de hilos
+			int j = 3;
 
 			// String ruta_mifichero = "C:\\julio\\transferencias.txt";
 			String ruta_mifichero ="/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/txts/transferencias.txt";
 			
 			File mifichero = new File(ruta_mifichero);
 			Saldo misaldo = new Saldo(mifichero);
-			Transferencia hilo[] = new Transferencia[j];
+			
+			Transferencia hiloTransferencia[] = new Transferencia[j];
 			Contador contador = new Contador();
 			
 			// Creamos objetos en cada posicion
 			for (int i = 0; i < j; i++) {
-				hilo[i] = new Transferencia(misaldo);
-				hilo[i].start();
+				hiloTransferencia[i] = new Transferencia(misaldo);
+				hiloTransferencia[i].start();
 			}
-			
-			
 			contador.start();
 
-			while (!misaldo.FicAcabado) {
+			while (!misaldo.FicheroAcabado) {
 				try {
-					Thread.sleep(1000);
+					Thread.sleep(500);
 				} catch (InterruptedException exc) {
 					System.out.println("Hilo principal interrumpido.");
 				}

@@ -1,4 +1,4 @@
-package dunkerque2;
+package dunkerque3;
 
 public class RoyalNavy {
 
@@ -20,7 +20,7 @@ public class RoyalNavy {
 	}
 
 	public synchronized void setSoldadosAliadosRescatados(int soldadosAliados) {
-		// la suma tiene que ir aqui, no vale tener la suma fuera del synchronized
-		this.soldadosAliadosRescatados += soldadosAliados;
+		// JHB Cambio este metodo
+		this.soldadosAliadosRescatados = this.soldadosAliadosRescatados + soldadosAliados;
 	}
 }

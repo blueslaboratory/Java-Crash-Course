@@ -4,17 +4,22 @@ public class Contador extends Thread {
 
 	Boolean contadorMarcha = true;
 
+	// CONSTRUCTOR
 	public Contador() {
+		
 	}
 
 	public void contador() {
+		
 		try {
 			int i = 0;
+			
 			while (contadorMarcha) {
 				System.out.printf(i + " %n");
-				this.sleep(1000);
+				Thread.sleep(500);
 				i++;
 			}
+			
 		} catch (InterruptedException e) {
 			return;
 		}

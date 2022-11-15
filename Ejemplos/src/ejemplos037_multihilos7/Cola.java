@@ -1,13 +1,18 @@
 package ejemplos037_multihilos7;
 
 public class Cola {
+	
 	private int numero;
-	private boolean disponible = false;// inicialmente cola vacia
+	// inicialmente cola vacia:
+	private boolean disponible = false;
 
 	// wait y notify es lo que hace que se esperen
 	// hay 3 formas de sincronizar hilos: synchronized, semaforos, wait y notify
 	
+	
+	
 	public synchronized int get() {
+		// mientras no este disponible: wait
 		while (!disponible) {
 			try {
 				wait();
@@ -15,13 +20,17 @@ public class Cola {
 				e.printStackTrace();
 			}
 		}
+		
 		// visualize valor
 		disponible = false;
 		notify();
 		return numero;
 	}
 
+	
+	
 	public synchronized void put(int valor) {
+		// mientras este disponible: wait
 		while (disponible) {
 			try {
 				wait();

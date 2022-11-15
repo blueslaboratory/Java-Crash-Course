@@ -18,7 +18,7 @@ public class SemaforoBasico implements Runnable{
 		try{
 			semaforo.acquire();
 			
-			System.out.println("Paso 1");
+			System.out.println("Paso 1 - " +this.toString());
 			Thread.sleep(1000);
 			System.out.println("Paso 2");
 			Thread.sleep(1000);

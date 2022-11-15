@@ -6,8 +6,14 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="a"/>
 		<list key="findhistory">
+			<item value="á"/>
+			<item value="yield"/>
+			<item value="í"/>
+			<item value="ú"/>
+			<item value="é"/>
+			<item value="ó"/>
 			<item value="Los botes salva"/>
 			<item value="5 -"/>
 			<item value="desembarcados"/>
@@ -17,19 +23,13 @@
 			<item value="lancha"/>
 			<item value="barca"/>
 			<item value="embar"/>
-			<item value="ú"/>
-			<item value="ó"/>
-			<item value="í"/>
-			<item value="é"/>
-			<item value="á"/>
-			<item value="ñ"/>
 		</list>
 		<list key="replacehistory">
-			<item value="u"/>
-			<item value="o"/>
-			<item value="i"/>
-			<item value="e"/>
 			<item value="a"/>
+			<item value="i"/>
+			<item value="u"/>
+			<item value="e"/>
+			<item value="o"/>
 			<item value="n"/>
 			<item value=""/>
 			<item value="estadoProceso"/>

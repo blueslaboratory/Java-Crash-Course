@@ -29,18 +29,25 @@ public class Hilo extends Thread {
             strCadena += "A";
             this.yield();
             
-			// La tarea consiste en cada hilo en realidad
+			// La tarea consiste en que en cada hilo en realidad
 			// solo tiene que anadir 20.000 veces una
-			// letra a una variable. Pero despuss de
+			// letra a una variable. Pero despues de
 			// anadir cada letra, “devuelve el control” al
 			// planificador para que determine que hilo
 			// debe entrar al proceso.
             
-            //yield() sugiere al planficador Java que puede seleccionar otro hilo,
+            // yield() sugiere al planficador Java que puede seleccionar otro hilo,
+
+            // yield() hace que un hilo que esta "ejecutandose" pase a "preparado" 
+            // para permitir que otros hilos de la misma prioridad puedan ejecutarse.
+            
+            // https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Thread.html#yield()
+            // A hint to the scheduler that the current thread is willing to yield 
+            // its current use of a processor. The scheduler is free to ignore this 
+            // hint. 
            
         }
 
-        System.out.println("Hilo de prioridad " + this.getPriority()
-                + " termina ahora");
+        System.out.println("Hilo de prioridad " +this.getPriority() +" termina ahora");
     }
 }

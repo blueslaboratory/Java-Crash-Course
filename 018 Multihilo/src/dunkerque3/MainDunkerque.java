@@ -133,8 +133,9 @@ de todos.
 
 */
 
-package dunkerque2;
-//DUNKERQUE LO QUE PUDO SER
+package dunkerque3;
+// DUNKERQUE LO QUE PUDO SER
+// Correccion de Julio
 
 import java.util.concurrent.Semaphore;
 
@@ -307,14 +308,15 @@ public class MainDunkerque {
 					Libreria.COUNTER = false;
 					todosRescatados = true;
 					
-					royalNavy.setSoldadosAliadosRescatados(400000);
-					dunkerquePlaya.setSoldadosAliadosLuchando(0);
+					//royalNavy.setSoldadosAliadosRescatados(400000);
+					//dunkerquePlaya.setSoldadosAliadosLuchando(0);
 					
 				}
 				
 				
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
+				//return;
 				e.printStackTrace();
 			}
 		}
@@ -324,7 +326,6 @@ public class MainDunkerque {
 		
 		// Ahogados o todosRescatados
 		// con interrupt da error, utilizamos stop aunque este deprecated
-		// hay que capturar la excepcion dentro del run del hilo!!
 		
 		/*
 		lib.stop();
@@ -342,6 +343,14 @@ public class MainDunkerque {
 		lancha5.stop();
 		*/
 	
+		System.out.println("\n***Parando hilos***");
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		lib.interrupt();
 		
@@ -382,10 +391,10 @@ public class MainDunkerque {
 			// no funciona bien
 			totalSoldados = totalLanchas + totalBotes;
 			
-			// corregido?
-			royalNavy.setSoldadosAliadosRescatados(400000);
-			dunkerquePlaya.setSoldadosAliadosLuchando(0);
-			totalSoldados = royalNavy.getSoldadosAliadosRescatados() + dunkerquePlaya.getSoldadosAliadosLuchando();
+			// asi que lo apanhamos
+			//royalNavy.setSoldadosAliadosRescatados(400000);
+			//dunkerquePlaya.setSoldadosAliadosLuchando(0);
+			//totalSoldados = royalNavy.getSoldadosAliadosRescatados() + dunkerquePlaya.getSoldadosAliadosLuchando();
 			
 		}
 		else {
@@ -404,17 +413,15 @@ public class MainDunkerque {
 			
 			ahogados = 400000 - (royalNavy.getSoldadosAliadosRescatados()+dunkerquePlaya.getSoldadosAliadosLuchando());
 			
-			totalSoldados = ahogados + royalNavy.getSoldadosAliadosRescatados() + dunkerquePlaya.getSoldadosAliadosLuchando();
+			totalSoldados = ahogados + royalNavy.getSoldadosAliadosRescatados() + dunkerquePlaya.getSoldadosAliadosLuchando();		
 		}
-				
-		
-		
-		
+					
 		System.out.println("\n***OPERACION DINAMO FINALIZADA***");
 		System.out.println("Se han salvado " +royalNavy.getSoldadosAliadosRescatados() +" soldados en total");
+		System.out.println("Se han salvado " +totalSoldados +" soldados en total");
 		System.out.println("Se han quedado en la playa " +dunkerquePlaya.getSoldadosAliadosLuchando() + " que deberan rendirse al ejercito aleman");
 		System.out.println("Se han ahogado " +ahogados +" soldados");
-		
+				
 		// No funciona del todo bien, casi seguro es por los semaforos
 		System.out.println("\nLas lanchas salvaron " +totalLanchas);
 		System.out.println("Los botes salvavidas salvaron " +totalBotes);

@@ -1,6 +1,6 @@
 // HACER/VER PRIMERO EL DE NAUFRAGO
 
-package dunkerque2;
+package dunkerque3;
 
 import java.util.concurrent.Semaphore;
 
@@ -93,8 +93,8 @@ public class Embarcacion extends Thread {
 
 		} catch (Exception e) {
 			// TODO: handle exception
-			System.exit(0);
-			//return;
+			//System.exit(0);
+			return;
 			//e.printStackTrace();
 		}
 	}
@@ -111,9 +111,9 @@ public class Embarcacion extends Thread {
 		
 		
 		if(nombreEmbarcacion.toUpperCase().equalsIgnoreCase("LANCHAS"))
-			capacidadEmbarcacion = Libreria.random(100, 200)+10000;
+			capacidadEmbarcacion = Libreria.random(100, 200);
 		else if(nombreEmbarcacion.toUpperCase().equalsIgnoreCase("BOTES SALVAVIDAS"))
-			capacidadEmbarcacion = Libreria.random(300, 400)+10000;
+			capacidadEmbarcacion = Libreria.random(300, 400);
 		
 		
 		// esto garantizaria accesos secuenciales a dunkerquePlaya
@@ -129,19 +129,28 @@ public class Embarcacion extends Thread {
 				int rescatar = dunkerquePlaya.getSoldadosAliadosLuchando() - capacidadEmbarcacion;
 	
 				// Quitando los negativos del final (ultimos soldados)
-				if (rescatar < 0 && dunkerquePlaya.getSoldadosAliadosLuchando() > 0) {
+				if (rescatar < 0) {
 					rescatar = dunkerquePlaya.getSoldadosAliadosLuchando();
+					
+					capacidadEmbarcacion = rescatar;
+					
 					System.out.println();
 					System.out.println("Los ultimos soldados por rescatar: " + rescatar);
-					dunkerquePlaya.setSoldadosAliadosLuchando(0);
+					dunkerquePlaya.setSoldadosAliadosLuchando(rescatar);
+					//EL PROBLEMA ESTA AQUI
+					//dunkerquePlaya.setSoldadosAliadosLuchando(rescatar);
 					System.out.println("** Rescatados: " + rescatar + " en " + nombreEmbarcacion +" (" +this.getName()+ ")"  + " **");
+
+					System.out.println("---ANTES Variable rescatados " +rescatados +"---");
 					rescatados += rescatar;
+					System.out.println("---DESPUES Variable rescatados " +rescatados +"---");
+					
 					
 					// Se han rescatado a los ultimos soldados
 					Libreria.COUNTER = false;
 				} 
-				else {
-					//dunkerquePlaya.setSoldadosAliadosLuchando(rescatar);
+				else if (rescatar > 0){
+					// Cambio esto JHB
 					dunkerquePlaya.setSoldadosAliadosLuchando(capacidadEmbarcacion);
 					//System.out.println("** Rescatados: " + capacidadEmbarcacion + " en la barca " + this.getName() + " **");
 					System.out.println("1 - Han embarcado " +capacidadEmbarcacion +" soldados de la playa en " +nombreEmbarcacion);
@@ -177,16 +186,28 @@ public class Embarcacion extends Thread {
 				Thread.sleep(500);
 				
 				desembarcados = royalNavy.getSoldadosAliadosRescatados();
-				//desembarcados += capacidadEmbarcacion;
-				//royalNavy.setSoldadosAliadosRescatados(desembarcados);
-				royalNavy.setSoldadosAliadosRescatados(capacidadEmbarcacion);
+				// Cambio esto JHB
+				//desembarcados += capacidadEmbarcacion;				
+				royalNavy.setSoldadosAliadosRescatados(capacidadEmbarcacion); // suma dentro del set
 				
 				// counter de embarcados por el tipo de objeto, empieza en 0
-				desembarcadosEmbarcacion += capacidadEmbarcacion;
+				// desembarcadosEmbarcacion += capacidadEmbarcacion;
 				
 				System.out.println("3 - Han desembarcado en los barcos de alta mar " +capacidadEmbarcacion + " soldados desde " +nombreEmbarcacion);
 				System.out.println("4 - Han embarcado " +royalNavy.getSoldadosAliadosRescatados() +" soldados en total");
 		
+			}
+			
+			// else if para que de tiempo a que llegue el ultimo hilo, sin esto no entra ese hilo
+			else if (royalNavy.getSoldadosAliadosRescatados() < 400000 && !Libreria.COUNTER) {
+				
+				royalNavy.setSoldadosAliadosRescatados(capacidadEmbarcacion); // suma dentro del set
+				
+				// counter de embarcados por el tipo de objeto, empieza en 0
+				// desembarcadosEmbarcacion += capacidadEmbarcacion;
+				
+				System.out.println("3 - Han desembarcado en los barcos de alta mar " +capacidadEmbarcacion + " soldados desde " +nombreEmbarcacion);
+				System.out.println("4 - Han embarcado " +royalNavy.getSoldadosAliadosRescatados() +" soldados en total");
 			}
 		//}
 	

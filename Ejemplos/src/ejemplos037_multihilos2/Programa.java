@@ -31,10 +31,11 @@ public class Programa {
 
         //inicia los hilos
         for (int i = 0; i < contador; i++) {
-            hiloMIN[i].start();
+        	hiloMAX[i].start();
             hiloNORM[i].start();
-            hiloMAX[i].start();
+            hiloMIN[i].start();
         }
 
     }
+    
 }

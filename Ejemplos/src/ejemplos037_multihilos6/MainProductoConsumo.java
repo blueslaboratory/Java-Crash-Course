@@ -1,4 +1,4 @@
-// UT3 - Programaci�n multihilo III.pptx
+// UT3 - Programacion multihilo III.pptx
 
 package ejemplos037_multihilos6;
 

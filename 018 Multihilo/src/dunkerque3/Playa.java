@@ -1,4 +1,4 @@
-package dunkerque2;
+package dunkerque3;
 
 public class Playa {
 
@@ -20,7 +20,7 @@ public class Playa {
 	}
 
 	public synchronized void setSoldadosAliadosLuchando(int soldadosAliados) {
-		// la resta tiene que ir aqui, no vale tener la resta fuera del synchronized
-		this.soldadosAliadosLuchando -= soldadosAliados;
+		// Cambio este metodo JHB
+		this.soldadosAliadosLuchando = this.soldadosAliadosLuchando - soldadosAliados;
 	}
 }

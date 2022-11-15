@@ -1,19 +1,32 @@
 package ejemplos037_multihilos6;
 
 public class Cola {
+	
 	private int numero;
-	private boolean disponible = false;// inicialmente cola vacia
+	// inicialmente cola vacia:
+	private boolean disponible = false;
 
+	
 	public int get() {
-		if (disponible) { // hay número en la cola
-			disponible = false; // se pone cola vacía
-			return numero; // se devuelve
+		
+		// si hay un numero en la cola
+		if (disponible) { 
+			// se pone cola vacia
+			disponible = false; 
+			// se devuelve
+			return numero; 
 		}
-		return -1; // no hay número disponible, cola vacía
+		
+		// no hay numero disponible, cola vacia
+		return -99; 
 	}
 
+	
 	public void put(int valor) {
-		numero = valor; // coloca valor en la cola
-		disponible = true; // disponible para consumir, cola llena
+		// coloca valor en la cola
+		numero = valor;
+		// disponible para consumir, cola llena
+		disponible = true; 
+
 	}
 }
