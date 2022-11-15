@@ -135,6 +135,8 @@ de todos.
 
 package dunkerque2;
 //DUNKERQUE LO QUE PUDO SER
+//dunkerque2 y dunkerque3 estan mal: el bueno es dunkerque4
+//los tengo para entender la progresion
 
 import java.util.concurrent.Semaphore;
 
@@ -324,7 +326,6 @@ public class MainDunkerque {
 		
 		// Ahogados o todosRescatados
 		// con interrupt da error, utilizamos stop aunque este deprecated
-		// hay que capturar la excepcion dentro del run del hilo!!
 		
 		/*
 		lib.stop();
@@ -382,7 +383,7 @@ public class MainDunkerque {
 			// no funciona bien
 			totalSoldados = totalLanchas + totalBotes;
 			
-			// corregido?
+			// asi que lo apanhamos
 			royalNavy.setSoldadosAliadosRescatados(400000);
 			dunkerquePlaya.setSoldadosAliadosLuchando(0);
 			totalSoldados = royalNavy.getSoldadosAliadosRescatados() + dunkerquePlaya.getSoldadosAliadosLuchando();

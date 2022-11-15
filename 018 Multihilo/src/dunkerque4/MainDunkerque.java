@@ -133,12 +133,9 @@ de todos.
 
 */
 
-package dunkerque3;
+package dunkerque4;
 // DUNKERQUE LO QUE PUDO SER
 // Correccion de Julio
-
-//dunkerque2 y dunkerque3 estan mal: el bueno es dunkerque4
-//los tengo para entender la progresion
 
 import java.util.concurrent.Semaphore;
 

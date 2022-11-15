@@ -1,4 +1,4 @@
-package dunkerque2;
+package dunkerque4;
 
 public class RoyalNavy {
 
@@ -20,6 +20,7 @@ public class RoyalNavy {
 	}
 
 	public synchronized void setSoldadosAliadosRescatados(int soldadosAliados) {
-		this.soldadosAliadosRescatados = soldadosAliados;
+		// JHB Cambio este metodo
+		this.soldadosAliadosRescatados = this.soldadosAliadosRescatados + soldadosAliados;
 	}
 }

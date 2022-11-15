@@ -1,6 +1,6 @@
 // HACER/VER PRIMERO EL DE NAUFRAGO
 
-package dunkerque2;
+package dunkerque4;
 
 import java.util.concurrent.Semaphore;
 
@@ -93,8 +93,8 @@ public class Embarcacion extends Thread {
 
 		} catch (Exception e) {
 			// TODO: handle exception
-			System.exit(0);
-			//return;
+			//System.exit(0);
+			return;
 			//e.printStackTrace();
 		}
 	}
@@ -129,19 +129,25 @@ public class Embarcacion extends Thread {
 				int rescatar = dunkerquePlaya.getSoldadosAliadosLuchando() - capacidadEmbarcacion;
 	
 				// Quitando los negativos del final (ultimos soldados)
-				if (rescatar < 0 && dunkerquePlaya.getSoldadosAliadosLuchando() > 0) {
+				if (rescatar < 0) {
 					rescatar = dunkerquePlaya.getSoldadosAliadosLuchando();
+					
+					capacidadEmbarcacion = rescatar;
+					
 					System.out.println();
 					System.out.println("Los ultimos soldados por rescatar: " + rescatar);
-					dunkerquePlaya.setSoldadosAliadosLuchando(0);
-					System.out.println("** Rescatados: " + rescatar + " en " + nombreEmbarcacion +" (" +this.getName()+ ")"  + " **");
-					rescatados += rescatar;
-					
-					// Se han rescatado a los ultimos soldados
-					Libreria.COUNTER = false;
-				} 
-				else {
 					dunkerquePlaya.setSoldadosAliadosLuchando(rescatar);
+					System.out.println("** Rescatados: " + rescatar + " en " + nombreEmbarcacion +" (" +this.getName()+ ")"  + " **");
+					
+					rescatados += rescatar;
+					// Se han rescatado a los ultimos soldados
+				} 
+				else if (rescatar > 0){
+					// Cambio esto JHB
+					// La sentencia a continuacion no se puede hacer:
+					// dunkerquePlaya.setSoldadosAliadosLuchando(0);
+					// Hay que restar dentro del set, la resta debe de ser synchronized:
+					dunkerquePlaya.setSoldadosAliadosLuchando(capacidadEmbarcacion);
 					//System.out.println("** Rescatados: " + capacidadEmbarcacion + " en la barca " + this.getName() + " **");
 					System.out.println("1 - Han embarcado " +capacidadEmbarcacion +" soldados de la playa en " +nombreEmbarcacion);
 					rescatados += capacidadEmbarcacion;
@@ -164,7 +170,8 @@ public class Embarcacion extends Thread {
 	// DESEMBARCANDO
 	public void desembarco() throws InterruptedException {
 
-		semaforoDesembarco.acquire(); // esto garantiza que solo entran 10 a la vez a desembarco()
+		// esto garantiza que solo entran 10 a la vez a desembarco()
+		semaforoDesembarco.acquire(); 
 			
 		// esto garantizaria accesos secuenciales a royalNavy
 		//synchronized (royalNavy) {
@@ -176,16 +183,20 @@ public class Embarcacion extends Thread {
 				Thread.sleep(500);
 				
 				desembarcados = royalNavy.getSoldadosAliadosRescatados();
-				desembarcados += capacidadEmbarcacion;
-				royalNavy.setSoldadosAliadosRescatados(desembarcados);
+				// Cambio esto JHB
+				// La sentencia a continuacion no se puede hacer:
+				// desembarcados += capacidadEmbarcacion;
+				// Hay que sumar dentro del set, la suma debe de ser synchronized:
+				royalNavy.setSoldadosAliadosRescatados(capacidadEmbarcacion); 
 				
 				// counter de embarcados por el tipo de objeto, empieza en 0
 				desembarcadosEmbarcacion += capacidadEmbarcacion;
 				
 				System.out.println("3 - Han desembarcado en los barcos de alta mar " +capacidadEmbarcacion + " soldados desde " +nombreEmbarcacion);
 				System.out.println("4 - Han embarcado " +royalNavy.getSoldadosAliadosRescatados() +" soldados en total");
-		
+					
 			}
+			
 		//}
 	
 		semaforoDesembarco.release();
