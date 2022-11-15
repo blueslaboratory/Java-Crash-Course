@@ -136,6 +136,10 @@ public class Embarcacion extends Thread {
 					
 					System.out.println();
 					System.out.println("Los ultimos soldados por rescatar: " + rescatar);
+					// Cambio esto JHB
+					// La sentencia a continuacion no se puede hacer:
+					// dunkerquePlaya.setSoldadosAliadosLuchando(0);
+					
 					dunkerquePlaya.setSoldadosAliadosLuchando(rescatar);
 					System.out.println("** Rescatados: " + rescatar + " en " + nombreEmbarcacion +" (" +this.getName()+ ")"  + " **");
 					
@@ -144,8 +148,6 @@ public class Embarcacion extends Thread {
 				} 
 				else if (rescatar > 0){
 					// Cambio esto JHB
-					// La sentencia a continuacion no se puede hacer:
-					// dunkerquePlaya.setSoldadosAliadosLuchando(0);
 					// Hay que restar dentro del set, la resta debe de ser synchronized:
 					dunkerquePlaya.setSoldadosAliadosLuchando(capacidadEmbarcacion);
 					//System.out.println("** Rescatados: " + capacidadEmbarcacion + " en la barca " + this.getName() + " **");
