@@ -1,4 +1,4 @@
-package ejemplos037_multihilo;
+package ejemplos037_multihilos;
 
 public class Raton3Grupos extends Thread {
 

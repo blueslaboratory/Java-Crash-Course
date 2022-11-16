@@ -1,4 +1,4 @@
-package ejemplos037_multihilo;
+package ejemplos037_multihilos;
 
 // extends Thread hace que se puedan ejecutar de forma simultanea
 public class Raton1Hilos extends Thread {

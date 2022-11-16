@@ -52,7 +52,6 @@
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.io.FileReader"/>
     <fullyQualifiedTypeName name="sun.net.www.content.text.plain"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.Process"/>
     <fullyQualifiedTypeName name="naufragos.Barca"/>
     <fullyQualifiedTypeName name="naufragos.Isla"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="dunkerke.RoyalNavy"/>
     <fullyQualifiedTypeName name="dunkerke.Playa"/>
     <fullyQualifiedTypeName name="dunkerke.Libreria"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
