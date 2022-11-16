@@ -19,12 +19,12 @@ public class Transferencia extends Thread {
 			// veo cual es la siguiente transferencia que toca
 			transferencia = this.miSaldoCuenta.getTransferencia();
 			
-			// Si devuelvo -1, hemos acabado el bucle
+			// si devuelvo -1 en getTransferencia() de Saldo.java, salimos del bucle
 			if (transferencia < 0) {
 				break;
 			}
 			
-			// Si tenemos saldo suficiente, hacemos la transferencia y 
+			// si tenemos saldo suficiente, hacemos la transferencia y 
 			// acumulamos el saldo del hilo
 			this.miSaldoCuenta.hacerTransferencia(transferencia);
 			
@@ -37,7 +37,7 @@ public class Transferencia extends Thread {
 		System.out.println("En este hilo: " + this.getName() 
 						 + " ha hecho transferencias por valor de: " + this.saldoAcumulado + " €.");
 
-		// Mostramos el saldo en cuenta
+		// mostramos el saldo en cuenta
 		System.out.println("Quedan " + this.miSaldoCuenta.getSaldo() + " € en la cuenta");
 		
 		return;

@@ -51,7 +51,7 @@ public class Principal {
 			Contador contador = new Contador();
 			
 			// Creamos objetos en cada posicion
-			for (int i = 0; i < j; i++) {
+			for (int i=0; i<j; i++) {
 				hiloTransferencia[i] = new Transferencia(misaldo);
 				hiloTransferencia[i].start();
 			}

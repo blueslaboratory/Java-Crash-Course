@@ -28,7 +28,7 @@ public class EscribeFichero {
 			Double importeTransferencia = (double) 0;
 
 			for (int i = 0; i < 100; i++) {
-				importeTransferencia = (rnd.nextDouble() * (2000 - 500 + 1) + 500); //(M-N+1)+N
+				importeTransferencia = (rnd.nextDouble() * (2000-500+1)+500); //(M-N+1)+N
 				importeTransferencia = Math.round(importeTransferencia * 100.0) / 100.0;
 				pw.println(importeTransferencia);
 			}

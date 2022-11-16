@@ -7,7 +7,7 @@ public class Principal {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 
-		// Paso 1 - Eejcutamos el proyecto que genera el fichero de transferencias
+		// Paso 1 - Ejecutamos el proyecto que genera el fichero de transferencias
 		// creamos objeto File al directorio donde esta Ejemplos
 		// String ruta_directorio = "C:\\Users\\jhorn\\eclipse-workspace\\UT3\\UT3_5_1_EscribeFichero\\bin";
 		String ruta_directorio = "/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/Ejemplos/bin";

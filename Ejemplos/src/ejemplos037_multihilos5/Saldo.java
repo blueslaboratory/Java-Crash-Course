@@ -44,10 +44,10 @@ public class Saldo {
 		Random rnd = new Random();
 
 		importeSaldo = (rnd.nextDouble() * (2000-500+1)+500); // (M-N+1)+N
-		importeSaldo = (Math.round(importeSaldo * 100.0) / 100.0) * numTransferencias;
-
+		importeSaldo = (Math.round(importeSaldo*100.0) / 100.0) * numTransferencias;
+		
 		this.saldoCuenta = importeSaldo;
-
+		
 		System.out.println("El saldo de la cuenta es: " + this.saldoCuenta);
 	}
 
@@ -122,10 +122,10 @@ public class Saldo {
 	}
 
 	
-	
-	public  void hacerTransferencia(Double transferencia) {
+	// este no esta synchronized porque tenemos el semaforo
+	public void hacerTransferencia(Double transferencia) {
 		try {
-
+			
 			if (this.getSaldo() > transferencia) {
 
 				semaforo.acquire();

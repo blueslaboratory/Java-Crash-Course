@@ -29,4 +29,12 @@ public class Contador extends Thread {
 	public void run() {
 		this.contador();
 	}
+	
+	
+	public static void main(String args[]) {
+		
+		Contador c = new Contador();
+		
+		c.start();
+	}
 }

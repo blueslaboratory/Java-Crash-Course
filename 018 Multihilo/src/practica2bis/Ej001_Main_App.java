@@ -55,6 +55,8 @@ Jugador 2 gana, adivino el numero! ! !
 
 */
 
+// Esta no es mia, ver mejor practica2 antes que practica2bis
+
 package practica2bis;
 
 public class Ej001_Main_App {

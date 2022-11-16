@@ -43,7 +43,7 @@ public class Saldo {
 		Random rnd = new Random();
 
 		importeSaldo = (rnd.nextDouble() * (2000-500+1)+500); // (M-N+1)+N
-		importeSaldo = (Math.round(importeSaldo * 100.0) / 100.0) * numTransferencias;
+		importeSaldo = (Math.round(importeSaldo*100.0) / 100.0) * numTransferencias;
 
 		this.saldoCuenta = importeSaldo;
 
