@@ -1,6 +1,6 @@
 // HACER/VER PRIMERO EL DE NAUFRAGO
 
-package dunkerque4;
+package dunkerque2bis;
 
 import java.util.concurrent.Semaphore;
 
@@ -129,7 +129,7 @@ public class Embarcacion extends Thread {
 				int rescatar = dunkerquePlaya.getSoldadosAliadosLuchando() - capacidadEmbarcacion;
 	
 				// Quitando los negativos del final (ultimos soldados)
-				if (rescatar < 0) {
+				if (rescatar <= 0) {
 					rescatar = dunkerquePlaya.getSoldadosAliadosLuchando();
 					
 					capacidadEmbarcacion = rescatar;
@@ -186,8 +186,9 @@ public class Embarcacion extends Thread {
 				
 				desembarcados = royalNavy.getSoldadosAliadosRescatados();
 				// Cambio esto JHB
-				// La sentencia a continuacion no se puede hacer:
+				// Las sentencias a continuacion no se pueden hacer:
 				// desembarcados += capacidadEmbarcacion;
+				// royalNavy.setSoldadosAliadosRescatados(desembarcados);
 				// Hay que sumar dentro del set, la suma debe de ser synchronized:
 				royalNavy.setSoldadosAliadosRescatados(capacidadEmbarcacion); 
 				

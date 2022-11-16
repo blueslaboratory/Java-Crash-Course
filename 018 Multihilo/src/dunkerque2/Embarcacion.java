@@ -129,18 +129,23 @@ public class Embarcacion extends Thread {
 				int rescatar = dunkerquePlaya.getSoldadosAliadosLuchando() - capacidadEmbarcacion;
 	
 				// Quitando los negativos del final (ultimos soldados)
-				if (rescatar < 0 && dunkerquePlaya.getSoldadosAliadosLuchando() > 0) {
+				if (rescatar <= 0 && dunkerquePlaya.getSoldadosAliadosLuchando() > 0) {
 					rescatar = dunkerquePlaya.getSoldadosAliadosLuchando();
+					
 					System.out.println();
 					System.out.println("Los ultimos soldados por rescatar: " + rescatar);
+					
+					// esto esta mal, se debe de hacer una resta en el set y cambiar la capacidad de la embarcacion
 					dunkerquePlaya.setSoldadosAliadosLuchando(0);
 					System.out.println("** Rescatados: " + rescatar + " en " + nombreEmbarcacion +" (" +this.getName()+ ")"  + " **");
+					
 					rescatados += rescatar;
 					
 					// Se han rescatado a los ultimos soldados
 					Libreria.COUNTER = false;
 				} 
 				else {
+					// esto esta mal, la resta del set se debe de hacer dentro del metodo: sincronizando
 					dunkerquePlaya.setSoldadosAliadosLuchando(rescatar);
 					//System.out.println("** Rescatados: " + capacidadEmbarcacion + " en la barca " + this.getName() + " **");
 					System.out.println("1 - Han embarcado " +capacidadEmbarcacion +" soldados de la playa en " +nombreEmbarcacion);
@@ -164,8 +169,9 @@ public class Embarcacion extends Thread {
 	// DESEMBARCANDO
 	public void desembarco() throws InterruptedException {
 
-		semaforoDesembarco.acquire(); // esto garantiza que solo entran 10 a la vez a desembarco()
-			
+		// esto garantiza que solo entran 10 a la vez a desembarco()
+		semaforoDesembarco.acquire(); 
+		
 		// esto garantizaria accesos secuenciales a royalNavy
 		//synchronized (royalNavy) {
 		
@@ -177,6 +183,7 @@ public class Embarcacion extends Thread {
 				
 				desembarcados = royalNavy.getSoldadosAliadosRescatados();
 				desembarcados += capacidadEmbarcacion;
+				// esto esta mal, la suma del set se debe de hacer dentro del metodo: sincronizando
 				royalNavy.setSoldadosAliadosRescatados(desembarcados);
 				
 				// counter de embarcados por el tipo de objeto, empieza en 0

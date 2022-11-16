@@ -2,16 +2,19 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="wrap" value="true"/>
-		<item key="casesensitive" value="false"/>
+		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="a"/>
+		<item key="selection" value="setSoldadosAliadosRescatados"/>
 		<list key="findhistory">
+			<item value="setSoldadosAliadosRescatados"/>
+			<item value="rescatados"/>
+			<item value="setRescatados"/>
+			<item value="ú"/>
 			<item value="á"/>
 			<item value="yield"/>
 			<item value="í"/>
-			<item value="ú"/>
 			<item value="é"/>
 			<item value="ó"/>
 			<item value="Los botes salva"/>
@@ -20,14 +23,11 @@
 			<item value="setDesembarcados"/>
 			<item value="4 - Han embarcado 2"/>
 			<item value="5"/>
-			<item value="lancha"/>
-			<item value="barca"/>
-			<item value="embar"/>
 		</list>
 		<list key="replacehistory">
+			<item value="u"/>
 			<item value="a"/>
 			<item value="i"/>
-			<item value="u"/>
 			<item value="e"/>
 			<item value="o"/>
 			<item value="n"/>
@@ -40,8 +40,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1011"/>
-		<item key="DIALOG_Y_ORIGIN" value="495"/>
+		<item key="DIALOG_X_ORIGIN" value="792"/>
+		<item key="DIALOG_Y_ORIGIN" value="494"/>
 		<item key="DIALOG_WIDTH" value="337"/>
 		<item key="DIALOG_HEIGHT" value="445"/>
 		<item key="DIALOG_FONT_NAME" value="1|Noto Sans|9.0|0|GTK|1|"/>

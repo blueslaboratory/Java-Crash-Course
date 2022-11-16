@@ -1,11 +1,11 @@
-package dunkerque4;
+package dunkerque1bis;
 
 public class Playa {
 
 	private int soldadosAliadosLuchando;
 	// en la playa solo cabe 1 embarcacion cada vez, pero el semaforo
 	// se declara en el main y se pasa a cada embarcacion
-	// Semaphore semaforo = new Semaphore(10);
+	// Semaphore semaforo = new Semaphore(1);
 
 	
 	// CONSTRUCTOR
@@ -19,8 +19,8 @@ public class Playa {
 		return soldadosAliadosLuchando;
 	}
 
+	// La resta se debe hacer aqui de forma sincronizada
 	public synchronized void setSoldadosAliadosLuchando(int soldadosAliados) {
-		// Cambio este metodo JHB
-		this.soldadosAliadosLuchando = this.soldadosAliadosLuchando - soldadosAliados;
+		this.soldadosAliadosLuchando -= soldadosAliados;
 	}
 }

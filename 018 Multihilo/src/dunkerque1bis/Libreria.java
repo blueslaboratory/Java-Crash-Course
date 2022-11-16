@@ -1,4 +1,4 @@
-package dunkerque3;
+package dunkerque1bis;
 
 public class Libreria extends Thread{
 
@@ -17,7 +17,7 @@ public class Libreria extends Thread{
 	}
 
 	
-	// CUENTA ATRÁS
+	// CUENTA ATRAS
 	public static boolean COUNTER = true;
 	public static void cuentaAtras() throws InterruptedException {
 		int c = 0;
@@ -47,8 +47,8 @@ public class Libreria extends Thread{
 			cuentaAtras();
 		} catch (InterruptedException e) {
 			// TODO: handle exception
-			//e.printStackTrace();
 			return;
+			//e.printStackTrace();
 		}
 	}
 	

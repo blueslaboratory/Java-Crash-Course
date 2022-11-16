@@ -1,11 +1,11 @@
-package dunkerque3;
+package dunkerque1bis;
 
 public class RoyalNavy {
 
 	private int soldadosAliadosRescatados;
 	// en la playa solo cabe 1 embarcacion cada vez, pero el semaforo
 	// se declara en el main y se pasa a cada embarcacion
-	// Semaphore semaforo = new Semaphore(7);
+	// Semaphore semaforo = new Semaphore(1);
 
 	
 	// CONSTRUCTOR
@@ -19,8 +19,8 @@ public class RoyalNavy {
 		return soldadosAliadosRescatados;
 	}
 
+	// La suma se debe de hacer aqui de forma sincronizada
 	public synchronized void setSoldadosAliadosRescatados(int soldadosAliados) {
-		// JHB Cambio este metodo
-		this.soldadosAliadosRescatados = this.soldadosAliadosRescatados + soldadosAliados;
+		this.soldadosAliadosRescatados += soldadosAliados;
 	}
 }

@@ -135,6 +135,9 @@ de todos.
 
 package dunkerque1;
 
+// este esta regular, el bueno esta en dunkerque1bis
+// se queda para que veas la progresion y los fallos
+
 import java.util.concurrent.Semaphore;
 
 public class MainDunkerque {
@@ -187,7 +190,7 @@ public class MainDunkerque {
 				
 				if(royalNavy.getSoldadosAliadosRescatados() >= 400000 ||
 				   dunkerquePlaya.getSoldadosAliadosLuchando() <= 0) {
-					
+				
 					Libreria.COUNTER = false;
 					todosRescatados = true;
 					

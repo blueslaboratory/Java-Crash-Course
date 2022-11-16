@@ -1,4 +1,4 @@
-package dunkerque4;
+package dunkerque2bis;
 
 public class Libreria extends Thread{
 
@@ -17,7 +17,7 @@ public class Libreria extends Thread{
 	}
 
 	
-	// CUENTA ATRÁS
+	// CUENTA ATRAS
 	public static boolean COUNTER = true;
 	public static void cuentaAtras() throws InterruptedException {
 		int c = 0;

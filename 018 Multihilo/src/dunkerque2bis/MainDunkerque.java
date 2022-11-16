@@ -133,7 +133,7 @@ de todos.
 
 */
 
-package dunkerque4;
+package dunkerque2bis;
 // DUNKERQUE LO QUE PUDO SER
 // Correccion de Julio
 
@@ -302,6 +302,7 @@ public class MainDunkerque {
 			try {
 				Thread.sleep(1);
 				
+				// cuando me rescates a todos
 				if(royalNavy.getSoldadosAliadosRescatados() == 400000) {
 					
 					Libreria.COUNTER = false;
