@@ -91,6 +91,8 @@ public class Conector {
 		if (exitVal == 69) {
 
 			// obtener la salida devuelta por el proceso si exitVal==69
+			// Reddit: You can only read from an InputStream, so use that to 
+			// catch the output of your process.
 			try {
 				InputStream is = p.getInputStream();
 				int c;
@@ -135,16 +137,22 @@ public class Conector {
 		// -1 mal
 
 		
-		OutputStream os = p.getOutputStream(); // recogemos el OutputStream de Ordenar
+		// recogemos el OutputStream de Ordenar que sera nuestro input
+		// Reddit: You write to an OutputStream, so use that to give the process your input.
+		// You are using names that make sense in the context of the spawned process. 
+		// But the API names make sense in the context of the parent process.
+		OutputStream os = p.getOutputStream(); 
 		// getOutputStream()
 		// Returns the output stream connected to the normal input of the process.
 		// Output to the stream is piped into the standard input of the process
 		// represented by this Process object.
-		os.write(numeros.getBytes()); // escribimos en el buffer, es decir el output de Ordenar
+		// escribimos en el buffer, es decir el output de Ordenar
+		os.write(numeros.getBytes()); 
 		// Writes b.length bytes from the specified byte array to this output stream.
-		os.flush(); // vacia el buffer de salida
-		// Flushes this output stream and forces any buffered output bytes to be written
-		// out.
+		// vaciamos el buffer de salida:
+		os.flush(); 
+		// Flushes this output stream and forces any buffered output bytes to be 
+		// written out.
 		os.close();
 
 		int exitVal = -1;

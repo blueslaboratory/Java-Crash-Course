@@ -49,7 +49,7 @@ public class Ej002_EjecutarAplicacionRuntime {
 		// run a shell script:
 		// p = entorno.exec("/home/alejandro/scripts/hello.sh"); 
 		
-		// Con esta linea, main no finaliza hasta que se cierre notepad.exe
+		// Con esta linea, main no finaliza hasta que se cierre la consola
 		int exitVal = p.waitFor();
 		
 		StringBuilder sb = new StringBuilder();

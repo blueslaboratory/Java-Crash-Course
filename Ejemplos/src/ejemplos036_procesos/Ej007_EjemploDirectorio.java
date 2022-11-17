@@ -1,6 +1,5 @@
 package ejemplos036_procesos;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -37,11 +36,11 @@ public class Ej007_EjemploDirectorio {
 
 		if (exitVal == 0) {
 			try {
-				// Redirigimos la salida al flujo de datos de salida
+				// 3. Redirigimos la salida al flujo de datos de salida
 				InputStream is = p.getInputStream();
 				int c;
 
-				// mostramos en pantalla caracter a caracter
+				// 4. mostramos en pantalla la salida caracter a caracter
 				while ((c = is.read()) != -1)
 					System.out.print((char) c);
 

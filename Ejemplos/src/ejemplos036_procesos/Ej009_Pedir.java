@@ -22,7 +22,7 @@ public class Ej009_Pedir {
 		File directorioLinux = new File("/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/Ejemplos/bin");
 
 		// El proceso a ejecutar es Ejemplo2
-		ProcessBuilder pb = new ProcessBuilder("java", "ejemplos036_procesos.Ej009_Calcular");
+		ProcessBuilder pb = new ProcessBuilder("java", "ejemplos036_procesos.Ej009_CalcularParImpar");
 
 		// se establece el directorio donde se encuentra el ejecutable
 		pb.directory(directorioLinux);
@@ -32,7 +32,8 @@ public class Ej009_Pedir {
 		
 		
 		respuesta = respuesta + "\n";
-		// escribimos en el buffer, es decir el output de Ej009_Calcular
+		// escribimos en el buffer, es decir escribimos en el input el output de Ej009_Calcular
+		// REDDIT: You write to an OutputStream, so use that to give the process your input.
 		OutputStream os = p.getOutputStream();
 		// getOutputStream()
 		// Returns the output stream connected to the normal input of the process. 
@@ -58,6 +59,8 @@ public class Ej009_Pedir {
 		// obtener la salida devuelta por el proceso si exitVal==69
 		if (exitVal == 69) {
 			try {
+				// REDDIT: You can only read from an InputStream, so use that to catch 
+				// the output of your process.
 				InputStream is = p.getInputStream();
 				int c;
 				while ((c = is.read()) != -1)

@@ -44,11 +44,12 @@ public class Ej007_LlamarEjemploDirectorio {
 		// solo entra aqui si exitVal==0
 		if (exitVal == 0) {
 
-			// obtener la salida devuelta por el proceso si exitVal==0
+			// 2. obtener la salida devuelta por el proceso si exitVal==0
 			try {
 				InputStream is = p.getInputStream();
 				int c;
 				
+				// 3. pintamos la salida como podriamos meterla en un fichero 
 				while ((c = is.read()) != -1)
 					System.out.print((char) c);
 				

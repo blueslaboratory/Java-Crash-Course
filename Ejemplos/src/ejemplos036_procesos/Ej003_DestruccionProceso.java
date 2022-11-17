@@ -17,6 +17,7 @@ public class Ej003_DestruccionProceso {
 			
 			
 			
+			
 			// WINDOWS
 			// p = entorno.exec("C:\\Windows\\notepad.exe");
 			
@@ -30,6 +31,7 @@ public class Ej003_DestruccionProceso {
 			// Abriendo la terminal en Linux Mint
 			ProcessBuilder pbTerminal = new ProcessBuilder("gnome-terminal");
 			Process pTerminal = pbTerminal.start();
+			
 			
 			
 			

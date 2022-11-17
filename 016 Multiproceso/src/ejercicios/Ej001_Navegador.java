@@ -1,6 +1,6 @@
 // A partir del proyecto 016 Multiproceso se corresponde a la asignatura de Programacion de Servicios y Procesos
 
-package procesos1;
+package ejercicios;
 
 import java.io.IOException;
 // import java.util.Scanner;
@@ -9,17 +9,21 @@ import javax.swing.JOptionPane;
 
 public class Ej001_Navegador {
 
-	static int retorno = -2;// En caso de que se haya ejecutado correctamente devolvera 0
+	// En caso de que se haya ejecutado correctamente devolvera 0
+	static int retorno = -2;
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 		
+		// Con JOptionPane:
 		String cadena = "https://www.google.com";
 		cadena = JOptionPane.showInputDialog("Introduce una Url");
 		
+		// Con Scanner:
 		// Scanner entrada = new Scanner(System.in);
 		// System.out.println("Introduce una Url ");
 		// String cadena = entrada.nextLine();
+		
 		
 		
 		// WINDOWS
@@ -27,7 +31,8 @@ public class Ej001_Navegador {
 		
 		
 		// LINUX
-		ProcessBuilder pb = new ProcessBuilder("/usr/bin/firefox", cadena); // "notas.txt"
+		// https://www.coingecko.com/
+		ProcessBuilder pb = new ProcessBuilder("/usr/bin/firefox"); 
 		
 		
 		

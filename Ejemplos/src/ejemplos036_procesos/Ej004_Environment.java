@@ -31,6 +31,7 @@ public class Ej004_Environment {
 		PildorasInformaticas: Curso Java. Colecciones XI Mapas. V�deo 189
 		*/
 		
+		// de aqui cogemos las variables del env.get
 		java.util.Map<String, String> env = pbLinux.environment();
 		System.out.println(env +"\n");
 		

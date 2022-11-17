@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Ej009_Calcular {
+public class Ej009_CalcularParImpar {
 	public static void main(String[] args) throws IOException, InterruptedException {
 
 		// leyendo del buffer de Ej009_Pedir

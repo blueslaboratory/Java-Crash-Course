@@ -167,9 +167,10 @@ public class Conector {
 		// represented by this Process object.
 		os.write(numeros.getBytes());
 		// Writes b.length bytes from the specified byte array to this output stream.
-		os.flush(); // vacia el buffer de salida
-		// Flushes this output stream and forces any buffered output bytes to be written
-		// out.
+		// vaciamos el buffer de salida:
+		os.flush(); 
+		// Flushes this output stream and forces any buffered output bytes to be 
+		// written out.
 		os.close();
 
 		int exitVal = -1;

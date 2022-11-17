@@ -39,6 +39,8 @@ public class Ej002_LlamarPintarNombre {
 		}
 
 		// obtener la salida devuelta por el proceso si exitVal==777
+		// ((en LINUX pasa una cosa rara que devuelve exitVal=9 y funciona con este valor))
+		// if (exitVal == 9) {
 		if (exitVal == 777) {
 			try {
 				InputStream is = p.getInputStream();

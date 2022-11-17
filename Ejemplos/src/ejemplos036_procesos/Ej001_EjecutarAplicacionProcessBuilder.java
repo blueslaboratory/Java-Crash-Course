@@ -1,5 +1,5 @@
 // A partir del paquete ejemplos036_procesos se corresponde a la asignatura de 
-// Programacion de Servicios y Procesos
+// Programacion de Servicios y Procesos (PSP)
 
 package ejemplos036_procesos;
 
