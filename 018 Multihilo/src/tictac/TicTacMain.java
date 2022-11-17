@@ -1,4 +1,4 @@
-package ejercicios;
+package tictac;
 
 public class TicTacMain {
 
@@ -27,6 +27,7 @@ public class TicTacMain {
 		
 		
 		// Esto crearia hilos de forma simultanea
+		// inicializar los hilos siempre con start()
 		/*
 		do {
 			tac.start();

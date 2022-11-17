@@ -1,24 +1,24 @@
-package ejercicios;
+package tictac;
 
-public class Tic extends Thread{
+public class Tac extends Thread{
 
 	private String info;
-	private int tiempoTic;
+	private int tiempoTac;
 
-	public Tic(String info, int tiempoTac) {
-		
+	public Tac(String info, int tiempoTac) {
+	
 		super ();
 		this.info = info;
-		this.tiempoTic = tiempoTac;
-	}
+		this.tiempoTac = tiempoTac;
+	} 
 		
-	public void tic() {
+	public void tac() {
 		try {
-			System.out.println("tic " +this.info);
+			System.out.println("tac" +this.info);
 			// esto al parar los hilos daria un problema: una excepcion
 			// es mejor hacer un extends, 
 			// en java no hay multiherencia
-			Thread.sleep(tiempoTic * 1000);
+			Thread.sleep(tiempoTac * 1000);
 		}catch (InterruptedException e) {
 			e.printStackTrace () ;
 		}														
@@ -26,16 +26,16 @@ public class Tic extends Thread{
 	
 	@Override
 	public void run() {
-		this.tic();
+		this.tac();
 	}
 
 	
 	// Probando la clase
 	public static void main(String[] args) {
 		
-		Tic t = new Tic("", 1);
+		Tac t = new Tac("", 1);
 		
 		// System.out.println(args);
-		t.start(); //llama al run
+		t.start(); // llama al run
 	}
 }
