@@ -24,14 +24,15 @@ public class Raton3Grupos extends Thread {
 
 	@Override
 	public void run() {
-		System.out.println("\nInformacion del hilo: " + Thread.currentThread().toString() + "-" +this.nombre);
+		System.out.println("\nInformacion del hilo " +this.nombre +":" +Thread.currentThread().toString());
 		this.comer();
 	}
 
 	public static void main(String[] args) {
 
 		ThreadGroup grupo = new ThreadGroup("Grupo de hilos");
-
+		System.out.println("grupo.getParent(): " + grupo.getParent());
+		
 		
 		Raton3Grupos fievel = new Raton3Grupos("Fievel", 4);
 		Thread t1 = new Thread(grupo, fievel);

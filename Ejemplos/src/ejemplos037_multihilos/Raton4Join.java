@@ -1,16 +1,23 @@
 package ejemplos037_multihilos;
 
 public class Raton4Join implements Runnable {
-
+	
 	private String nombre;
 	private int tiempoAlimentacion;
-
+	
+	// CONSTRUCTOR 
 	public Raton4Join(String nombre, int tiempoAlimentacion) {
 		super();
 		this.nombre = nombre;
 		this.tiempoAlimentacion = tiempoAlimentacion;
 	}
-
+	
+	// GETTERS Y SETTERS: ALT + SHIFT + S
+	public int getTiempoAlimentacion() {
+		return tiempoAlimentacion;
+	}
+	
+	// OTROS METODOS
 	public void comer() {
 		try {
 			System.out.printf("El raton " + this.nombre + " ha comenzado a alimentarse%n", nombre);
@@ -20,12 +27,12 @@ public class Raton4Join implements Runnable {
 			e.printStackTrace();
 		}
 	}
-
+	
 	@Override
 	public void run() {
 		this.comer();
 	}
-
+	
 	public static void main(String[] args) {
 
 		Raton4Join fievel = new Raton4Join("Fievel", 4);
@@ -38,17 +45,27 @@ public class Raton4Join implements Runnable {
 		new Thread(jerry).start();
 
 		// 2a forma de iniciar un thread
-		Thread t = new Thread(pinky);
-		t.start();
+		Thread tpinky = new Thread(pinky);
+		tpinky.start();
 
 		
 		try {
-			t.join();
-			System.out.println("*** estoy en el join ***");
+			System.out.println("\n*** estoy en el join de pinky ***");
+			
+			for(int i=0; i<pinky.getTiempoAlimentacion(); i++) {
+				Thread.sleep(950);
+				System.out.println("esperando... t=" +i +"s");
+			}
+			
+			tpinky.join(); 
 			// el join es para ordenar hilos
 			// mientras el hilo de pinky este en la cpu
 			// no me saques la parte de abajo del join
-
+			// pinky tarda 3s en alimentarse
+			
+			System.out.println("*** estoy fuera del join de pinky ***");
+			System.out.println();
+			
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

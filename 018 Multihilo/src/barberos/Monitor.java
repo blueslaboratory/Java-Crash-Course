@@ -49,7 +49,6 @@ public class Monitor {
 		}
 		return atenderCliente;
 	}
-
 	
 	public synchronized void liberarSilla(int i) {
 		sillasLibres[i] = true;

@@ -35,7 +35,8 @@ public class Raton1Hilos extends Thread {
 		Raton1Hilos mickey = new Raton1Hilos("Mickey", 6);
 
 		// Los iniciamos de forma simultanea, siempre llamando a start() y no a run()
-		// El tiempo total del proceso sera, aproximadamente, el tiempo del proceso mas lento (6 segundos)
+		// El tiempo total del proceso sera, aproximadamente, 
+		// el tiempo del proceso mas lento (6 segundos)
 		System.out.println("Llamandolos con start() es simultaneo");
 		fievel.start();
 		jerry.start();

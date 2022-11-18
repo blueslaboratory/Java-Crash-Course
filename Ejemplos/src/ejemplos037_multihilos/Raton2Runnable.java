@@ -34,6 +34,10 @@ public class Raton2Runnable implements Runnable {
 		Raton2Runnable pinky = new Raton2Runnable("Pinky", 3);
 		Raton2Runnable mickey = new Raton2Runnable("Mickey", 6);
 
+		
+		// Los iniciamos de forma simultanea, siempre llamando a start() y no a run()
+		// El tiempo total del proceso sera, aproximadamente, 
+		// el tiempo del proceso mas lento (6 segundos)
 		new Thread(fievel).start();
 		new Thread(jerry).start();
 		new Thread(pinky).start();
@@ -41,3 +45,4 @@ public class Raton2Runnable implements Runnable {
 	}
 
 }
+

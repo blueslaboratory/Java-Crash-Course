@@ -8,7 +8,7 @@ Un corredor no puede empezar a correr hasta que le hayan pasado el relevo (ha ac
 corredor anterior). 
 
 Como podemos controlar que un hilo no empiece hasta haber acabado
-el anterior? “join”
+el anterior? ï¿½joinï¿½
 */
 
 package practica1;
@@ -79,7 +79,7 @@ public class Ej003_RelevosThread extends Thread{
 			
 			Marta.start();
 			Marta.join();
-
+			
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

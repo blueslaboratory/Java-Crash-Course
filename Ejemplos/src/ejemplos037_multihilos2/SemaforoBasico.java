@@ -18,12 +18,12 @@ public class SemaforoBasico implements Runnable{
 		try{
 			semaforo.acquire();
 			
-			System.out.println("Paso 1 - " +this.toString());
-			Thread.sleep(1000);
-			System.out.println("Paso 2");
-			Thread.sleep(1000);
-			System.out.println("Paso 3");
-			Thread.sleep(1000);
+				System.out.println("Paso 1 - " +this.toString());
+				Thread.sleep(1000);
+				System.out.println("Paso 2");
+				Thread.sleep(1000);
+				System.out.println("Paso 3");
+				Thread.sleep(1000);
 			
 			semaforo.release();
 			
@@ -32,7 +32,8 @@ public class SemaforoBasico implements Runnable{
 		}
 		
 	}
-
+	
+	
 	public static void main (String args[]) {
 		
 		SemaforoBasico sb = new SemaforoBasico();

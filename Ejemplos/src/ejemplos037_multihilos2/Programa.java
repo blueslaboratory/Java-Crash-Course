@@ -26,8 +26,8 @@ public class Programa {
             hiloMAX[i] = new Hilo(Thread.MAX_PRIORITY);
         }
 
-        System.out.println("Hilos en proceso, espera......\n"
-        				 + "Los de mayor prioridad tienden a terminar antes...\n");
+        System.out.println("Hilos en proceso, espera......");
+        System.out.println("Los de mayor prioridad tienden a terminar antes...\n");
 
         //inicia los hilos
         for (int i = 0; i < contador; i++) {
@@ -37,5 +37,6 @@ public class Programa {
         }
 
     }
+
     
 }

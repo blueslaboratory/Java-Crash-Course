@@ -24,7 +24,7 @@ public class Raton0 {
 
 	public static void main(String[] args) {
 		
-		// Ejecucion secuencial no concurrente
+		// Ejecucion secuencial NO concurrente
 		
 		Raton0 fievel = new Raton0("Fievel", 4); 	//4s
 		Raton0 jerry = new Raton0("Jerry", 5); 		//4+5=9

@@ -1,6 +1,6 @@
 /*
 Utilizando la clase anterior, o una copia ya que posiblemente necesites hacerle alguna
-modificación, haz un proyecto y anade otra clase con la que los equipos de España y
+modificaciï¿½n, haz un proyecto y anade otra clase con la que los equipos de Espaï¿½a y
 EEUU van a hacer una carrera de relevos:
 */
 
@@ -13,6 +13,7 @@ public class Ej004_RelevosThread extends Thread{
 	private int vCorrer;
 	//private int tiempoTotal = 0;
 
+	// CONSTRUCTOR
 	public Ej004_RelevosThread(String pais, String nombre, int vCorrer) {
 		super();
 		this.nombre = nombre;
@@ -20,10 +21,12 @@ public class Ej004_RelevosThread extends Thread{
 		this.vCorrer = vCorrer;
 	} 
 	
+	// GETTERS Y SETTERS: ALT+SHIFT+S
 	public int getvCorrer() {
 		return vCorrer;
 	}
 
+	// OTROS METODOS
 	public int cienMetros() {
 		// tMarathon(horas)
 		int tCienMetros = 10*this.vCorrer;
@@ -47,5 +50,11 @@ public class Ej004_RelevosThread extends Thread{
 		this.cienMetros(); 
 	}
 
+	// probandolo (opcional)
+	public static void main(String args[]) {
+		Ej004_RelevosThread r1 = new Ej004_RelevosThread("Jamaica", "Usain Bolt", 958);
+		
+		r1.start();
+	}
 
 }

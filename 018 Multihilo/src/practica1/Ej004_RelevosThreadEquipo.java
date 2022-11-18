@@ -16,6 +16,7 @@ public class Ej004_RelevosThreadEquipo extends Thread{
 	private Ej004_RelevosThread r3; 
 	private Ej004_RelevosThread r4;
 
+	// CONSTRUCTOR
 	public Ej004_RelevosThreadEquipo(String pais, Ej004_RelevosThread r1, 
 												  Ej004_RelevosThread r2,
 												  Ej004_RelevosThread r3,
@@ -28,6 +29,13 @@ public class Ej004_RelevosThreadEquipo extends Thread{
 		this.r4 = r4;
 	} 
 		
+	public void relevo(Ej004_RelevosThread r) throws InterruptedException {		
+		
+		r.start();
+		r.join();
+		tiempoTotal += (float)r.getvCorrer()*10/1000;
+	}
+	
 	public void relevos() {
 		
 		try {
@@ -35,21 +43,25 @@ public class Ej004_RelevosThreadEquipo extends Thread{
 			// mientras el hilo de este en la cpu
 			// no me saques la parte de abajo del join
 			
-			this.r1.start();
-			this.r1.join();
-			this.tiempoTotal += (float)r1.getvCorrer()*10/1000;
+			relevo(r1);
+			//this.r1.start();
+			//this.r1.join();
+			//this.tiempoTotal += (float)r1.getvCorrer()*10/1000;
 			
-			this.r2.start();
-			this.r2.join();
-			this.tiempoTotal += (float)r2.getvCorrer()*10/1000;
+			relevo(r2);
+			//this.r2.start();
+			//this.r2.join();
+			//this.tiempoTotal += (float)r2.getvCorrer()*10/1000;
 			
-			this.r3.start();
-			this.r3.join();
-			this.tiempoTotal += (float)r3.getvCorrer()*10/1000;
+			relevo(r3);
+			//this.r3.start();
+			//this.r3.join();
+			//this.tiempoTotal += (float)r3.getvCorrer()*10/1000;
 			
-			this.r4.start();
-			this.r4.join();
-			this.tiempoTotal += (float)r4.getvCorrer()*10/1000;
+			relevo(r4);
+			//this.r4.start();
+			//this.r4.join();
+			//this.tiempoTotal += (float)r4.getvCorrer()*10/1000;
 			
 
 			System.out.println("*** " +this.pais +" - Tiempo total: " +this.tiempoTotal +" ***");
@@ -72,7 +84,7 @@ public class Ej004_RelevosThreadEquipo extends Thread{
 		// int valorEntero = Math.floor(Math.random()*(M-N+1)+N);
 		// Valor entre M y N, ambos incluidos.
 
-		return (int) Math.floor(Math.random() * (1050 - 950 + 1) + 950); 
+		return (int) Math.floor(Math.random() * (1050-950+1)+950); 
 	}
 	
 	

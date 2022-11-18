@@ -1,7 +1,10 @@
-package practica1;
-
 // Solucion Julio: UT3 - Programacion multihilo II.pptx - pg 14
 
+package practica1;
+
+
+
+// CLASE Relevo
 class Relevo {
 	
 	// CONSTRUCTOR
@@ -35,7 +38,8 @@ class Relevo {
 
 
 
-public class Ej004_RelevosThreadSynchronized extends Thread {
+// CLASE Ej004_RelevosThreadSynchronized 
+class Ej004_RelevosThreadSynchronized extends Thread {
 
 	private String equipo;
 	private String corredor;
@@ -55,22 +59,27 @@ public class Ej004_RelevosThreadSynchronized extends Thread {
 	}
 
 	public static void main(String[] args) {
-
-		Relevo mirelevo = new Relevo();
+		
 		Ej004_RelevosThreadSynchronized hilo[] = new Ej004_RelevosThreadSynchronized[4];
-
+		
 		String equipo[] = { "Pepe", "Maria", "Juan", "Marta" };
-
+		Relevo mirelevo = new Relevo();
+		
+		
 		// Creamos objetos en cada posicion
 		for (int i=0; i<equipo.length; i++) {
 			hilo[i] = new Ej004_RelevosThreadSynchronized(equipo[i], "España", mirelevo);
 			hilo[i].start();
+			
 //			try {
 //				hilo[i].join();
-//			   } catch (InterruptedException e) { }
+//			} catch (InterruptedException e) {
+//			
+//			}
+			
 		}
-
-		//System.out.println("FINAL DE PROGRAMA");
+		
+		System.out.println("FINAL DE PROGRAMA");
 	}
 
 }

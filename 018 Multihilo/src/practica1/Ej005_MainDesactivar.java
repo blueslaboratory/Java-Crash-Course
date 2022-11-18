@@ -1,13 +1,13 @@
 /*
 Haz una clase java en la que tengamos 2 metodos:
-- Uno simplemente arranca una cuenta atras desde el 9 a 0. Cuando llega a 0, la
-bomba explota.
-- Otro es un artificiero que intenta desactivar la bomba. Tarda en desactivarla un
-numero aleatorio entre 9500 y 10500 milisegundos.
+- Uno simplemente arranca una cuenta atras desde el 9 a 0. 
+  Cuando llega a 0, la bomba explota.
+- Otro es un artificiero que intenta desactivar la bomba. 
+  Tarda en desactivarla un numero aleatorio entre 9500 y 10500 ms.
 
 - El metodo indicara cuando empieza y cuando acaba su tiempo.
 - En este metodo controlaremos la excepcion de que se interrumpa el hilo
-(InterruptedException) e indicaremos que el artificiero ha muerto.
+  (InterruptedException) e indicaremos que el artificiero ha muerto.
 
 Estos metodos se arrancaran uno u otro en funcion de un parametro.
 Arranca 2 hilos, uno con el artificiero y otro con el contador.

@@ -35,8 +35,8 @@ class Contador3 {
 class HiloA3 extends Thread {
 	private Contador3 contador;
 	
-	public HiloA3(String n, Contador3 c) {
-		setName(n);
+	public HiloA3(String name, Contador3 c) {
+		setName(name);
 		contador = c;
 	}
 	
@@ -58,8 +58,8 @@ class HiloB3 extends Thread {
 	
 	private Contador3 contador;
 	
-	public HiloB3(String n, Contador3 c) {
-		setName(n);
+	public HiloB3(String name, Contador3 c) {
+		setName(name);
 		contador = c;
 	}
 	
