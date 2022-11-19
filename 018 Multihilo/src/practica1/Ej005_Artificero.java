@@ -24,7 +24,7 @@ public class Ej005_Artificero extends Thread{
 	
 	public Ej005_Artificero() {
 		super();
-		this.tDesactivar = (int) Math.floor(Math.random()*(10500-9500+1)+9500);
+		this.tDesactivar = (int) Math.floor(Math.random()*(10500-9500+1)+9500); // (M-N+1)+N
 	}
 	
 	public void desactivar() {

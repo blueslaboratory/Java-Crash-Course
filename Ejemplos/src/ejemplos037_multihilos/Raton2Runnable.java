@@ -42,6 +42,12 @@ public class Raton2Runnable implements Runnable {
 		new Thread(jerry).start();
 		new Thread(pinky).start();
 		new Thread(mickey).start();
+		
+		/*
+		Thread tfievel = new Thread(fievel);
+		tfievel.start();
+		*/
+		
 	}
 
 }

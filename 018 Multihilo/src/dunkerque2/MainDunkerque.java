@@ -277,11 +277,11 @@ public class MainDunkerque {
 		
 		
 		ThreadGroup lanchas = new ThreadGroup("LANCHAS");
-		Thread l1 = new Thread(botes, "lancha1");
-		Thread l2 = new Thread(botes, "lancha2");
-		Thread l3 = new Thread(botes, "lancha3");
-		Thread l4 = new Thread(botes, "lancha4");
-		Thread l5 = new Thread(botes, "lancha5");
+		Thread l1 = new Thread(lanchas, "lancha1");
+		Thread l2 = new Thread(lanchas, "lancha2");
+		Thread l3 = new Thread(lanchas, "lancha3");
+		Thread l4 = new Thread(lanchas, "lancha4");
+		Thread l5 = new Thread(lanchas, "lancha5");
 		l1.start();
 		l2.start();
 		l3.start();

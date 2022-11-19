@@ -1,7 +1,7 @@
 /*
 Crea un programa Java que lance cinco hilos, cada uno incrementara 
-una variable contador de tipo entero, compartida por
-todos, 5000 veces y luego saldra. Comprobar el resultado final de la 
+una variable contador de tipo entero, compartida por todos, 
+5000 veces y luego saldra. Comprobar el resultado final de la 
 variable. 
 
 Se obtiene el resultado correcto?
