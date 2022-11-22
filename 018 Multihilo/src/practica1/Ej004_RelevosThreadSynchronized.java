@@ -67,7 +67,8 @@ class Ej004_RelevosThreadSynchronized extends Thread {
 		
 		
 		// Creamos objetos en cada posicion
-		for (int i=0; i<equipo.length; i++) {
+		for (
+			int i=0; i<equipo.length; i++) {
 			hilo[i] = new Ej004_RelevosThreadSynchronized(equipo[i], "España", mirelevo);
 			hilo[i].start();
 			

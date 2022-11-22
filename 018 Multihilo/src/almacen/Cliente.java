@@ -1,28 +1,33 @@
 package almacen;
 
 public class Cliente extends Thread {
+	
 	int idCliente;
 	int intentosEntrada;
 	boolean compra;
-	Almacen al;
+	Almacen almacen;
 	
-	public Cliente(int id, int intentosEntrada, Almacen al) {
+	
+	// CONSTRUCTORES
+	public Cliente(int id, int intentosEntrada, Almacen almacen) {
 		super();
 		this.idCliente = id;
 		this.intentosEntrada = intentosEntrada;
-		this.al = al;
+		this.almacen = almacen;
+		
+		// TODO Auto-generated constructor stub
+	}
+	public Cliente(int id, Almacen almacen) {
+		super();
+		this.idCliente = id;
+		this.intentosEntrada = 100;
+		this.almacen = almacen;
 		
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Cliente(int id, Almacen al) {
-		super();
-		this.idCliente = id;
-		this.intentosEntrada = 100;
-		this.al = al;
-		
-		// TODO Auto-generated constructor stub
-	}
+	
+	// GETTERS Y SETTERS: ALT + SHIFT + S
 	public int getIdCliente() {
 		return idCliente;
 	}
@@ -42,23 +47,29 @@ public class Cliente extends Thread {
 		this.compra = compra;
 	}
 	
+	
+	// OTROS METODOS
 	public void intentoEntrarCliente () {
+		
 		for(int i=1; i<=10; i++ ) {
-			al.entrada(this);
+			almacen.entrada(this);
 			this.setIntentosEntrada();
-			try {
-				int num = (int)(Math.random()*(100)+1	);
-				Thread.sleep(num);
-				} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-			}
 			
+			try {
+				int num = (int)(Math.random()*(100) +1); //(M-N+1)+N
+				Thread.sleep(num);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+			}	
 		}
+		
+		// da igual si coge el producto o no, lo va a seguir intentando 10 veces
 		System.out.println("El  cliente " + this.idCliente + " no ha conseguido entrar comprar y se va");
 	}
+	
+	
 	public void run(){
 		this.intentoEntrarCliente ();
-	}
-	
+	}	
 
 }
