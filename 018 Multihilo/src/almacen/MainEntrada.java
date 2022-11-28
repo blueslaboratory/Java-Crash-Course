@@ -19,21 +19,21 @@ dos situaciones:
 
 package almacen;
 
-public class Entrada {
+public class MainEntrada {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		int unidades = 100;
-		Almacen almacenParla = new Almacen (unidades);
-		Cliente cliente[] = new Cliente[300]; 
+		int clientes = 300;
+		Almacen almacen = new Almacen (unidades);
+		Cliente cliente[] = new Cliente[clientes]; 
 		
-		for(int i=0; i<5; i++ ) {			
-			cliente[i] =  new Cliente (i,  almacenParla);
+		
+		for(int i=0; i<clientes; i++ ) {			
+			cliente[i] = new Cliente (i,  almacen);
 			cliente[i].start();
 		}
-		
-		
+			
 	}
-
 }

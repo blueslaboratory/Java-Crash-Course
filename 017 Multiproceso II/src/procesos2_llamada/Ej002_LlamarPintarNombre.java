@@ -16,7 +16,7 @@ public class Ej002_LlamarPintarNombre {
 				
 		// El proceso a ejecutar es Ejemplo2
 		// El 3er parametro es de tipo Strin[] args y lo recibe el main
-		ProcessBuilder pb = new ProcessBuilder("java", "procesos2_lectura.Ej002_PintarNombre", "Pepito");
+		ProcessBuilder pb = new ProcessBuilder("java", "procesos2_lectura.Ej002_PintarNombre", "bluesito");
 
 		// se establece el directorio donde se encuentra el ejecutable
 		pb.directory(directorioLinux);
@@ -41,7 +41,7 @@ public class Ej002_LlamarPintarNombre {
 		// obtener la salida devuelta por el proceso si exitVal==777
 		// ((en LINUX pasa una cosa rara que devuelve exitVal=9 y funciona con este valor))
 		// if (exitVal == 9) {
-		if (exitVal == 777) {
+		if (exitVal == 777 | exitVal == 9) {
 			try {
 				InputStream is = p.getInputStream();
 				int c;

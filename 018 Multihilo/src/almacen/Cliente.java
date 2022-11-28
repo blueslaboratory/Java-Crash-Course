@@ -5,25 +5,15 @@ public class Cliente extends Thread {
 	int idCliente;
 	int intentosEntrada;
 	boolean compra;
-	Almacen almacen;
+	Almacen almacen;	
 	
 	
 	// CONSTRUCTORES
-	public Cliente(int id, int intentosEntrada, Almacen almacen) {
-		super();
-		this.idCliente = id;
-		this.intentosEntrada = intentosEntrada;
-		this.almacen = almacen;
-		
-		// TODO Auto-generated constructor stub
-	}
 	public Cliente(int id, Almacen almacen) {
 		super();
 		this.idCliente = id;
 		this.intentosEntrada = 100;
 		this.almacen = almacen;
-		
-		// TODO Auto-generated constructor stub
 	}
 	
 	
@@ -37,8 +27,8 @@ public class Cliente extends Thread {
 	public int getIntentosEntrada() {
 		return intentosEntrada;
 	}
-	public void setIntentosEntrada() {
-		this.intentosEntrada--;
+	public void setIntentosEntrada(int intentos) {
+		this.intentosEntrada = intentos;
 	}
 	public boolean isCompra() {
 		return compra;
@@ -49,11 +39,16 @@ public class Cliente extends Thread {
 	
 	
 	// OTROS METODOS
+	public void menos1Intento() {
+		this.intentosEntrada--;
+	}
+	
 	public void intentoEntrarCliente () {
 		
+		// da igual si coge el producto o no, lo va a seguir intentando 10 veces
 		for(int i=1; i<=10; i++ ) {
 			almacen.entrada(this);
-			this.setIntentosEntrada();
+			this.menos1Intento();
 			
 			try {
 				int num = (int)(Math.random()*(100) +1); //(M-N+1)+N
@@ -63,13 +58,11 @@ public class Cliente extends Thread {
 			}	
 		}
 		
-		// da igual si coge el producto o no, lo va a seguir intentando 10 veces
 		System.out.println("El  cliente " + this.idCliente + " no ha conseguido entrar comprar y se va");
 	}
 	
-	
 	public void run(){
-		this.intentoEntrarCliente ();
+		intentoEntrarCliente ();
 	}	
 
 }

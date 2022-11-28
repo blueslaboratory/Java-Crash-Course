@@ -5,42 +5,40 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Filosofo implements Runnable {
 	
 	Monitor monitor;
-	int posPalilloIzqquierdo, posPalilloDerecho;
+	int posPalilloIzquierdo, posPalilloDerecho;
 
 	
 	// CONSTRUCTOR
 	public Filosofo(Monitor gestorPalillos, int palilloIzquierdo, int palilloDerecho) {
 		this.monitor = gestorPalillos;
 		this.posPalilloDerecho = palilloDerecho;
-		this.posPalilloIzqquierdo = palilloIzquierdo;
+		this.posPalilloIzquierdo = palilloIzquierdo;
 	}
 
-	
 	
 	public void run() {
 		boolean palillosCogidos;
 		while (true) {
 			
 			// Comprobamos si podemos coger los palillos
-			palillosCogidos = this.monitor.intentarCogerPalillos(posPalilloIzqquierdo, posPalilloDerecho);
+			palillosCogidos = this.monitor.intentarCogerPalillos(posPalilloIzquierdo, posPalilloDerecho);
 			
 			if (palillosCogidos) {
 				// Nos damos un atracon de comer
 				comer();
-				this.monitor.liberarPalillos(posPalilloIzqquierdo, posPalilloDerecho);
+				// Liberamos los palillos
+				this.monitor.liberarPalillos(posPalilloIzquierdo, posPalilloDerecho);
 				// Despues de un buen banquete, nos echamos una siesta
 				dormir();
 			}
 		}
 	}
 
-	
-	
+		
 	private void comer() {
 		System.out.println("Filosofo " + Thread.currentThread().getName() + " comiendo");
 		esperarTiempoAzar();
 	}
-
 	
 	
 	private void esperarTiempoAzar() {
@@ -54,7 +52,6 @@ public class Filosofo implements Runnable {
 			System.out.println("Fallo la espera");
 		}
 	}
-
 	
 	
 	private void dormir() {

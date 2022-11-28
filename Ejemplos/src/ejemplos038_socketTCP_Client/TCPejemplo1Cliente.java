@@ -13,24 +13,25 @@ public class TCPejemplo1Cliente {
 		
 		// puerto remoto
 		int numeroPuerto = 6069;
-
 		
-		System.out.println("Hola soy el cliente y me inicio despues del servidor");
+		
 		System.out.println("PROGRAMA CLIENTE INICIADO...");
+		System.out.println("Hola soy el cliente y me inicio despues del servidor");
+		System.out.println();
 		Socket Cliente = new Socket(Host, numeroPuerto);
 
 		
 		// CREO FLUJO DE SALIDA AL SERVIDOR
 		DataOutputStream flujoSalida = new DataOutputStream(Cliente.getOutputStream());
 
-		// CREO FLUJO DE ENTRADA AL SERVIDOR
+		// CREO FLUJO DE ENTRADA DEL SERVIDOR
 		DataInputStream flujoEntrada = new DataInputStream(Cliente.getInputStream());
-
 		
-		for (int i=0; i<=9; i++) {
+		
+		for (int i=0; i<=5; i++) {
 			
 			// ENVIO UN SALUDO AL SERVIDOR
-			flujoSalida.writeUTF("Saludos al SERVIDOR DESDE EL CLIENTE. Paso: " + i);
+			flujoSalida.writeUTF("Saludos CLIENTE --> SERVIDOR. Paso: " + i);
 
 			// EL SERVIDOR ME ENVIA UN MENSAJE
 			System.out.println("Recibiendo del SERVIDOR: \n\t" + flujoEntrada.readUTF());

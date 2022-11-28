@@ -43,10 +43,8 @@ public class Ej005_ConsumoPalindromo {
 		// cadAux = new StringBuilder(cad).reverse().toString();
 
 		
-		// complicadito
-		cadAux = "";
-		
-		for (int i = cad.length() - 1; i >= 0; i--) {
+		// complicadito		
+		for (int i=cad.length()-1; i>=0; i--) {
 			cadAux += cad.charAt(i);
 		}
 

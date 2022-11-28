@@ -1,18 +1,24 @@
 package almacen;
 
 public class Almacen {
+	
 	int unidadesProductos;
 
+	
+	// CONSTRUCTOR
 	public Almacen(int unidadesProductos) {
 		super();
 		this.unidadesProductos = unidadesProductos;
-		// TODO Auto-generated constructor stub
 	}
 
+	
+	// GETTERS Y SETTERS: ALT + SHIFT + S
 	public int getUnidadesProductos() {
 		return unidadesProductos;
 	}
 
+	
+	// OTROS METODOS
 	public synchronized void entrada(Cliente cli) {
 		System.out.println("El cliente " + cli.idCliente + " ha conseguido entrar en la tienda");
 		
@@ -24,8 +30,7 @@ public class Almacen {
 		else {
 			System.out.println("El producto esta agotado, el cliente " + cli.idCliente + " no ha conseguido comprar su producto");
 		}
-			
+		
 	}
 	
-
 }
