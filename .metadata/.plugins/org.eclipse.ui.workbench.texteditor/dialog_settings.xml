@@ -6,17 +6,17 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="setSoldadosAliadosRescatados"/>
+		<item key="selection" value="u"/>
 		<list key="findhistory">
+			<item value="ó"/>
+			<item value="ú"/>
+			<item value="í"/>
+			<item value="é"/>
+			<item value="á"/>
 			<item value="setSoldadosAliadosRescatados"/>
 			<item value="rescatados"/>
 			<item value="setRescatados"/>
-			<item value="ú"/>
-			<item value="á"/>
 			<item value="yield"/>
-			<item value="í"/>
-			<item value="é"/>
-			<item value="ó"/>
 			<item value="Los botes salva"/>
 			<item value="5 -"/>
 			<item value="desembarcados"/>
@@ -25,11 +25,11 @@
 			<item value="5"/>
 		</list>
 		<list key="replacehistory">
+			<item value="o"/>
 			<item value="u"/>
-			<item value="a"/>
 			<item value="i"/>
 			<item value="e"/>
-			<item value="o"/>
+			<item value="a"/>
 			<item value="n"/>
 			<item value=""/>
 			<item value="estadoProceso"/>
