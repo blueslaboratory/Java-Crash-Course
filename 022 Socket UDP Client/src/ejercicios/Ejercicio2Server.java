@@ -27,7 +27,7 @@ public class Ejercicio2Server {
 		// TODO Auto-generated method stub
 
 		String mensaje;
-		boolean next;
+		boolean flag;
 		
 		DatagramSocket socket = new DatagramSocket(portServer);
 		DatagramPacket paqueteRecibido = new DatagramPacket(buffer, buffer.length);
@@ -44,15 +44,15 @@ public class Ejercicio2Server {
 			mensaje = transformar(paqueteRecibido);
 			
 			// enviar textos 
-			if( !(next = mensaje.equalsIgnoreCase("*")) ) {
+			if( !(flag = mensaje.equalsIgnoreCase("*")) ) {
 				enviarDatos(socket, mensaje, portClient);
 			}
 			
 			System.out.println();
-		} while (!next);
+		} while (!flag);
 		
 		System.out.println();
-		System.out.println("Cerrando la conexion del SERVIDOR");
+		System.out.println("cerrando conexion del SERVIDOR...");
 		socket.close();
 	}
 
@@ -65,11 +65,15 @@ public class Ejercicio2Server {
 	
 	
 	public static String transformar(DatagramPacket paqueteRecibido) throws IOException {
+		
+		String textToLower = new String(paqueteRecibido.getData());
+		// esto no hace falta creo, ademas lo reescribe de una manera rara
 		// https://stackoverflow.com/questions/17549195/clear-datagram-buffer-in-java
+		/*
 		String textToLower = new String(paqueteRecibido.getData(),
 										paqueteRecibido.getOffset(),
 										paqueteRecibido.getLength());
-		
+		*/
 		System.out.println("Se ha recibido por parte del CLIENTE el texto: ");
 		System.out.println(textToLower);
 		

@@ -48,7 +48,7 @@ public class Ejercicio2Client {
 
 		// conexion
 		System.out.println();
-		System.out.println("cerrando conexion...");
+		System.out.println("cerrando conexion del CLIENTE...");
 		sc.close();
 		socket.close();
 	}
