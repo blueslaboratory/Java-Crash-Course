@@ -66,14 +66,15 @@ public class Ejercicio2Server {
 	
 	public static String transformar(DatagramPacket paqueteRecibido) throws IOException {
 		
-		String textToLower = new String(paqueteRecibido.getData());
+		// String textToLower = new String(paqueteRecibido.getData());
 		// esto no hace falta creo, ademas lo reescribe de una manera rara
+		// parece que si hace falta para pillar el * parece
 		// https://stackoverflow.com/questions/17549195/clear-datagram-buffer-in-java
-		/*
+		
 		String textToLower = new String(paqueteRecibido.getData(),
 										paqueteRecibido.getOffset(),
 										paqueteRecibido.getLength());
-		*/
+		
 		System.out.println("Se ha recibido por parte del CLIENTE el texto: ");
 		System.out.println(textToLower);
 		
