@@ -1,6 +1,6 @@
 package ejemplos037_multihilos2;
 
-public class Programa {
+public class HiloMain {
 
     public static void main(String[] args) {
        
@@ -27,7 +27,7 @@ public class Programa {
         }
 
         System.out.println("Hilos en proceso, espera......");
-        System.out.println("Los de mayor prioridad tienden a terminar antes...\n");
+        System.out.println("Los de mayor prioridad tienden a terminar antes...\n"); // xD
 
         //inicia los hilos
         for (int i = 0; i < contador; i++) {

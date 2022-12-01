@@ -29,7 +29,7 @@ public class Ej001_MainParesImpares {
 			try {
 				opcion = Integer.parseInt(sc.nextLine());
 			} catch (Exception e) {
-				System.out.println("Introduzca 1, 2 o 3");
+				System.out.println("Se ha producido una excepcion");
 			}
 			
 			if(opcion!=1 && opcion!=2 && opcion!=3)

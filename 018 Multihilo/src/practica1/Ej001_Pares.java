@@ -22,6 +22,7 @@ public class Ej001_Pares extends Thread{
 		
 	public void pares() {
 		try {
+			
 			for(int i=0; i<=10; i++) {
 				if(i%2==0) {
 					System.out.println(i);

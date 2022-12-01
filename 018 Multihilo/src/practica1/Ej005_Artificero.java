@@ -43,8 +43,7 @@ public class Ej005_Artificero extends Thread{
 
 		@Override
 	public void run() {
-		this.desactivar();
-		
+		desactivar();
 	}
 
 	// sobraria pero nos lo quedamos para ver

@@ -70,7 +70,7 @@ public class Ejercicio1Server {
 			}	
 		}
 		
-		System.out.println("Numero de apariciones del caracter '" + caracter +"':" +contador +caracter);
+		System.out.println("Numero de apariciones del caracter '" + caracter +"': " +contador +caracter);
 		
 		String enviarmensaje = "nº de caracteres que son '" +caracter +"': " +contador +caracter;
 		buffer1 = enviarmensaje.getBytes();
@@ -81,6 +81,7 @@ public class Ejercicio1Server {
 		socket.send(envio);
 		
 		
+		// conexion
 		System.out.println();
 		System.out.println("Cerrando conexion");
 		socket.close();

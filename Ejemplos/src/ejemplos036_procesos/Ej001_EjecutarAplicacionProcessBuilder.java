@@ -47,7 +47,8 @@ public class Ej001_EjecutarAplicacionProcessBuilder {
 
 		pbLinux.command("cal", "2023", "-m 2");
 
-		Process p = pbLinux.start(); // abre la terminal
+		// abre la terminal:
+		Process p = pbLinux.start(); 
 		// Con esta linea, main no finaliza hasta que se cierre  la terminal:
 		retorno = p.waitFor();
 

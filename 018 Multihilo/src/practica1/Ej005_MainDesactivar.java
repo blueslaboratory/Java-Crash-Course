@@ -25,9 +25,9 @@ public class Ej005_MainDesactivar {
 		Ej005_Bomba bomba = new Ej005_Bomba(10);
 		Ej005_Artificero artificero = new Ej005_Artificero();
 		
-		
 		bomba.start();
 		artificero.start();
+		
 		
 		do {
 			

@@ -21,7 +21,7 @@ public class Saldo {
 	private Double saldoCuenta = (double) 0;
 	private int posicionTransferencia = 0;
 	
-
+	
 	public Saldo(File FichTrans) {
 		this.miFicheroTransferencias = FichTrans;
 

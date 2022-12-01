@@ -4,7 +4,7 @@ public class Monitor {
 	
 	boolean[] sillasLibres;
 	boolean[] clienteEstaAtendido;
-
+	
 	
 	
 	// CONSTRUCTOR
@@ -17,7 +17,7 @@ public class Monitor {
 			clienteEstaAtendido[i] = false;
 		}
 	}
-
+	
 	
 	
 	// GETTERS & SETTERS

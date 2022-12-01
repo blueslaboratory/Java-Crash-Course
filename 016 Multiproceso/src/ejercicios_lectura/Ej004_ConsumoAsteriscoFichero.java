@@ -14,8 +14,8 @@ public class Ej004_ConsumoAsteriscoFichero {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		InputStreamReader in = new InputStreamReader(System.in);
-		BufferedReader br = new BufferedReader(in);
+		InputStreamReader isr = new InputStreamReader(System.in);
+		BufferedReader br = new BufferedReader(isr);
 
 		Float suma = (float) 0;
 		String r = "*";
@@ -25,7 +25,7 @@ public class Ej004_ConsumoAsteriscoFichero {
 
 				r = br.readLine();
 
-				// if (r.compareToIgnoreCase("*") == 0 )
+				//if (r.compareToIgnoreCase("*") == 0 )
 				if (r.equals("*") == true) {
 					System.out.println("Suma: " + suma);
 				} else {

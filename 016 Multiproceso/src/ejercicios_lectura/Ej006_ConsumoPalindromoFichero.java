@@ -13,8 +13,8 @@ public class Ej006_ConsumoPalindromoFichero {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		InputStreamReader in = new InputStreamReader(System.in);
-		BufferedReader br = new BufferedReader(in);
+		InputStreamReader isr = new InputStreamReader(System.in);
+		BufferedReader br = new BufferedReader(isr);
 		String r = "";
 		boolean flag = false;
 

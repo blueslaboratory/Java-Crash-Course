@@ -18,9 +18,9 @@ import java.util.Arrays;
 
 public class Ejercicio2Server {
 
-	static byte[] buffer = new byte[1024];
 	static int portServer = 7777;
 	static int portClient = 6666;
+	static byte[] buffer = new byte[1024];
 	
 	
 	public static void main(String[] args) throws IOException {
@@ -49,6 +49,7 @@ public class Ejercicio2Server {
 			}
 			
 			System.out.println();
+			
 		} while (!flag);
 		
 		System.out.println();

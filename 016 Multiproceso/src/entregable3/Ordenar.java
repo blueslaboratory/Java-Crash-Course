@@ -14,21 +14,20 @@ public class Ordenar {
 		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
 		
 		List<Integer> lista= new ArrayList<Integer>();
-		 int numero;
+		int numero;
 		 
-		 for(int i=0;i<10;i++) {
+		 for(int i=0; i<10; i++) {
 			 numero=Integer.parseInt(br.readLine());
 			 lista.add(numero);
 		 }
 		 
 		 Collections.sort(lista);
 		 
-		 for(int i=0;i<lista.size();i++) {
-			 System.out.print(lista.get(i) + ", ");
+		 for(int i=0; i<lista.size(); i++) {
+			 System.out.println(lista.get(i));
 		 }
 		 
 		 System.exit(0);
 
 	}
-
 }

@@ -5,13 +5,13 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Barbero implements Runnable {
 
 	private String nombre;
-	private Monitor gc;
+	private Monitor monitor;
 	
 	
 	// CONSTRUCTOR
-	public Barbero(Monitor gc, String nombre) {
+	public Barbero(Monitor monitor, String nombre) {
 		this.nombre = nombre;
-		this.gc = gc;
+		this.monitor = monitor;
 	}
 	
 	
@@ -32,19 +32,19 @@ public class Barbero implements Runnable {
 		
 		while (true) {
 			
-			num_silla = gc.atenderAlgunCliente();
+			num_silla = monitor.atenderAlgunCliente();
 			
 			/* Mientras no haya nadie a quien atender, esperamos */
 			while (num_silla == -1) {
 				esperarTiempoAzar();
-				num_silla = gc.atenderAlgunCliente();
+				num_silla = monitor.atenderAlgunCliente();
 			}
 			
 			/* Atendemos al cliente que acaba de llegar */
 			esperarTiempoAzar();
 			
 			/* Liberamos la silla tras el afeitado */
-			gc.liberarSilla(num_silla);
+			monitor.liberarSilla(num_silla);
 		}
 	}
 }

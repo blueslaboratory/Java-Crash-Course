@@ -45,6 +45,7 @@ public class Ejercicio1Client {
 			
 			Scanner sc = new Scanner(System.in);
 			String mensajeCliente;
+			System.out.println();
 			System.out.println("Introduce un mensaje para el servidor:");
 			mensajeCliente = sc.nextLine();
 			
@@ -54,6 +55,7 @@ public class Ejercicio1Client {
 			flujoSalida.writeUTF(mensajeCliente);
 
 			// EL SERVIDOR ME ENVIA UN MENSAJE
+			System.out.println();
 			System.out.println("Recibiendo del SERVIDOR:");
 			System.out.println(flujoEntrada.readUTF());
 			Thread.sleep(1000);

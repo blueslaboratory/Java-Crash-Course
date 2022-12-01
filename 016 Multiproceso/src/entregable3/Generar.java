@@ -18,6 +18,8 @@ public class Generar {
 		Random r = new Random();
 		int numero;
 
+		
+		// escribimos los aleatorios en imparest.txt
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(fTxt))) {
 			for (int i = 0; i < 10; i++) {
 				
@@ -32,12 +34,14 @@ public class Generar {
 			e.printStackTrace();
 		}
 
-		ProcessBuilder pb = new ProcessBuilder("java", "Ejercicio2.Ordenar");
+		
+		ProcessBuilder pb = new ProcessBuilder("java", "entregable3.Ordenar");
 		
 		pb.directory(directorio);
 		pb.redirectInput(fTxt);
 		Process p = pb.start();
 
+		
 		int exitVal = -1;
 		try {
 			exitVal = p.waitFor();
@@ -46,7 +50,8 @@ public class Generar {
 			e.printStackTrace();
 		}
 
-		if (exitVal == 0) {
+		
+		if (exitVal == 0 || exitVal == -1) {
 
 			// obtener la salida devuelta por el proceso
 			try {
@@ -60,22 +65,8 @@ public class Generar {
 			}
 		}
 
-		// NUNCA SE VA A PRODUCIR EL -1 PORQUE ES ALGO QUE GENERAMOS Y NO INTRODUCIMOS
-		// POR TECLADO
-
-		if (exitVal == -1) {
-
-			// obtener la salida devuelta por el proceso
-			try {
-				InputStream is = p.getInputStream();
-				int c;
-				while ((c = is.read()) != -1)
-					System.out.print((char) c);
-				is.close();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
+		// NUNCA SE VA A PRODUCIR EL -1 PORQUE ES ALGO QUE GENERAMOS 
+		// Y NO INTRODUCIMOS POR TECLADO
 
 	}
 

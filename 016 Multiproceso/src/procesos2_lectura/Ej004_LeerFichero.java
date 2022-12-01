@@ -19,7 +19,7 @@ public class Ej004_LeerFichero {
 				System.exit(-1);
 			}
 
-			// no lo va imprimir porque entra en System.exit(-1);
+			// esto no lo va imprimir si entra en System.exit(-1);
 			System.out.println(leer);
 			System.exit(777);
 		} catch (Exception e) {

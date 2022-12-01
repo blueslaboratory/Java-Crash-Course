@@ -18,7 +18,7 @@ Hay una carrera entre:
 - Juan: corre a 7 km / hora, en bici va a 18 km / hora y nada a 2.000 m / hora
 - Vicente: corre a 6 km / hora, en bici va a 30 km / hora y nada a 1.000 m / hora
 
-Todos evidentemente empiezan a competir a la vez. �Quien gana? Prueba y documenta
+Todos evidentemente empiezan a competir a la vez. Quien gana? Prueba y documenta
 */
 
 

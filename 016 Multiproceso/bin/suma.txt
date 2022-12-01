@@ -1,0 +1,12 @@
+Suma: 0.0+5 = 5.0
+Suma: 5.0+21 = 26.0
+Suma: 26.0+5 = 31.0
+Suma: 31.0+88 = 119.0
+Suma: 119.0+69 = 188.0
+Suma: 188.0+777 = 965.0
+Suma: 965.0+666 = 1631.0
+Suma: 1631.0+23 = 1654.0
+Suma: 1654.0+14 = 1668.0
+Suma: 1668.0+1 = 1669.0
+
+Fin de ejecucion: no has introducido un numero

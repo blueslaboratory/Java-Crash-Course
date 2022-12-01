@@ -88,7 +88,7 @@ public class Ej001_Jugador extends Thread{
 	
 	
 	public void jugada() {
-		int n = 1 + (int)(10*Math.random());
+		int n = 1 + (int)(10*Math.random());  // (M-N+1)+N
 
 		// para soltar el synchronize
 		if ((arbitro.getTurno()) == this.id)

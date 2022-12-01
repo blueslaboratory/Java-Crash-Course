@@ -124,11 +124,12 @@ public class Ej001_Arbitro{
 		if (jugada!=numAdivinar) {
 			System.out.println("\tSigue intentandolo jugador" +turno);
 			turno++;
+			
 			if(turno>nTotalJugadores) {
 				turno=1;
 			}
-			System.out.println("\tSiguiente jugador: jugador" +turno);
 			
+			System.out.println("\tSiguiente jugador: jugador" +turno);
 		}
 		else {
 			FINISH = true;
@@ -136,8 +137,6 @@ public class Ej001_Arbitro{
 			System.out.println("***WINNER: PLAYER" +id +"***");
 			System.out.println("Fin de la partida");
 		}
-
-		
 	}
 	
 	

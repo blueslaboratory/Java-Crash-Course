@@ -50,7 +50,7 @@ public class Ejercicio1Client {
 		// 2º paquete
 		DatagramPacket entrada = new DatagramPacket(enviar1, enviar1.length);
 		socket.receive(entrada);
-		// esto no vale, da una direccion de memoria
+		// esto no vale, da una direccion de memoria:
 		// String paquete = String.valueOf(entrada.getData());
 		String paquete = new String(entrada.getData());
 

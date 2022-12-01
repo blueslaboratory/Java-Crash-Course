@@ -20,9 +20,9 @@ import java.net.Socket;
 public class Ejercicio1Server {
 
 	public static void main(String[] args) {
-		// ASIGNO UN PUERTO A MI APLICACION E INSTANCIO UN SERVERSOCKET CON EL PUERT0
-		// ASI COMO UN SOCKET PARA CUANDO SE CONECTA UN CLIENTE
-		
+		// Asigno un puerto a mi aplicacion e instancio un ServerSocket con el puerto
+		// asi como un Socket para cuando se conecta un cliente		
+				
 		
 		try {
 			int numeroPuerto = 6069;
@@ -34,7 +34,7 @@ public class Ejercicio1Server {
 			System.out.println("Hola soy el servidor y me tengo que iniciar antes que el cliente");
 			System.out.println("Esperando al cliente.....");
 			clienteConectado = servidor.accept();
-	
+			
 			
 			
 			// CREO FLUJO DE ENTRADA DEL CLIENTE
@@ -50,8 +50,10 @@ public class Ejercicio1Server {
 			
 			
 			// EL CLIENTE ME ENVIA UN MENSAJE
-			System.out.println("Recibiendo del CLIENTE:");
 			String mensajeCliente = flujoEntrada.readUTF();			
+			System.out.println();
+			System.out.println("Recibiendo del CLIENTE");
+			System.out.println(mensajeCliente);
 			
 			
 			// ENVIO EL MENSAJE AL CLIENTE

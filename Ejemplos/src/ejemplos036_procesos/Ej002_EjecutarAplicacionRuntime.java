@@ -28,7 +28,8 @@ public class Ej002_EjecutarAplicacionRuntime {
 
 		Process p1, p2;
 		p1 = entorno.exec("C:\\Windows\\notepad.exe");
-		p2 = entorno.exec("cmd /c start"); // Desde la ventana de DOS arrancamos otra venta de DOS
+		// Desde la ventana de DOS arrancamos otra venta de DOS:
+		p2 = entorno.exec("cmd /c start"); 
 
 		// Con esta linea, main no finaliza hasta que se cierre notepad.exe
 		p1.waitFor();
@@ -70,7 +71,7 @@ public class Ej002_EjecutarAplicacionRuntime {
 			System.exit(0);
 		} else {
 			//abnormal...
-			System.out.println("Failure ):");
+			System.out.println("Failure :(");
 			System.out.println("exitValue: " +p.exitValue());
 		}
 		

@@ -2,15 +2,15 @@
 Escribe una clase que tenga 3 metodos para simular un IronMan: 
 bici (180 km), marathon(42 km) y nadar (4.000 m). 
 
-Luego escribe otro metodo va enlazando las pruebas.
+Luego escribe otro metodo que va enlazando las pruebas.
 En la clase tendremos 4 variables: 
 - velocidad a la que corres, 
 - velocidad en la bici y 
 - velocidad nadando, 
 
 Ademas del nombre del participante.
-En cada prueba sacaremos por consola cuando un participante empieza la prueba y cuando
-la acaba.
+En cada prueba sacaremos por consola cuando un participante 
+empieza la prueba y cuando la acaba.
 Vamos a suponer que 1 hora son 1000 milisegundos en nuestro programa.
 
 Hay una carrera entre:
@@ -18,7 +18,7 @@ Hay una carrera entre:
 - Juan: corre a 7 km / hora, en bici va a 18 km / hora y nada a 2.000 m / hora
 - Vicente: corre a 6 km / hora, en bici va a 30 km / hora y nada a 1.000 m / hora
 
-Todos evidentemente empiezan a competir a la vez. �Quien gana? Prueba y documenta
+Todos evidentemente empiezan a competir a la vez. Quien gana? Prueba y documenta
 */
 
 

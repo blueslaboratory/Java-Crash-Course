@@ -1,7 +1,6 @@
 package ejemplos037_multihilos1;
 
 
-
 //Clase Contador3
 class Contador3 {
 	

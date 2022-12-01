@@ -34,7 +34,7 @@ public class Ejercicio3Server {
 			ServerSocket server0 = new ServerSocket(portNumber0);
 			Socket clienteConectado0 = null;
 			Socket clienteConectado1 = null;
-
+			
 			
 			
 			// SERVER 0
@@ -97,6 +97,9 @@ public class Ejercicio3Server {
 			
 			
 			// CERRAR STREAMS Y SOCKETS
+			System.out.println();
+			System.out.println("Cerrando las conexiones...");
+			
 			// Server 0
 			entrada0.close();
 			flujoEntrada0.close();
@@ -106,7 +109,6 @@ public class Ejercicio3Server {
 						
 			clienteConectado0.close();
 			server0.close();
-			
 			
 			// Server 1
 			entrada1.close();

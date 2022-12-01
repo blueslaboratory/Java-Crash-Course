@@ -12,7 +12,8 @@ public class Cliente implements Runnable {
 
 	
 	public void run() {
-		// Los clientes no esperan a que hayan sillas libres. Sino hay sillas libres se van...
+		// Los clientes no esperan a que hayan sillas libres. 
+		// Sino hay sillas libres se van...
 		gc.getSillaLibre();
 	}
 }

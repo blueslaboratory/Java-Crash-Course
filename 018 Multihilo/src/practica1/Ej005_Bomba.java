@@ -48,8 +48,7 @@ public class Ej005_Bomba extends Thread{
 	
 	@Override
 	public void run() {
-		this.countdown();
-		
+		countdown();
 	}
 
 	

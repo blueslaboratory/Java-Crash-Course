@@ -7,7 +7,6 @@ public class Ej011_EjecutarFicheroBat {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-
 		
 		
 		// WINDOWS 

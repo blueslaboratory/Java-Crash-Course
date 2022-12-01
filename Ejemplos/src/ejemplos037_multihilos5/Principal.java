@@ -39,7 +39,7 @@ public class Principal {
 
 		if (exitVal == 0) {
 			// numero de hilos
-			int j = 3;
+			int numHilos = 3;
 
 			// String ruta_mifichero = "C:\\julio\\transferencias.txt";
 			String ruta_mifichero ="/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/txts/transferencias.txt";
@@ -47,11 +47,11 @@ public class Principal {
 			File mifichero = new File(ruta_mifichero);
 			Saldo misaldo = new Saldo(mifichero);
 			
-			Transferencia hiloTransferencia[] = new Transferencia[j];
+			Transferencia hiloTransferencia[] = new Transferencia[numHilos];
 			Contador contador = new Contador();
 			
 			// Creamos objetos en cada posicion
-			for (int i=0; i<j; i++) {
+			for (int i=0; i<numHilos; i++) {
 				hiloTransferencia[i] = new Transferencia(misaldo);
 				hiloTransferencia[i].start();
 			}

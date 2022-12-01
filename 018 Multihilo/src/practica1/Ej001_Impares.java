@@ -22,6 +22,7 @@ public class Ej001_Impares implements Runnable{
 		
 	public void impares() {
 		try {
+			
 			for(int i=0; i<=10; i++) {
 				if(i%2!=0) {
 					System.out.println(i);

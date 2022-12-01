@@ -135,7 +135,7 @@ de todos.
 
 package dunkerque2;
 //DUNKERQUE LO QUE PUDO SER
-//dunkerque2 y dunkerque3 estan mal: el bueno es dunkerque4
+//dunkerque2 esta mal: el bueno es dunkerque2bis
 //los tengo para entender la progresion
 
 import java.util.concurrent.Semaphore;

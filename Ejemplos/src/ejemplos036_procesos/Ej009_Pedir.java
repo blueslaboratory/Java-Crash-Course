@@ -17,7 +17,7 @@ public class Ej009_Pedir {
 		String respuesta = sc.nextLine();
 
 		// creamos objeto File al directorio donde esta ejemplos036_procesos.Ej009_Calcular
-		// G:\\DOCUMENTS\\DA1D1E\\Programaci�n\\Eclipse-workspace\\Ejemplos\
+		// G:\\DOCUMENTS\\DA1D1E\\Programacion\\Eclipse-workspace\\Ejemplos\
 		File directorioWindows = new File("E:\\DOCUMENTS\\DA2D1E-2\\Programacion\\Eclipse-workspace\\Ejemplos\\bin");
 		File directorioLinux = new File("/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/Ejemplos/bin");
 
@@ -32,7 +32,7 @@ public class Ej009_Pedir {
 		
 		
 		respuesta = respuesta + "\n";
-		// escribimos en el buffer, es decir escribimos en el input el output de Ej009_Calcular
+		// escribimos en el buffer, es decir, escribimos en el input el output de Ej009_Calcular
 		// REDDIT: You write to an OutputStream, so use that to give the process your input.
 		OutputStream os = p.getOutputStream();
 		// getOutputStream()
