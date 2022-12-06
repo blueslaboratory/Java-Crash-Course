@@ -8,11 +8,12 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value="u"/>
 		<list key="findhistory">
-			<item value="ó"/>
 			<item value="ú"/>
+			<item value="ó"/>
 			<item value="í"/>
 			<item value="é"/>
 			<item value="á"/>
+			<item value="&apos;a"/>
 			<item value="setSoldadosAliadosRescatados"/>
 			<item value="rescatados"/>
 			<item value="setRescatados"/>
@@ -22,11 +23,10 @@
 			<item value="desembarcados"/>
 			<item value="setDesembarcados"/>
 			<item value="4 - Han embarcado 2"/>
-			<item value="5"/>
 		</list>
 		<list key="replacehistory">
-			<item value="o"/>
 			<item value="u"/>
+			<item value="o"/>
 			<item value="i"/>
 			<item value="e"/>
 			<item value="a"/>

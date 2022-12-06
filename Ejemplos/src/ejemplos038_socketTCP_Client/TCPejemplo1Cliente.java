@@ -9,7 +9,7 @@ public class TCPejemplo1Cliente {
 		
 		// Host -> "localhost";
 		//String Host = "192.168.56.1";
-		String Host = "localhost";
+		String host = "localhost";
 		
 		// puerto remoto
 		int numeroPuerto = 6069;
@@ -18,7 +18,7 @@ public class TCPejemplo1Cliente {
 		System.out.println("PROGRAMA CLIENTE INICIADO...");
 		System.out.println("Hola soy el cliente y me inicio despues del servidor");
 		System.out.println();
-		Socket Cliente = new Socket(Host, numeroPuerto);
+		Socket Cliente = new Socket(host, numeroPuerto);
 
 		
 		// CREO FLUJO DE SALIDA AL SERVIDOR
@@ -28,7 +28,7 @@ public class TCPejemplo1Cliente {
 		DataInputStream flujoEntrada = new DataInputStream(Cliente.getInputStream());
 		
 		
-		for (int i=0; i<=5; i++) {
+		for(int i=0; i<=5; i++) {
 			
 			// ENVIO UN SALUDO AL SERVIDOR
 			flujoSalida.writeUTF("Saludos CLIENTE --> SERVIDOR. Paso: " + i);

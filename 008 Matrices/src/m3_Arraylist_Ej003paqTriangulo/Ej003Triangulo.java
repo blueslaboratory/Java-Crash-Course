@@ -1,5 +1,5 @@
 package m3_Arraylist_Ej003paqTriangulo;
-import m3_arraylist_Ej003paqPunto.*;
+import m3_Arraylist_Ej003paqPunto.*;
 
 public class Ej003Triangulo {
 	private Ej003Punto p1, p2, p3;

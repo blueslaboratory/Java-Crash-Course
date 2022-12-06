@@ -12,7 +12,8 @@ public class UDPcliente {
 		
 		InetAddress destino = InetAddress.getLocalHost();
 		// puerto al que envio el datagrama
-		int port = 12345; 
+		int serverPort = 12345;
+		int localPort = 6789;
 		byte[] mensaje = new byte[1024];
 
 		
@@ -22,8 +23,8 @@ public class UDPcliente {
 
 		
 		// CONSTRUYO EL DATAGRAMA A ENVIAR
-		DatagramPacket envio = new DatagramPacket(mensaje, mensaje.length, destino, port);
-		DatagramSocket socket = new DatagramSocket(6789);// Puerto local
+		DatagramPacket envio = new DatagramPacket(mensaje, mensaje.length, destino, serverPort);
+		DatagramSocket socket = new DatagramSocket(localPort);// Puerto local
 
 		
 		System.out.println("Enviando Datagrama de longitud: " + mensaje.length);

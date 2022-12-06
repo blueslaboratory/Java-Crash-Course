@@ -55,7 +55,7 @@ Jugador 2 gana, adivino el numero! ! !
 
 */
 
-package practica2bis;
+package practica2sol;
 
 public class Ej001_Arbitro {
 	private int numJugadores;

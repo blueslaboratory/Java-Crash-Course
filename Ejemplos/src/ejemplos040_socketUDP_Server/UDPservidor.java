@@ -2,7 +2,6 @@ package ejemplos040_socketUDP_Server;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
-import java.net.InetAddress;
 
 //Recuerda que el servidor siempre se inicia antes que el cliente
 
@@ -12,6 +11,7 @@ public class UDPservidor {
 
 		// buffer para recibir el datagrama
 		byte[] buffer = new byte[1024];
+		
 		// ASOCIO EL SOCKET AL PUERTO 12345
 		int port = 12345;
 		DatagramSocket socket = new DatagramSocket(port);
@@ -21,10 +21,13 @@ public class UDPservidor {
 		System.out.println("ESPERANDO DATAGRAMA...");
 		System.out.println();
 		DatagramPacket recibo = new DatagramPacket(buffer, buffer.length);
+		
 		// recibo datagrama:
 		socket.receive(recibo);
+		
 		// obtengo numero de bytes:
 		int bytesRec = recibo.getLength();
+		
 		// obtengo String:
 		String paquete = new String(recibo.getData());
 

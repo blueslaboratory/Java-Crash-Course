@@ -83,9 +83,9 @@
 	<section name="SaveAsDialogSettings">
 		<item key="DIALOG_X_ORIGIN" value="618"/>
 		<item key="DIALOG_Y_ORIGIN" value="119"/>
-		<item key="DIALOG_WIDTH" value="700"/>
-		<item key="DIALOG_HEIGHT" value="621"/>
-		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|10.5|0|WINDOWS|1|-14|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_WIDTH" value="525"/>
+		<item key="DIALOG_HEIGHT" value="605"/>
+		<item key="DIALOG_FONT_NAME" value="1|Noto Sans|9.0|0|GTK|1|"/>
 	</section>
 	<section name="BasicNewProjectResourceWizard">
 	</section>

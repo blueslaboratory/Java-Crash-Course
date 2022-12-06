@@ -1,4 +1,4 @@
-package cena_filosofos;
+package filosofos;
 
 import java.util.concurrent.ThreadLocalRandom;
 

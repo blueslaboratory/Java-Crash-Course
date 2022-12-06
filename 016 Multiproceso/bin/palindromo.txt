@@ -1,6 +1,0 @@
-
-Dentro del metodo palindromo
-cadena: soy un palindromo omordnilap nu yos
-cadena auxiliar: soy un palindromo omordnilap nu yos
-
-palindromo: true

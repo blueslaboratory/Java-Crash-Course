@@ -32,7 +32,7 @@ Dibujo:
               |
 */
 
-package cena_filosofos;
+package filosofos;
 
 public class Main {
 	

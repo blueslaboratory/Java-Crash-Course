@@ -34,7 +34,7 @@ public class TCPejemplo1Servidor {
 		DataOutputStream flujoSalida = new DataOutputStream(salida);
 		
 		
-		for (int i=0; i<=5; i++) {
+		for(int i=0; i<=5; i++) {
 			
 			// EL CLIENTE ME ENVIA UN MENSAJE
 			System.out.println("Recibiendo del CLIENTE: \n\t" + flujoEntrada.readUTF());

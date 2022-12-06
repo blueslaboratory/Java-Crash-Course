@@ -1,4 +1,4 @@
-package baile_hogwarts;
+package hogwarts;
 
 public class Principal {
 

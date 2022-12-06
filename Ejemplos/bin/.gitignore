@@ -95,7 +95,7 @@
 /ejemplos035_enumerados4/
 /ejemplos035_enumerados5/
 /ejemplos036_procesos/
-/ejemplos037_multihilo/
+/ejemplos037_multihilos/
 /ejemplos037_multihilos1/
 /ejemplos037_multihilos2/
 /ejemplos037_multihilos3/
@@ -104,17 +104,8 @@
 /ejemplos037_multihilos6/
 /ejemplos037_multihilos7/
 /ejemplos037_multihilos8/
-/ejemplos037_multihilos9/
-/ejemplos037_multihilos/
 /ejemplos038_socketTCP_Client/
-/ejemplos038_socketTCP_Clients/
 /ejemplos038_socketTCP_Server/
-/ejemplos038_socketTCP_Servers/
-/ejemplos039_testinetaddress/
-/ejemplos039_testinetaddresss/
-/ejemplos040_tcpclient/
+/ejemplos039_INETaddress/
 /ejemplos040_socketUDP_Client/
 /ejemplos040_socketUDP_Server/
-/ejemplos040_socketUDP_Clients/
-/ejemplos040_socketUDP_Serverr/
-/ejemplos039_INETaddress/

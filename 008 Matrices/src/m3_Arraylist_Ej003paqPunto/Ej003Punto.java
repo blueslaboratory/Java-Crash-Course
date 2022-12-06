@@ -1,4 +1,4 @@
-package m3_arraylist_Ej003paqPunto;
+package m3_Arraylist_Ej003paqPunto;
 
 public class Ej003Punto {
 	private double x;

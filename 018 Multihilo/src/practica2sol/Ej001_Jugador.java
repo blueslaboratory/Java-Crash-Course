@@ -55,21 +55,31 @@ Jugador 2 gana, adivino el numero! ! !
 
 */
 
-// Esta no es mia, ver mejor practica2 antes que practica2bis
+package practica2sol;
 
-package practica2bis;
+public class Ej001_Jugador extends Thread {
+	private int identificador;
+	Ej001_Arbitro arbitro;
 
-public class Ej001_Main_App {
+	public Ej001_Jugador(int ident, Ej001_Arbitro arbitro) {
+		this.identificador = ident;
+		this.arbitro = arbitro;
+	}
 
-	public static void main(String[] args) {
-		Ej001_Arbitro arbitro = new Ej001_Arbitro(3);
-		Ej001_Jugador j1 = new Ej001_Jugador(1, arbitro);
-		Ej001_Jugador j2 = new Ej001_Jugador(2, arbitro);
-		Ej001_Jugador j3 = new Ej001_Jugador(3, arbitro);
+	@Override
+	public void run() {
+		while (arbitro.estadoJuego() == false) {
+			if (arbitro.getTurno() == identificador) {
+				int num = 1 + (int) (10 * Math.random());
 
-		j1.start();
-		j2.start();
-		j3.start();
+				arbitro.comprobarJuego(identificador, num);
+
+			}
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+			}
+		}
 
 	}
 
