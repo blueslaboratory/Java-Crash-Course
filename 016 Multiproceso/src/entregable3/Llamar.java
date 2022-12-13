@@ -15,13 +15,15 @@ import java.io.InputStream;
 
 public class Llamar {
 
+	
 	public static final String RUTA = "/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/016 Multiproceso/bin";
 	
 	public static void main(String[] args) throws IOException {
 		
 		//File directorio= new File("C:\\Users\\jparr\\OneDrive\\Escritorio\\M�dulo\\2� A�o\\Programacion DM\\GeneraNumeros\\bin");
 		File directorio = new File(RUTA);
-		File fOut= new File(RUTA, "../ordenados.txt");
+		//File fOut= new File(RUTA, "../ordenados.txt");
+		File fOut= new File("/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/txts/ordenados.txt");
 		
 		ProcessBuilder pb= new ProcessBuilder("java","entregable3.Generar");
 		

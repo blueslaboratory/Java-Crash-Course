@@ -13,13 +13,13 @@ public class Generar {
 	public static void main(String[] args) throws IOException {
 		// File directorio = new File("C:\\Users\\jparr\\OneDrive\\Escritorio\\M�dulo\\2� A�o\\Programacion DM\\OrdenaNumeros\\bin");
 		File directorio = new File("/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/016 Multiproceso/bin");
-		File fTxt = new File("../impares.txt");
+		File fTxt = new File("/media/alejandro/MSI DATA/DOCUMENTS/DA2D1E-2/Programacion/Eclipse-workspace/txts/impares.txt");
 
 		Random r = new Random();
 		int numero;
 
 		
-		// escribimos los aleatorios en imparest.txt
+		// escribimos los aleatorios en impares.txt
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(fTxt))) {
 			for (int i = 0; i < 10; i++) {
 				
