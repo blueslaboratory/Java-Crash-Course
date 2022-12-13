@@ -105,11 +105,13 @@ public class ParesNonesTCPServer {
 			DataOutputStream flujoSalida = new DataOutputStream(salida);
 			
 			
-			
+			/*
 			numeroPartidas = flujoEntrada.readInt();
 			System.out.println("Numero de partidas a jugar: " +numeroPartidas);
-			
-			while(numeroPartidas>0) {
+			*/
+			//while(numeroPartidas>0) {
+				
+			while(SCORECLIENTE<3 && SCORESERVIDOR<3) {
 				
 				System.out.println();
 				System.out.println("*** PARTIDA " +counter +" ***");
@@ -141,7 +143,7 @@ public class ParesNonesTCPServer {
 				System.out.println("Servidor: " +SCORESERVIDOR +" Cliente: " +SCORECLIENTE);
 				System.out.println();
 				
-				numeroPartidas--;
+				//numeroPartidas--;
 				counter++;
 			}
 			

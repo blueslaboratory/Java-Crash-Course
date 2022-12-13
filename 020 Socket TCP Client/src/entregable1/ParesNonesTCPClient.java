@@ -71,8 +71,8 @@ public class ParesNonesTCPClient {
 		
 		try {
 			
-			// Host -> "localhost";
-			//String Host = "192.168.56.1";
+			// host -> "localhost";
+			//String host = "192.168.56.1";
 			String host = "localhost";
 			
 			// puerto remoto
@@ -101,18 +101,19 @@ public class ParesNonesTCPClient {
 			
 			
 			
-			
+			/*
 			System.out.print("Numero de partidas a jugar: ");
 			numeroPartidas = Integer.parseInt(sc.nextLine());
 			flujoSalida.writeInt(numeroPartidas);
-			
+			*/
 			// Programa cliente:
 			// Una de las aplicaciones le pedira al usuario por pantalla el juego a jugar 
 			// y el numero que quiere jugar. Se lo enviara a la otra que actua de servidor.
 						
 			
-			while(numeroPartidas>0) {
-				
+			//while(numeroPartidas>0) {
+			
+			while(SCORECLIENTE<3 && SCORESERVIDOR<3) {
 				
 				System.out.println();
 				System.out.println("*** PARTIDA " +counter +" ***");
@@ -150,7 +151,7 @@ public class ParesNonesTCPClient {
 				System.out.println("Cliente: " +SCORECLIENTE +" Servidor: " +SCORESERVIDOR);
 				System.out.println();
 				
-				numeroPartidas--;
+				//numeroPartidas--;
 				counter++;
 			} 
 			
