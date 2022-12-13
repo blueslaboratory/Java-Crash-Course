@@ -77,7 +77,7 @@ public class ParesNonesTCPServer {
 			int numeroPuerto = 6069;
 			
 			String paresNones;
-			int numeroPartidas;
+			// int numeroPartidas;
 			int counter = 1;
 			int numeroCliente;
 			int numeroServidor;

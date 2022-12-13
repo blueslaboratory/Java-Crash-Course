@@ -80,7 +80,7 @@ public class ParesNonesTCPClient {
 			
 			Scanner sc = new Scanner(System.in);
 			String paresNones;
-			int numeroPartidas;
+			// int numeroPartidas;
 			int counter = 1;
 			String numeroCliente;
 			String numeroServidor;
