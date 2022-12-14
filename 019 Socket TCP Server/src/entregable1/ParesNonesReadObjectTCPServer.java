@@ -63,7 +63,12 @@ import java.net.Socket;
 
 import partida.Partida;
 
+/*
+Importar partida.Partida:
 
+Project properties -> java build path -> classpath
+y agregas el proyecto 019 Socket TCP Server
+ */
 
 public class ParesNonesReadObjectTCPServer {
 
