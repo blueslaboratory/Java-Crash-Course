@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="u"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="classpath"/>
 			<item value="ú"/>
 			<item value="ó"/>
 			<item value="í"/>
@@ -22,7 +23,6 @@
 			<item value="5 -"/>
 			<item value="desembarcados"/>
 			<item value="setDesembarcados"/>
-			<item value="4 - Han embarcado 2"/>
 		</list>
 		<list key="replacehistory">
 			<item value="u"/>
