@@ -1,3 +1,4 @@
+package ejemplos043_SMTP;
 /*
 
 Agregar .jars a 023 SMTP
@@ -62,6 +63,7 @@ public class GestorCorreo {
 			e.printStackTrace();
 		}
 	}
+	
 	
 	private void setPropiedadesServidorSMTP(){
 		// https://programacion.net/articulo/tutorjava_nivel_basico_97/55
