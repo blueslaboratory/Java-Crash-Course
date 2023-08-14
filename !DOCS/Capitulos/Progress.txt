@@ -1,0 +1,25 @@
+NOTAS – REPASO – EDITS: 
+
+[UT1, UT3] status: revisada y updated (WPS 14/08/2022)
+Falta: [UT4 Programación Orientada a Objetos, final]
+
+
+Editor de texto: WPS
+
+Titulo de capitulos
+- E.g. UT3
+- Calibri Light 16
+
+Titulos principales: 
+ - E.g. 1. o 5.
+ - Calibri 14
+
+Titulos secundarios
+ - E.g. 6.3.
+ - Calibri Body 13
+
+Contenido:
+ - Calibri Body 13
+
+Codigo:
+ - FreeMono 11-13
