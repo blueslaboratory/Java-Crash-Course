@@ -1,7 +1,7 @@
 NOTAS – REPASO – EDITS: 
 
-[UT1, UT4] status: revisada y updated (WPS 14/08/2022)
-Falta: [UT5, final]
+[UT1, UT5] status: revisada y updated (WPS 14/08/2022)
+Falta: [UT6, final]
 
 
 Editor de texto: WPS
