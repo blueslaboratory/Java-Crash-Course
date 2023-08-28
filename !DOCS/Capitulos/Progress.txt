@@ -1,7 +1,11 @@
 NOTAS – REPASO – EDITS: 
 
-[UT1, UT5] status: revisada y updated (WPS 14/08/2022)
-Falta: [UTX Varios, final]
+Capitulos
+[UT1, UTX Varios] status: revisada y updated (WPS 14/08/2022)
+
+Java Crash Course completo v0.2
+Falta: [UT5, final]
+
 
 
 
