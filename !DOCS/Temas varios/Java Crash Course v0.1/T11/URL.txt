@@ -1,6 +1,0 @@
-https://www.tutorialesprogramacionya.com/javaya/detalleconcepto.php?punto=55&codigo=128&inicio=40
-
-Install Window Builder plugin for Eclipse Oxygen to create Java Swing:
-https://www.youtube.com/watch?v=6dDJgJg4mjY
-
-https://www.tutorialesprogramacionya.com/javaya/detalleconcepto.php?punto=56&codigo=129&inicio=40

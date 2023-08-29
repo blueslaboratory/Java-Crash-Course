@@ -1,0 +1,8 @@
+Sobre atajos de teclado en Eclipse:
+
+Ctrl+May+L nos visualiza en Eclipse todos los atajos de teclado
+
+
+DOCUMENTACION JDK:
+https://docs.oracle.com/en/java/javase/14/docs/api/index.html
+https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Double.html
